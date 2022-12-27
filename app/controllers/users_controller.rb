@@ -25,4 +25,9 @@ class UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+
+  def index
+    user = User.all
+    render json: user
+  end
 end

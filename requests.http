@@ -1,4 +1,11 @@
-@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzIyMDMzNDN9.tsjrpoOQuf7TIH7wwhpcOpf1OXwC5vh9bxxGmw6VfL0
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzIyMDYyMTZ9.NArr8ydUbK1BNJC7h_MXJSfWsNh_pa8uKpcNaiKVzUU
+
+
+###
+GET http://localhost:3000/users.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
 
 #### update points
 PATCH http://localhost:3000/users.json
@@ -29,3 +36,4 @@ Content-Type: application/json
   "image_url": "https://items.jellyneo.net/layout/imgs/itemdb/mascot_sad_250.png",
   "name": "Sad Mascot"
 }
+
