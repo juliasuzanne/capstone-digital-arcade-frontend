@@ -1,0 +1,31 @@
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzIyMDMzNDN9.tsjrpoOQuf7TIH7wwhpcOpf1OXwC5vh9bxxGmw6VfL0
+
+#### update points
+PATCH http://localhost:3000/users.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "points": 100
+}
+
+
+### login
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+###
+POST http://localhost:3000/artifacts.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "price_in_points": 20,
+  "image_url": "https://items.jellyneo.net/layout/imgs/itemdb/mascot_sad_250.png",
+  "name": "Sad Mascot"
+}
