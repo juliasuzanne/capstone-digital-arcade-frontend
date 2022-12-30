@@ -1,4 +1,4 @@
-@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzIyMDYyMTZ9.NArr8ydUbK1BNJC7h_MXJSfWsNh_pa8uKpcNaiKVzUU
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI0NTA0OTl9.wnKRERbayTaNsaWlmuTwgRXI1k5yrQ6hQh8aWuVsAr0
 
 
 ###
@@ -13,7 +13,7 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "points": 100
+  "points": 90
 }
 
 

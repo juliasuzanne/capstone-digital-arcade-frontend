@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     user.points = params[:points] || user.points
     user.name = params[:name] || user.name
     user.email = params[:email] || user.email
-    user.image_url = params[:image_url] || user.image_url
     if user.save
       render json: user
     else
@@ -27,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    user = User.all
+    user = User.find_by(id: current_user.id)
     render json: user
   end
 end
