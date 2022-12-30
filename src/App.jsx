@@ -9,6 +9,7 @@ import { Signup } from "./Signup";
 import { Game } from "./Game";
 import { ArtifactsNew } from "./ArtifactsNew";
 import axios from "axios";
+import { ArtifactsAll } from "./ArtifactsAll";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/game" element={<Game />} />
           <Route path="/" element={<Home />} />
           <Route path="/newartifact" element={<ArtifactsNew />} />
+          <Route path="/artifacts" element={<ArtifactsAll />} />
         </Routes>
       </BrowserRouter>
     </div>

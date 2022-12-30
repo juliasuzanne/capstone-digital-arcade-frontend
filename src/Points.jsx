@@ -4,14 +4,14 @@ import axios from "axios";
 export function Points() {
   let [points, setPoints] = useState(0);
 
-  function getPoints() {
-    setPoints(points + 1);
-  }
+  function getPoints() {}
 
   const [errors, setErrors] = useState([]);
+
   const handleUpdatePoints = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
+    console.log("test" + event.target);
     handleSetPoints(params);
     event.target.reset();
   };

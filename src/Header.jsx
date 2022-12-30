@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import { LogoutLink } from "./LogoutLink";
+import { useState, useEffect } from "react";
+import { ShowPoints } from "./ShowPoints";
+import axios from "axios";
+import { UserProfile } from "./UserProfile";
 
 export function Header() {
+  let [currentUser, setCurrentUser] = useState([]);
+
+  const handleCurrentUser = () => {
+    axios.get("http://localhost:3000/users.json").then((response) => {
+      console.log(response);
+      setCurrentUser(response.data);
+    });
+  };
+
+  useEffect(handleCurrentUser, []);
+
   return (
     <div>
       <header>
@@ -9,6 +24,9 @@ export function Header() {
           <div className="container-fluid">
             <a className="navbar-brand" to="#">
               Blog
+            </a>
+            <a className="navbar-brand">
+              <ShowPoints user={currentUser} />
             </a>
             <button
               className="navbar-toggler"
@@ -31,6 +49,11 @@ export function Header() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/game">
                     Game
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/artifacts">
+                    Artifacts
                   </Link>
                 </li>
                 {localStorage.jwt === undefined ? (

@@ -1,34 +1,46 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { ArtifactsIndex } from "./ArtifactsIndex";
 import { UserProfile } from "./UserProfile";
 
 export function Home() {
-  let [artifacts, setArtifacts] = useState([]);
-  let [user, setUser] = useState([]);
+  let [currentUser, setCurrentUser] = useState([]);
+  const [errors, setErrors] = useState([]);
+  const [points, setPoints] = useState(0);
 
-  const handleIndexArtifacts = () => {
-    axios.get("http://localhost:3000/artifacts.json").then((response) => {
-      console.log(response);
-      setArtifacts(response.data);
-    });
-  };
-
-  const handleUserProfile = () => {
+  const handleCurrentUser = () => {
     axios.get("http://localhost:3000/users.json").then((response) => {
       console.log(response);
-      setUser(response.data);
+      setCurrentUser(response.data);
     });
   };
 
-  useEffect(handleIndexArtifacts, []);
-  useEffect(handleUserProfile, []);
+  const getTenPoints = () => {
+    console.log(currentUser);
+    console.log(currentUser.points);
+    currentUser.points = currentUser.points + points;
+    axios
+      .patch("http://localhost:3000/users", { points: currentUser.points })
+      .then((window.location.href = "/"))
+      .catch((error) => {
+        console.log(error.response.data.errors);
+        setErrors(error.response.data.errors);
+      });
+    setPoints(0);
+  };
+
+  const getPoints = () => {
+    setPoints(points + 1);
+  };
+
+  useEffect(handleCurrentUser, []);
 
   return (
     <div>
+      <UserProfile user={currentUser} />
+      <button onClick={getPoints}> accrue</button>
+      <p>{points}</p>
+      <button onClick={getTenPoints}> submit score </button>
       <h1> test</h1>
-      <ArtifactsIndex artifacts={artifacts} />
-      <UserProfile user={user} />
     </div>
   );
 }
