@@ -18,8 +18,8 @@ export function NotJustMyArtifactsIndex(props) {
         .map((artifact) => (
           <div key={artifact.id} id="artifact">
             <h2> User: {artifact.name}</h2>
-            <img src={artifact.image} alt="" />
-            <p> Price: {artifact.price}</p>
+            <img src={artifact.image_url} alt="" />
+            <p> Price: {artifact.price_in_points}</p>
             {/* <button onClick={() => props.onSelectArtifact(artifact)}>More Info</button> */}
           </div>
         ))}

@@ -10,6 +10,7 @@ import { Game } from "./Game";
 import { ArtifactsNew } from "./ArtifactsNew";
 import axios from "axios";
 import { ArtifactsAll } from "./ArtifactsAll";
+import { NotJustMyArtifacts } from "./NotJustMyArtifacts";
 import { Index } from "./Index";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/newartifact" element={<ArtifactsNew />} />
           <Route path="/artifacts" element={<ArtifactsAll />} />
+          <Route path="/artifacts/all" element={<NotJustMyArtifacts />} />
           <Route path="/game" element={<Game />} />
         </Routes>
       </BrowserRouter>

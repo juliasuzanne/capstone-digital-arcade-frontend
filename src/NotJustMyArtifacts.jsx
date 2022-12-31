@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { NotJustMyArtifactsIndex } from "./NotJustMyArtifactsIndex";
 import axios from "axios";
 
-export function ArtifactsAll() {
+export function NotJustMyArtifacts() {
   let [artifacts, setArtifacts] = useState([]);
 
   const handleIndexArtifacts = () => {
@@ -14,5 +14,9 @@ export function ArtifactsAll() {
 
   useEffect(handleIndexArtifacts, []);
 
-  return <NotJustMyArtifactsIndex artifacts={artifacts} />;
+  return (
+    <div>
+      <NotJustMyArtifactsIndex artifacts={artifacts} />;
+    </div>
+  );
 }
