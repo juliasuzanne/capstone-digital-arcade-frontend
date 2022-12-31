@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function ArtifactsIndex(props) {
+export function NotJustMyArtifactsIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
 
   console.log(props.posts);
@@ -17,8 +17,7 @@ export function ArtifactsIndex(props) {
         .filter((artifacts) => artifacts.name.toLowerCase().includes(searchFilter.toLowerCase()))
         .map((artifact) => (
           <div key={artifact.id} id="artifact">
-            <h2> User: {artifact.username}</h2>
-            <p> Name: {artifact.name} </p>
+            <h2> User: {artifact.name}</h2>
             <img src={artifact.image} alt="" />
             <p> Price: {artifact.price}</p>
             {/* <button onClick={() => props.onSelectArtifact(artifact)}>More Info</button> */}

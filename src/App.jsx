@@ -10,6 +10,7 @@ import { Game } from "./Game";
 import { ArtifactsNew } from "./ArtifactsNew";
 import axios from "axios";
 import { ArtifactsAll } from "./ArtifactsAll";
+import { Index } from "./Index";
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Index />} />
           <Route path="/newartifact" element={<ArtifactsNew />} />
           <Route path="/artifacts" element={<ArtifactsAll />} />
+          <Route path="/game" element={<Game />} />
         </Routes>
       </BrowserRouter>
     </div>

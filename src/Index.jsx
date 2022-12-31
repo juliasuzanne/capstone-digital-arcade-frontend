@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { SubmitScore } from "./SubmitScore";
 
-export function Home() {
+export function Index() {
   let [currentUser, setCurrentUser] = useState([]);
   const [errors, setErrors] = useState([]);
 
@@ -17,7 +16,8 @@ export function Home() {
 
   return (
     <div>
-      <SubmitScore user={currentUser} />
+      <p>Welcome, {currentUser.name} </p>
+      <img src={currentUser.image_url} className="circular-images" />
     </div>
   );
 }
