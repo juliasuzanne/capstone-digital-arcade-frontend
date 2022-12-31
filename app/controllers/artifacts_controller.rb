@@ -1,7 +1,13 @@
 class ArtifactsController < ApplicationController
   def index
-    artifacts = Artifact.all.order(:id)
-    render json: artifacts
+    @artifacts = Artifact.where(user_id: current_user.id)
+    render template: "artifacts/index"
+    # render json: artifacts.as_json
+  end
+
+  def all
+    artifacts = Artifact.all
+    render json: artifacts.as_json
   end
 
   def create

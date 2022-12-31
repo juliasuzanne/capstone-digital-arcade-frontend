@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   patch "/users" => "users#update"
   get "/artifacts" => "artifacts#index"
+  get "/artifacts/all" => "artifacts#all"
   get "/users" => "users#index"
   post "/artifacts" => "artifacts#create"
 end

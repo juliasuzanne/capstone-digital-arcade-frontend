@@ -6,6 +6,11 @@ GET http://localhost:3000/users.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
+####
+GET http://localhost:3000/artifacts/2.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
 
 #### update points
 PATCH http://localhost:3000/users.json
