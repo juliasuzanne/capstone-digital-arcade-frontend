@@ -1,7 +1,19 @@
+import { ReduceScore } from "./ReduceScore";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 export function ArtifactShow(props) {
-  const handleClick = () => {
-    props.onBuyArtifact(props.artifact.id);
+  let [currentUser, setCurrentUser] = useState([]);
+  const [errors, setErrors] = useState([]);
+
+  const handleCurrentUser = () => {
+    axios.get("http://localhost:3000/users.json").then((response) => {
+      console.log(response);
+      setCurrentUser(response.data);
+    });
   };
+
+  useEffect(handleCurrentUser, []);
 
   return (
     <div>
@@ -9,7 +21,7 @@ export function ArtifactShow(props) {
       <p> ID: {props.artifact.id} </p>
       <p> {props.artifact.price} </p>
       <p> {props.artifact.description}</p>
-      <button onClick={handleClick}>Buy Artifact</button>
+      <ReduceScore user={currentUser} artifact={props.artifact} />
     </div>
   );
 }
