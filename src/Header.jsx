@@ -50,7 +50,7 @@ export function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/artifacts">
+              <Link className="nav-link" to="/artifacts/all">
                 All Artifacts
               </Link>
             </li>
@@ -70,7 +70,7 @@ export function Header() {
             ) : (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/artifacts/all">
+                  <Link className="nav-link" to="/artifacts">
                     My Artifacts
                   </Link>
                 </li>

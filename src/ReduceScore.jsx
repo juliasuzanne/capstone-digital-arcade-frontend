@@ -9,17 +9,21 @@ export function ReduceScore(props) {
   const currentPoints = props.user.points;
 
   const handlePurchaseArtifact = () => {
-    let newPoints = props.user.points - props.artifact.price_in_points;
-    axios
-      .patch("http://localhost:3000/users", { points: newPoints })
-      .then((window.location.href = "/"))
-      .catch((error) => {
-        console.log(error.response.data.errors);
-        setErrors(error.response.data.errors);
-      });
-    props.onBuy();
+    if (parseInt(props.artifact.price_in_points) < parseInt(props.user.points)) {
+      let newPoints = props.user.points - props.artifact.price_in_points;
+      axios
+        .patch("http://localhost:3000/users", { points: newPoints })
+        .then((window.location.href = "/"))
+        .catch((error) => {
+          console.log(error.response.data.errors);
+          setErrors(error.response.data.errors);
+        });
+      props.onBuy();
 
-    setPoints(0);
+      setPoints(0);
+    } else {
+      console.log("Not enough points to purchase");
+    }
   };
 
   return (
