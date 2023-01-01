@@ -6,7 +6,7 @@ class ArtifactsController < ApplicationController
   end
 
   def all
-    artifacts = Artifact.all
+    artifacts = Artifact.all.where(user_id: nil)
     render json: artifacts.as_json
   end
 
