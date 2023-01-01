@@ -12,7 +12,17 @@ export function ArtifactsAll() {
     });
   };
 
+  const handleRemoveUserIdFromArtifact = (artifact) => {
+    artifact.user_id = null;
+    console.log("USER ID:" + artifact.user_id);
+  };
+
   useEffect(handleIndexArtifacts, []);
 
-  return <ArtifactsIndex artifacts={artifacts} />;
+  return (
+    <div>
+      <h1> Artifacts Available</h1>
+      <ArtifactsIndex artifacts={artifacts} onReturnArtifact={handleRemoveUserIdFromArtifact} />
+    </div>
+  );
 }

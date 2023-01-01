@@ -51,11 +51,6 @@ export function Header() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/artifacts">
-                My Artifacts
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/artifacts/all">
                 All Artifacts
               </Link>
             </li>
@@ -73,9 +68,16 @@ export function Header() {
                 </li>
               </>
             ) : (
-              <li className="nav-link text-decoration-none">
-                <LogoutLink />
-              </li>
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/artifacts/all">
+                    My Artifacts
+                  </Link>
+                </li>
+                <li className="nav-link text-decoration-none">
+                  <LogoutLink />
+                </li>
+              </>
             )}
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { SubmitScore } from "./SubmitScore";
+import { TextAdventure } from "./TextAdventure";
 
 export function Home() {
   let [currentUser, setCurrentUser] = useState([]);
@@ -17,7 +18,7 @@ export function Home() {
 
   return (
     <div>
-      <SubmitScore user={currentUser} />
+      <TextAdventure user={currentUser} />
     </div>
   );
 }

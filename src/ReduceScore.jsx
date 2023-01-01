@@ -25,10 +25,15 @@ export function ReduceScore(props) {
   return (
     <div>
       <p>{currentPoints}</p>
-      <button className="buttonGrey" onClick={handlePurchaseArtifact}>
-        {" "}
-        Buy
-      </button>
+
+      {localStorage.jwt === undefined ? (
+        <p>Login to purchase</p>
+      ) : (
+        <button className="buttonGrey" onClick={handlePurchaseArtifact}>
+          {" "}
+          Buy
+        </button>
+      )}
     </div>
   );
 }

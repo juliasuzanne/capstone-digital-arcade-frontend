@@ -76,8 +76,11 @@ a:active { text-decoration: none; }
   text-align: center;
 }
 
-.buttonGrey {
-  border-radius: 30%;
-  background-color: darkgray;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+.plain {
+ all: unset;
+ padding: 3px;
+}
+
+.plain:hover{
+  background-color: grey;
 }

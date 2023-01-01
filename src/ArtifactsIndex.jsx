@@ -3,7 +3,6 @@ import { useState } from "react";
 export function ArtifactsIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
 
-  console.log(props.posts);
   return (
     <div id="artifacts-index">
       Search Filter:
@@ -21,7 +20,7 @@ export function ArtifactsIndex(props) {
             <p> Name: {artifact.name} </p>
             <img src={artifact.image} alt="" />
             <p> Price: {artifact.price}</p>
-            {/* <button onClick={() => props.onSelectArtifact(artifact)}>More Info</button> */}
+            {/* <button onClick={() => props.onReturnArtifact(artifact)}> Return Artifact, no refunds!</button> */}
           </div>
         ))}
     </div>
