@@ -17,6 +17,8 @@ export function ReduceScore(props) {
         console.log(error.response.data.errors);
         setErrors(error.response.data.errors);
       });
+    props.onBuy();
+
     setPoints(0);
   };
 

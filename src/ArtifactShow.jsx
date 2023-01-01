@@ -6,6 +6,10 @@ export function ArtifactShow(props) {
   let [currentUser, setCurrentUser] = useState([]);
   const [errors, setErrors] = useState([]);
 
+  const handleBuy = () => {
+    props.onBuyArtifact(props.artifact.id);
+  };
+
   const handleCurrentUser = () => {
     axios.get("http://localhost:3000/users.json").then((response) => {
       console.log(response);
@@ -21,7 +25,7 @@ export function ArtifactShow(props) {
       <p> ID: {props.artifact.id} </p>
       <p> {props.artifact.price} </p>
       <p> {props.artifact.description}</p>
-      <ReduceScore user={currentUser} artifact={props.artifact} />
+      <ReduceScore user={currentUser} artifact={props.artifact} onBuy={handleBuy} />
     </div>
   );
 }
