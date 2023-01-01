@@ -12,7 +12,7 @@ export function SubmitScore(props) {
     setPoints(points + 1);
   };
 
-  const getTenPoints = () => {
+  const handleGetPoints = () => {
     let newPoints = points + props.user.points;
     axios
       .patch("http://localhost:3000/users", { points: newPoints })
@@ -32,7 +32,7 @@ export function SubmitScore(props) {
         accrue
       </button>
       <p>{points}</p>
-      <button className="buttonGrey" onClick={getTenPoints}>
+      <button className="buttonGrey" onClick={handleGetPoints}>
         {" "}
         submit score{" "}
       </button>

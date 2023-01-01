@@ -54,11 +54,11 @@ export function Header() {
                 My Artifacts
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/artifacts">
+            <li className="nav-item">
+              <Link className="nav-link" to="/artifacts/all">
                 All Artifacts
               </Link>
-            </li> */}
+            </li>
             {localStorage.jwt === undefined ? (
               <>
                 <li className="nav-item">
