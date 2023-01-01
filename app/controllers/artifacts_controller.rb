@@ -23,4 +23,25 @@ class ArtifactsController < ApplicationController
       render json: { errors: artifact.errors.full_messages }, status: :bad_request
     end
   end
+
+  def update
+    artifact = Artifact.find(params[:id])
+
+    if artifact.is_claimed == true
+      render json: {
+        message: "Artifact unavailable for purchase",
+      }
+    elsif artifact.is_affordable(current_user) == false
+      render json: {
+        message: "You do not have enough points to purchase this item",
+      }
+    else
+      artifact.user_id = current_user.id
+      if artifact.save
+        render json: artifact.as_json
+      else
+        render json: { errors: artifact.errors.full_messages }
+      end
+    end
+  end
 end

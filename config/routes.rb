@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "/artifacts/all" => "artifacts#all"
   get "/users" => "users#index"
   post "/artifacts" => "artifacts#create"
+  patch "/artifacts/:id" => "artifacts#update"
 end

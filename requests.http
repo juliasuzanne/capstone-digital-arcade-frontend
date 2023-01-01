@@ -1,12 +1,11 @@
-@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI0NTA0OTl9.wnKRERbayTaNsaWlmuTwgRXI1k5yrQ6hQh8aWuVsAr0
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI2NjY5NTl9.gjDfow50-5wdKgMTBZs8s4ng7Rreay38MnD9V2jL3LI
 
-
-###
+### SEE USER PROFILE
 GET http://localhost:3000/users.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
-####
+#### SHOW ARTIFACT (DEAD)
 GET http://localhost:3000/artifacts/2.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
@@ -31,7 +30,7 @@ Content-Type: application/json
   "password": "password"
 }
 
-###
+### CREATE ARTIFACT
 POST http://localhost:3000/artifacts.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
@@ -41,4 +40,10 @@ Content-Type: application/json
   "image_url": "https://items.jellyneo.net/layout/imgs/itemdb/mascot_sad_250.png",
   "name": "Sad Mascot"
 }
+
+
+### BUY AN ARTIFACT
+PATCH http://localhost:3000/artifacts/4.json
+Authorization: Bearer {{jwt}}
+
 
