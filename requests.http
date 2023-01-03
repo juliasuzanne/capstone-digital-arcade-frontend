@@ -10,6 +10,21 @@ GET http://localhost:3000/artifacts/2.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
+### SEE ALL IMAGES FOR GAME
+GET http://localhost:3000/images.json
+Content-Type: application/json
+
+
+### CREATE IMAGE FOR GAME
+POST http://localhost:3000/images.json
+Content-Type: application/json
+
+{
+  "image_url" : "https://media.istockphoto.com/id/1340824257/photo/fog-white-clouds-or-haze-for-designs.jpg?s=612x612&w=0&k=20&c=ivtSRdJRlm5C3eIMipJ9JZncbb3nA8pLMMW3Vlfw56A=",
+  "points" : 5,
+  "name" : "cloud"
+}
+
 
 #### update points
 PATCH http://localhost:3000/users.json

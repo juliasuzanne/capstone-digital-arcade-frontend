@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   get "/artifacts/all" => "artifacts#all"
   get "/users" => "users#index"
   post "/artifacts" => "artifacts#create"
+  post "/images" => "images#create"
+  get "/images" => "images#index"
+
   patch "/artifacts/:id" => "artifacts#update"
 end
