@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
-import { Image1 } from "./Images/Image1";
-import { Image2 } from "./Images/Image2";
+import { Image } from "./Images/Image";
+import axios from "axios";
 
 export function FindInImageGame() {
   let [imagesFound, setImagesFound] = useState([]);
-  const [show1, setShow1] = useState(true);
-  const [show2, setShow2] = useState(true);
+  const [show, setShow] = useState(true);
+  const [images, setImages] = useState([]);
 
-  const handleImageClick1 = () => {
-    console.log("1");
-    setShow1(false);
+  const handleIndexImages = () => {
+    axios.get("http://localhost:3000/images.json").then((response) => {
+      console.log(response);
+      setImages(response.data);
+    });
   };
-  const handleImageClick2 = () => {
-    console.log("2");
-    setShow2(false);
+
+  const handleImageClick = () => {
+    setShow(false);
   };
+
+  useEffect(handleIndexImages, []);
 
   return (
     <div>
-      <Image1 show={show1} click={handleImageClick1} />
-      <Image2 show={show2} click={handleImageClick2} />
+      <Image show={show} click={handleImageClick} images={images} />
     </div>
   );
 }
