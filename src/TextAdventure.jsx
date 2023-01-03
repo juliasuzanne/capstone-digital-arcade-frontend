@@ -8,7 +8,7 @@ export function TextAdventure(props) {
   let [text, setText] = useState("Let's get started");
   let [step, setStep] = useState(0);
   let [buttonText, setButtonText] = useState("Start");
-  let [buttonTextTwo, setButtonTextTwo] = useState("Second button");
+  let [buttonTextTwo, setButtonTextTwo] = useState("Now");
 
   const currentPoints = props.user.points;
 
@@ -30,15 +30,31 @@ export function TextAdventure(props) {
 
   const handleChangeText = () => {
     if (step === 0) {
-      setText("Step2");
-      setButtonText("Go to Step 2");
-      setButtonTextTwo("Go to Step 1");
+      setText("We've started");
+      setButtonText("Now what happens?");
+      setButtonTextTwo("I don't understand.");
       setStep(1);
-    } else if (step === 1) {
-      setText("Step 1");
+      setPoints(points + 20);
+    }
+  };
+
+  const handleChangeTextTwo = () => {
+    if (step === 0) {
+      setText("Now?");
+      setButtonText("Yes, Now");
+      setButtonTextTwo("Tell me a story");
       setStep(2);
-      setButtonText("Go to Step 3");
-      setButtonText("Got to Step 4");
+      setPoints(points + 20);
+    } else if (step === 1) {
+      setText("Please try harder to understand.");
+      setStep(4);
+      setButtonText("End");
+      setButtonText("End");
+    } else if (step === 2) {
+      setText("Here is your story:");
+      setStep(4);
+      setButtonText("End");
+      setButtonText("End");
     }
   };
 
@@ -49,7 +65,7 @@ export function TextAdventure(props) {
         {" "}
         {buttonText}
       </button>
-      <button className="plain" onClick={handleChangeText}>
+      <button className="plain" onClick={handleChangeTextTwo}>
         {" "}
         {buttonTextTwo}
       </button>

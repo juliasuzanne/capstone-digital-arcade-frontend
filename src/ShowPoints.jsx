@@ -7,8 +7,7 @@ export function ShowPoints(props) {
           <p>Guest</p>
         ) : (
           <div>
-            <p>User: {props.user.name}</p>
-            <p>Points: {props.user.points}</p>
+            <p>You have {props.user.points} points</p>
           </div>
         )}
 

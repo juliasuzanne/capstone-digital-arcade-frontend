@@ -27,6 +27,38 @@ a:hover { text-decoration: none; color: black;}
 
 a:active { text-decoration: none; }
 
+button{
+  background-color: transparent;
+  border-width: 0;
+  background-size: 100%;
+}
+
+.hand {
+  position: fixed;
+  left:30px;
+  width: 400px;
+  z-index: 3;
+}
+
+.scene {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#pupils {
+  position: absolute;
+  left: var(--left);
+  top: var(--top);
+}
+
 
 
 #signup {

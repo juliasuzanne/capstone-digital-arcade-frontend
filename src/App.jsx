@@ -12,6 +12,7 @@ import axios from "axios";
 import { ArtifactsAll } from "./ArtifactsAll";
 import { NotJustMyArtifacts } from "./NotJustMyArtifacts";
 import { Index } from "./Index";
+import { FindInImageGame } from "./FindInImageGame";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/artifacts" element={<ArtifactsAll />} />
           <Route path="/artifacts/all" element={<NotJustMyArtifacts />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/image" element={<FindInImageGame />} />
         </Routes>
       </BrowserRouter>
     </div>
