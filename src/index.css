@@ -18,6 +18,36 @@ div {
 
 a:link { text-decoration: none; }
 
+.showhide {
+  position: absolute;
+  z-index: 5;
+  background-color:black;
+  color: white;
+}
+
+#image1 {
+  top: 500px;
+  left: 400px;
+}
+#image2 {
+  top: 1000px;
+  left: 400px;
+}
+#image3 {
+  top: 500px;
+  left: 900px;
+}
+#image4 {
+  top: 600px;
+  left: 60px;
+}
+
+.imagegamebackground {
+  position: absolute;
+  left: 50px;
+  top: 370px;
+  z-index: 0;
+}
 
 a:visited { text-decoration: none;}
 
