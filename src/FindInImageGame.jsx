@@ -1,27 +1,25 @@
 import { useEffect, useState } from "react";
+import { Image1 } from "./Images/Image1";
+import { Image2 } from "./Images/Image2";
 
 export function FindInImageGame() {
   let [imagesFound, setImagesFound] = useState([]);
-  let [show1, setShow1] = useState("true");
-  let [show2, setShow2] = useState("true");
+  const [show1, setShow1] = useState(true);
+  const [show2, setShow2] = useState(true);
 
   const handleImageClick1 = () => {
     console.log("1");
-    setShow1("false");
+    setShow1(false);
   };
   const handleImageClick2 = () => {
     console.log("2");
-    setShow2("false");
+    setShow2(false);
   };
 
   return (
     <div>
-      <button show={show1} onClick={handleImageClick1}>
-        image1
-      </button>
-      <button show={show2} onClick={handleImageClick2}>
-        image2
-      </button>
+      <Image1 show={show1} click={handleImageClick1} />
+      <Image2 show={show2} click={handleImageClick2} />
     </div>
   );
 }
