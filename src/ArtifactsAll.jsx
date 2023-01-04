@@ -21,7 +21,6 @@ export function ArtifactsAll() {
 
   return (
     <div>
-      <h1> Artifacts Available</h1>
       <ArtifactsIndex artifacts={artifacts} onReturnArtifact={handleRemoveUserIdFromArtifact} />
     </div>
   );

@@ -28,17 +28,24 @@ export function Face() {
   let root = document.documentElement;
 
   root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX - 400) * 0.035) + "px");
-    root.style.setProperty("--top", String((event.clientY - 300) * 0.04) + "px");
+    root.style.setProperty("--left", String((event.clientX - 800) * 0.025) + "px");
+    root.style.setProperty("--top", String((event.clientY - 500) * 0.04) + "px");
   });
 
   function handleArtifactClick() {
     console.log("test");
     window.location.href = "/artifacts/all";
   }
+
   function handleMyArtifactClick() {
+    {
+      localStorage.jwt === undefined ? console.log("Please login") : (window.location.href = "/artifacts");
+    }
+  }
+
+  function handleImageGameClick() {
     console.log("test");
-    window.location.href = "/artifacts";
+    window.location.href = "/image";
   }
   return (
     <div id="face">
@@ -91,6 +98,15 @@ export function Face() {
             src={egg}
             style={{
               height: "20vh",
+            }}
+          />
+        </button>
+
+        <button id="egg" onClick={handleImageGameClick}>
+          <img
+            src={egg}
+            style={{
+              height: "10vh",
             }}
           />
         </button>

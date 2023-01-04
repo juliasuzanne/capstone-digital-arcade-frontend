@@ -8,6 +8,8 @@ import axios from "axios";
 
 export function FindInImageGame(props) {
   let [imagesFound, setImagesFound] = useState(0);
+
+  let [imagesFoundArray, setImagesFoundArray] = useState([]);
   const [show1, setShow1] = useState(true);
   const [show2, setShow2] = useState(true);
   const [show3, setShow3] = useState(true);
@@ -48,13 +50,20 @@ export function FindInImageGame(props) {
   const handleImageClick1 = () => {
     setShow1(false);
     setImagesFound(imagesFound + 1);
+    let array = imagesFoundArray;
+    array.push("Image1");
+    setImagesFoundArray(array);
     setPoints(points + 1);
     foundImage();
+    console.log(imagesFoundArray);
   };
 
   const handleImageClick2 = () => {
     setShow2(false);
     setImagesFound(imagesFound + 1);
+    let array = imagesFoundArray;
+    array.push("Image2");
+    setImagesFoundArray(array);
     setPoints(points + 1);
     foundImage();
   };
@@ -62,6 +71,9 @@ export function FindInImageGame(props) {
   const handleImageClick3 = () => {
     setShow3(false);
     setImagesFound(imagesFound + 1);
+    let array = imagesFoundArray;
+    array.push("Image3");
+    setImagesFoundArray(array);
     setPoints(points + 1);
     foundImage();
   };
@@ -69,6 +81,9 @@ export function FindInImageGame(props) {
   const handleImageClick4 = () => {
     setShow4(false);
     setImagesFound(imagesFound + 1);
+    let array = imagesFoundArray;
+    array.push("Image4");
+    setImagesFoundArray(array);
     setPoints(points + 1);
     foundImage();
   };
@@ -81,6 +96,11 @@ export function FindInImageGame(props) {
       <Image4 show={show4} click={handleImageClick4} image={Image4} />
       <p>Message: {message}</p>
       <p> {points} </p>
+      <p>
+        {imagesFoundArray.map((element) => {
+          return <li>{element}</li>;
+        })}
+      </p>
       <p> {imagesFound} </p>
       <img
         className="imagegamebackground"

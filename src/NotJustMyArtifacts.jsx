@@ -46,6 +46,8 @@ export function NotJustMyArtifacts() {
 
   return (
     <div>
+      <h1> Artifacts Available</h1>
+
       <NotJustMyArtifactsIndex artifacts={artifacts} onShowArtifact={handleShowArtifact} />
       <Modal show={isArtifactsShowVisible} onClose={handleClose}>
         <ArtifactShow artifact={currentArtifact} onBuyArtifact={handleBuyArtifact} />

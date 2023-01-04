@@ -6,6 +6,22 @@ body {
   font-family: sans-serif;
 }
 
+.canvas {
+display: inline-block;
+width: 500px;
+height: auto;
+background-color: white;
+margin: 0px;
+padding: 0px;
+}
+
+.draw{
+  height:20px;
+  width:20px;
+  margin: 0px;
+  float: left;
+
+}
 
 header {
   position: sticky;
@@ -49,6 +65,13 @@ a:link { text-decoration: none; }
   z-index: 0;
 }
 
+.homebackground {
+  position: absolute;
+  height: 50vh;
+  z-index: 0;
+  
+}
+
 a:visited { text-decoration: none;}
 
 
@@ -62,6 +85,7 @@ button{
   border-width: 0;
   background-size: 100%;
 }
+
 
 .hand {
   position: fixed;
@@ -83,13 +107,11 @@ html {
   scroll-behavior: smooth;
 }
 
-#pupils {
+#pupils{
   position: absolute;
   left: var(--left);
   top: var(--top);
 }
-
-
 
 #signup {
   margin: auto;
@@ -108,3 +130,80 @@ html {
   color: rgb(10, 43, 10);
   text-align: center;
 }
+
+.curtains {
+  position: absolute;
+  z-index: 1;
+  height: 675px;
+  left: 50px;
+  top: 300px;
+}
+
+.light{
+  position: absolute;
+  z-index: 3;
+  height: 675px;
+  left: 50px;
+  top: 300px;
+
+}
+
+.opencurtain{
+  z-index: 0;
+  height: 675px;
+  left: 50px;
+  top: 300px;
+  position:absolute;
+}
+
+.roombackground {
+  position: absolute;
+  z-index: 2;
+  height: 675px;
+  left: 50px;
+  top: 300px;
+
+}
+
+#lightswitch {
+  background-color:transparent;
+  color: transparent;
+  position: absolute;
+  z-index: 15;
+  top: 590px;
+  left: 740px;
+  width: 42px;
+  height: 40px;
+}
+
+#opencurtain {
+  background-color:transparent;
+  color: transparent;
+  position: absolute;
+  z-index: 15;
+  top: 500px;
+  height: 250px;
+  width:110px;
+  left: 590px;
+
+}
+
+.face {
+  z-index: 12;
+  position: absolute;
+  height: 675px;
+  top: 210px;
+  left: 50px;
+  top: 300px;
+
+}
+
+#pupilspainting {
+  position: relative;
+  left: var(--left);
+  top: var(--top);
+  z-index: 10;
+  height: 675px;
+}
+
+

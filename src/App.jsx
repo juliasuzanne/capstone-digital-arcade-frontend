@@ -12,7 +12,9 @@ import axios from "axios";
 import { ArtifactsAll } from "./ArtifactsAll";
 import { NotJustMyArtifacts } from "./NotJustMyArtifacts";
 import { Index } from "./Index";
+import { ButtonRoom } from "./ButtonRoom";
 import { ImageGameHandler } from "./ImageGameHandler";
+import { Draw } from "./Draw";
 function App() {
   return (
     <div>
@@ -20,6 +22,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/draw" element={<Draw />} />
+          <Route path="/hotel" element={<ButtonRoom />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Index />} />
           <Route path="/newartifact" element={<ArtifactsNew />} />
