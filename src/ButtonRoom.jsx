@@ -12,6 +12,7 @@ export function ButtonRoom() {
   const [mousePos, setMousePos] = useState({});
   const [showLight, setShowLight] = useState(false);
   const [openCurtain, setOpenCurtain] = useState(true);
+  const [image, setImage] = useState("./src/assets/images/curtainclosebutton.png");
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -24,13 +25,6 @@ export function ButtonRoom() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
-  let root = document.documentElement;
-
-  root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX - 8000) * 0.013) + "px");
-    root.style.setProperty("--top", String((event.clientY + 6200) * 0.014) + "px");
-  });
 
   const handleShowLight = () => {
     if (showLight === false) {
@@ -61,6 +55,9 @@ export function ButtonRoom() {
   const exitRoom = () => {
     window.location.href = "/";
   };
+  const catalog = () => {
+    window.location.href = "/image";
+  };
 
   return (
     <div>
@@ -70,15 +67,17 @@ export function ButtonRoom() {
       <button onClick={exitRoom}>
         <img id="exit" src="./src/assets/images/exit.png" />
       </button>
-      <button id="opencurtain" onClick={handleOpenCurtain}>
-        {" "}
-        toggle curtain{" "}
-      </button>
-      <Curtain show={openCurtain} />
+      <button
+        id="opencurtain"
+        onMouseEnter={() => setImage("./src/assets/images/curtainopenbutton.png")}
+        onMouseLeave={() => setImage("./src/assets/images/curtainclosebutton.png")}
+        onClick={catalog}
+      ></button>
+      {/* <Curtain show={openCurtain} /> */}
 
       <img className="counter" src="./src/assets/images/counter.png" />
       <img className="roombackground" src="./src/assets/images/home_background.png" />
-      <img className="opencurtain" src="./src/assets/images/opencurtain.png" />
+      <img className="opencurtain" src={image} />
 
       <Light show={showLight} />
 

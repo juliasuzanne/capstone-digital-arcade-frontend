@@ -152,9 +152,9 @@ html {
 
 .opencurtain{
   z-index: 0;
-  height: 675px;
-  left: 50px;
-  top: 20px;
+  height: 340px;
+  left: 550px;
+  top: 180px;
   position:absolute;
 }
 
