@@ -3,6 +3,10 @@ import { useInterval } from "./useInterval";
 import { CANVAS_SIZE, SNAKE_START, APPLE_START, SCALE, SPEED, DIRECTIONS } from "./constants";
 import axios from "axios";
 
+// FOUNDATION CODE FROM THIS VIDEO: https://www.youtube.com/watch?v=OrpJdVP-hO4
+
+// YOUTUBE VIDEO GITHUB LINK: https://github.com/weibenfalk/react-snake-starter-files
+
 export function Snake() {
   const canvasRef = useRef();
   const [snake, setSnake] = useState(SNAKE_START);
