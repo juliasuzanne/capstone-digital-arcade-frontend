@@ -53,7 +53,7 @@ export function ButtonRoom() {
   };
 
   const exitRoom = () => {
-    window.location.href = "/";
+    window.location.href = "/outside";
   };
 
   const seeArtifacts = () => {

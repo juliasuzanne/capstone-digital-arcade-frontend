@@ -4,6 +4,23 @@
   background-size:cover;
 }
 
+.sky{
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+#moon{
+  background-color: black;
+  padding: 1px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: rgb(130, 130, 130);
