@@ -60,7 +60,7 @@ export function ButtonRoom() {
     window.location.href = "/artifacts/all";
   };
   const catalog = () => {
-    window.location.href = "/artifactroom";
+    window.location.href = "/artifactnew";
   };
 
   return (

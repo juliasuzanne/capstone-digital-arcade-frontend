@@ -1,4 +1,4 @@
-.modal-background {
+.cmodal-background {
   display: block;
   position: absolute;
   top: 400px;
@@ -9,7 +9,7 @@
   background-color:transparent;
 }
 
-.modal-main {
+.cmodal-main {
   position: absolute;
   background: lightgrey;
   width: 500px;
@@ -20,7 +20,7 @@
   padding: 1em;
 }
 
-.modal-main button.close {
+.cmodal-main button.close {
   font-size: 1em;
   background: none;
   border: none;
