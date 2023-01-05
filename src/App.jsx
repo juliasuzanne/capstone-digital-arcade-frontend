@@ -17,6 +17,7 @@ import { ImageGameHandler } from "./ImageGameHandler";
 import { Draw } from "./Draw";
 import { Moon } from "./Moon";
 import { Snake } from "./Snake";
+import { ArtifactRoom } from "./ArtifactRoom";
 function App() {
   return (
     <div>
@@ -24,13 +25,15 @@ function App() {
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/artifactroom" element={<ArtifactRoom />} />
+          <Route path="/catalog" element={<ArtifactRoom />} />
           <Route path="/snake" element={<Snake />} />
           <Route path="/outside" element={<Moon />} />
           <Route path="/draw" element={<Draw />} />
           <Route path="/hotel" element={<ButtonRoom />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Index />} />
-          <Route path="/newartifact" element={<ArtifactsNew />} />
+          <Route path="/artifactcatalog" element={<ArtifactsNew />} />
           <Route path="/artifacts" element={<ArtifactsAll />} />
           <Route path="/artifacts/all" element={<NotJustMyArtifacts />} />
           <Route path="/game" element={<Game />} />

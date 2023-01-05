@@ -103,6 +103,17 @@ button{
 
 }
 
+#artifacts-index{
+  float: left;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.showingartifact {
+  width: 300px;
+}
+
 html {
   scroll-behavior: smooth;
 }

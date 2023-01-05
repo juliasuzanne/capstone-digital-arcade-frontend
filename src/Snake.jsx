@@ -82,6 +82,7 @@ export function Snake() {
     setDir([0, -1]);
     setSpeed(SPEED);
     setGameOver(false);
+    setPoints(0);
   };
 
   useEffect(() => {

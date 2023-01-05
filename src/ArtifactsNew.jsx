@@ -3,6 +3,7 @@ import axios from "axios";
 
 export function ArtifactsNew() {
   const [errors, setErrors] = useState([]);
+
   const handleNewArtifact = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
@@ -13,7 +14,7 @@ export function ArtifactsNew() {
   const handleCreateArtifact = (params) => {
     axios
       .post("http://localhost:3000/artifacts", params)
-      .then((window.location.href = "/"))
+      // .then((window.location.href = "/artifacts/all"))
       .catch((error) => {
         console.log(error.response.data.errors);
         setErrors(error.response.data.errors);
@@ -26,20 +27,26 @@ export function ArtifactsNew() {
       {errors.map((error) => (
         <li key={error}>{error}</li>
       ))}
-      ;
+
       <form onSubmit={handleNewArtifact}>
         <div>
           Name:
-          <input name="name" type="string" />
-        </div>
-        <div>
-          Image Url:
-          <input name="image_url" type="url" />
+          <input name="name" className="form-control" type="string" />
         </div>
         <div>
           Price:
-          <input name="price_in_points" type="integer" />
+          <input className="form-control" name="price_in_points" type="integer" />
         </div>
+        <div>
+          <input
+            hidden
+            className="form-control"
+            name="image_url"
+            type="string"
+            defaultValue="/src/assets/images/egg.png"
+          ></input>
+        </div>
+        <img src="./src/assets/images/egg.png" width="300px" />
         <button type="submit">Submit</button>
       </form>
     </div>
