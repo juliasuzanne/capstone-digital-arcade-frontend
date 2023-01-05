@@ -62,3 +62,28 @@ PATCH http://localhost:3000/artifacts/4.json
 Authorization: Bearer {{jwt}}
 
 
+### CREATE ITEM
+POST http://localhost:3000/items.json 
+Content-Type: application/json
+
+{
+ "image_url": "./app/images/vhs.png"
+}
+
+### SEE ALL ITEMS
+GET http://localhost:3000/items.json 
+Content-Type: application/json
+
+### SHOW ITEM
+GET http://localhost:3000/items/9.json
+
+### UPDATE ITEM
+PATCH http://localhost:3000/items/9.json
+Content-Type: application/json
+
+{
+  "image_url": 90
+}
+
+
+### DESTROY ITEM

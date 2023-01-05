@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def index
     items = Item.all
     render json: items.as_json
@@ -8,9 +7,9 @@ class ItemsController < ApplicationController
   def create
     item = Item.new(image_url: params[:image_url])
     if item.save
-      render json: {message: "Item created successfully."}, status: :created
+      render json: { message: "Item created successfully." }, status: :created
     else
-      render json: {errors.item.erros.full_messages}, status: :bad_request
+      render json: { errors: item.errors.full_messages }, status: :bad_request
     end
   end
 
@@ -19,14 +18,18 @@ class ItemsController < ApplicationController
     item.image_url = params[:image_url]
     if item.save
       render json: item
-    else 
-      render json: { errors: item.errors.full_messages}, status: :bad_request
+    else
+      render json: { errors: item.errors.full_messages }, status: :bad_request
     end
+  end
+
+  def show
+    item = Item.find(params[:id])
+    render json: item.as_json
   end
 
   def destroy
     item = Item.find(params[:id])
     item.destroy
   end
-  
 end
