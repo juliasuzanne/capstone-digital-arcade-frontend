@@ -16,6 +16,7 @@ import { ButtonRoom } from "./ButtonRoom";
 import { ImageGameHandler } from "./ImageGameHandler";
 import { Draw } from "./Draw";
 import { Moon } from "./Moon";
+import { Snake } from "./Snake";
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/snake" element={<Snake />} />
           <Route path="/outside" element={<Moon />} />
           <Route path="/draw" element={<Draw />} />
           <Route path="/hotel" element={<ButtonRoom />} />

@@ -133,6 +133,16 @@ html {
 
 
 /* BUTTON ROOM */
+
+.buttonRoom{
+  background-color: rgb(117, 119, 104);
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 180vh;
+  top: 0;
+  left: 0;
+}
 .curtains {
   position: absolute;
   z-index: 1;
@@ -246,3 +256,4 @@ html {
   z-index: 10;
   height: 675px;
 } */
+

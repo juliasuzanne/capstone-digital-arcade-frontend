@@ -64,7 +64,7 @@ export function ButtonRoom() {
   };
 
   return (
-    <div>
+    <div className="buttonRoom">
       <button onClick={handleShowLight}>
         <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
       </button>
