@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   get "/images" => "images#index"
 
   patch "/artifacts/:id" => "artifacts#update"
+
+  get "/items" => "items#create"
+  get "/items/:id" => "items#show"
+  delete "/items/:id" => "items#destroy"
+  patch "/items/:id" => "items#update"
 end

@@ -12,7 +12,6 @@ class ArtifactsController < ApplicationController
 
   def create
     artifact = Artifact.new(
-      user_id: current_user.id,
       price_in_points: params[:price_in_points],
       image_url: params[:image_url],
       name: params[:name],
