@@ -199,7 +199,26 @@ html {
 
 }
 
-.face {
+.talk {
+  position: absolute;
+  background-color: transparent;
+  color: transparent;
+  z-index: 15;
+  top: 570px;
+  height: 90px;
+  width:50px;
+  left: 520px;
+}
+
+#exit {
+  position: absolute;
+  z-index: 15;
+  top: 350px;
+  height: 60px;
+  left: 100px;
+}
+
+/* .face {
   z-index: 12;
   position: absolute;
   height: 675px;
@@ -215,6 +234,4 @@ html {
   top: var(--top);
   z-index: 10;
   height: 675px;
-}
-
-
+} */

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ShowPoints } from "./ShowPoints";
 import axios from "axios";
 import { UserProfile } from "./UserProfile";
+import "./header.css";
 
 export function Header() {
   let [currentUser, setCurrentUser] = useState([]);
@@ -20,68 +21,31 @@ export function Header() {
   return (
     <div>
       <header>
-        <div className="container-fluid">
-          <a className="navbar-brand" to="#"></a>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand">
-              <p className="gridded">Welcome, {currentUser.name} </p>
-              <ShowPoints user={currentUser} />
-            </a>
-            <img src={currentUser.image_url} className="circular-images" />
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Home
+        <p className="header-item">Welcome, {currentUser.name} </p>
+        <div className="header-item">
+          {" "}
+          <ShowPoints user={currentUser} />
+        </div>
+        <div className="user-item">
+          <img src={currentUser.image_url} className="circular-images" />
+          {localStorage.jwt === undefined ? (
+            <>
+              <li className="header-item">
+                <Link className="nav-link" to="/signup">
+                  Signup
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/game">
-                  Game
+              <li className="header-item">
+                <Link className="nav-link" to="/login">
+                  Login
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/artifacts/all">
-                  All Artifacts
-                </Link>
-              </li>
-              {localStorage.jwt === undefined ? (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/signup">
-                      Signup
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/login">
-                      Login
-                    </Link>
-                  </li>
-                </>
-              ) : (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/artifacts">
-                      My Artifacts
-                    </Link>
-                  </li>
-                  <li className="nav-link text-decoration-none">
-                    <LogoutLink />
-                  </li>
-                </>
-              )}
-            </ul>
-          </nav>
+            </>
+          ) : (
+            <li className="nav-link text-decoration-none">
+              <LogoutLink />
+            </li>
+          )}
         </div>
       </header>
     </div>

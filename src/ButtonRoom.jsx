@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Curtain } from "./Images/Curtain";
 import { Light } from "./Images/Light";
-import face from "./assets/images/facepainting.png";
-import pupils from "./assets//images/pupilspainting.png";
-import { autoType } from "d3";
+// import face from "./assets/images/facepainting.png";
+// import pupils from "./assets//images/pupilspainting.png";
+// import { autoType } from "d3";
+import { ConversationModal } from "./ConversationModal";
+import { Home } from "./Home";
 
 export function ButtonRoom() {
   const [mousePos, setMousePos] = useState({});
@@ -45,10 +47,27 @@ export function ButtonRoom() {
     }
   };
 
+  let [isConversationVisible, setIsConversationVisible] = useState(false);
+
+  const handleShowConversation = () => {
+    setIsConversationVisible(true);
+  };
+
+  const handleCloseConversation = () => {
+    setIsConversationVisible(false);
+  };
+
+  const exitRoom = () => {
+    window.location.href = "/";
+  };
+
   return (
     <div>
       <button onClick={handleShowLight}>
         <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
+      </button>
+      <button onClick={exitRoom}>
+        <img id="exit" src="./src/assets/images/exit.png" />
       </button>
       <button id="opencurtain" onClick={handleOpenCurtain}>
         {" "}
@@ -62,7 +81,13 @@ export function ButtonRoom() {
 
       <Light show={showLight} />
 
-      <p> Family </p>
+      <button className="talk" onClick={handleShowConversation}>
+        {" "}
+        talk{" "}
+      </button>
+      <ConversationModal show={isConversationVisible} onClose={handleCloseConversation}>
+        <Home />
+      </ConversationModal>
     </div>
   );
 }

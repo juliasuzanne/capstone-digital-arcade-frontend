@@ -1,0 +1,11 @@
+
+.header-item {
+  z-index: 50;
+  position: fixed;
+}
+
+.user-item {
+  z-index: 50;
+  position: fixed;
+  right: 20px;
+}
