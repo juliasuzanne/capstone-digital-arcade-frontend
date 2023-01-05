@@ -167,6 +167,15 @@ html {
 
 }
 
+.counter{
+  position: absolute;
+  z-index: 3;
+  height: 675px;
+  left: 50px;
+  top: 300px;
+}
+
+
 #lightswitch {
   background-color:transparent;
   color: transparent;

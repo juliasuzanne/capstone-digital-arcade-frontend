@@ -8,8 +8,6 @@ import { autoType } from "d3";
 export function ButtonRoom() {
   const [mousePos, setMousePos] = useState({});
   const [showLight, setShowLight] = useState(false);
-  const [left, setLeft] = useState({});
-  const [top, setTop] = useState({});
   const [openCurtain, setOpenCurtain] = useState(true);
 
   useEffect(() => {
@@ -49,26 +47,17 @@ export function ButtonRoom() {
 
   return (
     <div>
-      <div>
-        <img className="face" src={face} />
-        <img
-          id="pupilspainting"
-          src={pupils}
-          style={{
-            position: "relative",
-            height: "100vh",
-          }}
-        />
-      </div>
-      <button id="lightswitch" onClick={handleShowLight}>
-        toggle light
+      <button onClick={handleShowLight}>
+        <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
       </button>
       <button id="opencurtain" onClick={handleOpenCurtain}>
         {" "}
         toggle curtain{" "}
       </button>
       <Curtain show={openCurtain} />
-      <img className="roombackground" src="./src/assets/images/hotel.png" />
+
+      <img className="counter" src="./src/assets/images/counter.png" />
+      <img className="roombackground" src="./src/assets/images/home_background.png" />
       <img className="opencurtain" src="./src/assets/images/opencurtain.png" />
 
       <Light show={showLight} />
