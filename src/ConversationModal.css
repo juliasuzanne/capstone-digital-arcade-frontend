@@ -14,14 +14,14 @@
   background: lightgrey;
   width: 500px;
   height: auto;
-  top: 450px;
+  top: 150px;
   left: 500px;
   transform: translate(-50%,-50%);
   padding: 1em;
 }
 
 .modal-main button.close {
-  font-size: 2em;
+  font-size: 1em;
   background: none;
   border: none;
   position: absolute;
