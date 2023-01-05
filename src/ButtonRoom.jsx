@@ -55,6 +55,10 @@ export function ButtonRoom() {
   const exitRoom = () => {
     window.location.href = "/";
   };
+
+  const seeArtifacts = () => {
+    window.location.href = "/artifacts/all";
+  };
   const catalog = () => {
     window.location.href = "/image";
   };
@@ -64,6 +68,7 @@ export function ButtonRoom() {
       <button onClick={handleShowLight}>
         <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
       </button>
+      <button id="artifactbox" onClick={seeArtifacts}></button>
       <button onClick={exitRoom}>
         <img id="exit" src="./src/assets/images/exit.png" />
       </button>

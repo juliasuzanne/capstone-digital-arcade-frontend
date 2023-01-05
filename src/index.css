@@ -218,6 +218,17 @@ html {
   left: 100px;
 }
 
+#artifactbox{
+  background-color:transparent;
+  color: transparent;
+  position: absolute;
+  z-index: 15;
+  top: 400px;
+  height: 40px;
+  width:280px;
+  left: 360px;
+}
+
 /* .face {
   z-index: 12;
   position: absolute;
