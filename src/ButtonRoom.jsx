@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Curtain } from "./Images/Curtain";
 import { Light } from "./Images/Light";
+import { Header } from "./Header";
 // import face from "./assets/images/facepainting.png";
 // import pupils from "./assets//images/pupilspainting.png";
 // import { autoType } from "d3";
