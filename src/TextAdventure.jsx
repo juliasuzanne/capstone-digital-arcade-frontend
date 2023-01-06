@@ -32,7 +32,7 @@ export function TextAdventure(props) {
     if (step === 0) {
       setText("I'm the same as I was yesterday and the same as I will be tomorrow.");
       setButtonText("Can I buy something here?");
-      setButtonTextTwo("Do you need help?");
+      setButtonTextTwo("What is your name?");
       setStep(1);
     } else if (step === 1) {
       setText(
@@ -41,6 +41,8 @@ export function TextAdventure(props) {
       setButtonText("Thanks, that's enough.");
       setButtonTextTwo("How do I earn points from this world?");
       setStep(2);
+    } else if (step === 2) {
+      props.onClose();
     } else if (step === 3) {
       setText(
         "Use the exit to go outside. You can go in this curtained room here to catalog artifacts for display. You can go explore downstairs. Also - just poke around and see what you can find. There are always new mysteries waiting to be solved."
@@ -53,10 +55,14 @@ export function TextAdventure(props) {
       setStep(10);
       setButtonText("");
       setButtonTextTwo("");
+    } else if (step === 6) {
+      props.onClose();
     } else if (step === 7) {
-      window.location.href = "/hotel";
+      props.onClose();
     } else if (step === 4) {
-      window.location.href = "/hotel";
+      props.onClose();
+    } else if (step === 11) {
+      props.onClose();
     }
   };
 
@@ -66,6 +72,11 @@ export function TextAdventure(props) {
       setButtonText("Can you give me an overview on how this room works?");
       setButtonTextTwo("I'm feeling lost in life in general. I could use any advice.");
       setStep(3);
+    } else if (step === 1) {
+      setText("My name is Julia.");
+      setButtonText("Mine, too.");
+      setButtonTextTwo("So is mine.");
+      setStep(11);
     } else if (step === 2) {
       setText(
         "You earn points by fixing things around here and cleaning up. To see what tasks need to get done, you can check this computer over to my left."
@@ -95,7 +106,9 @@ export function TextAdventure(props) {
       setButtonText("");
       setButtonTextTwo("");
     } else if (step === 8) {
-      window.location.href = "/hotel";
+      props.onClose();
+    } else if (step === 11) {
+      props.onClose();
     }
   };
 

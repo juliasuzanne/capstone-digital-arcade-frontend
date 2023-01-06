@@ -17,6 +17,7 @@ import { ImageGameHandler } from "./ImageGameHandler";
 import { Draw } from "./Draw";
 import { Moon } from "./Moon";
 import { Snake } from "./Snake";
+import { Computer } from "./Computer";
 import { ArtifactRoom } from "./ArtifactRoom";
 function App() {
   return (
@@ -29,15 +30,17 @@ function App() {
           <Route path="/catalog" element={<ArtifactRoom />} />
           <Route path="/snake" element={<Snake />} />
           <Route path="/outside" element={<Moon />} />
+          <Route path="/face" element={<Index />} />
           <Route path="/draw" element={<Draw />} />
           <Route path="/hotel" element={<ButtonRoom />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<ButtonRoom />} />
           <Route path="/artifactcatalog" element={<ArtifactsNew />} />
           <Route path="/artifacts" element={<ArtifactsAll />} />
           <Route path="/artifacts/all" element={<NotJustMyArtifacts />} />
           <Route path="/game" element={<Game />} />
           <Route path="/image" element={<ImageGameHandler />} />
+          <Route path="/computer" element={<Computer />} />
         </Routes>
       </BrowserRouter>
     </div>

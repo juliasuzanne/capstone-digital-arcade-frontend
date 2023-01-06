@@ -89,7 +89,7 @@ export function Snake() {
     const context = canvasRef.current.getContext("2d");
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    context.fillStyle = "white";
+    context.fillStyle = "black";
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     context.fillStyle = "lightgrey";
     context.fillRect(apple[0], apple[1], 1, 1);
@@ -99,7 +99,7 @@ export function Snake() {
     let newPoints = points + currentUser.points;
     axios
       .patch("http://localhost:3000/users", { points: newPoints })
-      .then((window.location.href = "/hotel"))
+      .then((window.location.href = "/computer"))
       .catch((error) => {
         console.log(error.response.data.errors);
         setErrors(error.response.data.errors);

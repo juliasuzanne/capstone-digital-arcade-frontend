@@ -99,8 +99,6 @@ a:active { text-decoration: none; }
 }
 
 .plain:hover{
-  text-decoration: underline;  
-  text-decoration-color: black;
-  text-decoration-thickness: 2px;
+  text-shadow: 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 0 0 10px black, 0 0 11px black, 0 0 12px black, 0 0 13px black, 0 0 14px black, 0 0 15px black, 0 0 16px black, 0 0 17px black, 0 0 18px black, 0 0 19px black;
   
 }

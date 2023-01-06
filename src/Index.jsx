@@ -29,7 +29,7 @@ export function Index() {
 
   return (
     <div>
-      <ShowMap
+      {/* <ShowMap
         show={isMapVisible}
         image={<img src="/src/assets/images/map.png" width="500" />}
         onClose={handleClose}
@@ -38,7 +38,7 @@ export function Index() {
         <button onClick={handleShowMap}>
           <img className="hand" src="/src/assets/images/hand_map.png" width="200px" />
         </button>
-      </div>
+      </div> */}
       {/* <div>
         <img className="scene" src="/src/assets/images/scene.jpg"/>
       </div> */}

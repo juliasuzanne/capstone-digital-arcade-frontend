@@ -1,0 +1,33 @@
+.comp-modal-background {
+  display: block;
+  position: absolute;
+  width:100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left:0;
+  background-color:transparent;
+}
+
+
+.comp-modal-main {
+  position: absolute;
+  background-image: url("/src/assets/images/computermodal.png");
+  background-size: cover;
+  width: 30vw;
+  translate: rotate(-15deg);
+  height: 50vh;
+  left: 400px;
+  top: 100px;
+  color: white;
+  font-style: bold;
+  z-index: 10;
+
+}
+
+.comp-modal-main button.close {
+  font-size: small;
+  font-style: italic;
+  position: absolute;
+  bottom: -2em;
+}

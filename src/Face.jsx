@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import face from "./assets/images/face.png";
 import pupils from "./assets//images/pupils.png";
 import threadButton from "./assets/images/thread.png";
-import { Link } from "react-router-dom";
+import { Link, UNSAFE_DataRouterStateContext } from "react-router-dom";
 import background2 from "./assets/images/background2.png";
 import egg from "./assets/images/egg.png";
+import { autoType } from "d3";
 
 // import { autoType, forceCenter } from "d3";
 
@@ -28,8 +29,8 @@ export function Face() {
   let root = document.documentElement;
 
   root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX - 800) * 0.025) + "px");
-    root.style.setProperty("--top", String((event.clientY - 500) * 0.04) + "px");
+    root.style.setProperty("--left", String((event.clientX - 500) * 0.025) + "px");
+    root.style.setProperty("--top", String((event.clientY - 200) * 0.03) + "px");
   });
 
   function handleArtifactClick() {
@@ -48,7 +49,8 @@ export function Face() {
     window.location.href = "/image";
   }
   return (
-    <div id="face">
+    <div>
+      <div id="face"></div>
       {/* The mouse is at position{" "} */}
       <b hidden>
         ({mousePos.x}, {mousePos.y})
@@ -70,8 +72,8 @@ export function Face() {
           style={{
             position: "absolute",
             width: "60vw",
-            justifyContent: "center",
-            zIndex: 2,
+            top: "40px",
+            zIndex: 21,
           }}
         />
 
@@ -81,35 +83,9 @@ export function Face() {
           style={{
             position: "relative",
             width: "60vw",
+            zIndex: 20,
           }}
         />
-
-        <button id="thread" onClick={handleMyArtifactClick}>
-          <img
-            src={threadButton}
-            style={{
-              height: "14vh",
-            }}
-          />
-        </button>
-
-        <button id="egg" onClick={handleArtifactClick}>
-          <img
-            src={egg}
-            style={{
-              height: "20vh",
-            }}
-          />
-        </button>
-
-        <button id="egg" onClick={handleImageGameClick}>
-          <img
-            src={egg}
-            style={{
-              height: "10vh",
-            }}
-          />
-        </button>
 
         {/* {(document.getElementById("pupils").style.width = left)} */}
         {console.log()}

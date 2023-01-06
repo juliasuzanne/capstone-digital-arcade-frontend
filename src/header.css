@@ -2,6 +2,9 @@
 .header-item {
   z-index: 50;
   position: fixed;
+  right: 20px;
+  top: 120px;
+  display: block;
 }
 
 .user-item {

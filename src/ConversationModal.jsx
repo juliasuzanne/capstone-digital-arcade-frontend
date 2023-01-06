@@ -7,7 +7,7 @@ export function ConversationModal(props) {
         <section className="cmodal-main">
           {props.children}
           <button className="close" type="button" onClick={props.onClose}>
-            leave
+            (leave conversation)
           </button>
         </section>
       </div>

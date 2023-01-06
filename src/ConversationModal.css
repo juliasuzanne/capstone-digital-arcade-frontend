@@ -15,14 +15,16 @@
   background: transparent;
   width: 500px;
   height: auto;
+  color: white;
   top: -50px;
   left: 400px;
   font-style: bold;
-  text-shadow: 0 0 4px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 9px #fff, 0 0 10px #fff;
+  text-shadow: 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 0 0 10px black, 0 0 11px black;
 }
 
 .cmodal-main button.close {
-  font-size: 1em;
+  font-size: small;
+  font-style: italic;
   background: none;
   border: none;
   position: absolute;

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { SubmitScore } from "./SubmitScore";
 import { TextAdventure } from "./TextAdventure";
 
-export function Home() {
+export function Home(props) {
   let [currentUser, setCurrentUser] = useState([]);
   const [errors, setErrors] = useState([]);
 
@@ -18,7 +18,7 @@ export function Home() {
 
   return (
     <div>
-      <TextAdventure user={currentUser} />
+      <TextAdventure user={currentUser} onClose={props.onClose} />
     </div>
   );
 }
