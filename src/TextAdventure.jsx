@@ -102,10 +102,16 @@ export function TextAdventure(props) {
   return (
     <div>
       <p>{text}</p>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
       <button className="plain" onClick={handleChangeText}>
         {" "}
         {buttonText}
       </button>
+      <br></br>
       <button className="plain" onClick={handleChangeTextTwo}>
         {" "}
         {buttonTextTwo}

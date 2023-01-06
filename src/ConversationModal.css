@@ -9,15 +9,16 @@
   background-color:transparent;
 }
 
+
 .cmodal-main {
   position: absolute;
-  background: lightgrey;
+  background: transparent;
   width: 500px;
   height: auto;
-  top: 150px;
-  left: 500px;
-  transform: translate(-50%,-50%);
-  padding: 1em;
+  top: -50px;
+  left: 400px;
+  font-style: bold;
+  text-shadow: 0 0 4px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 9px #fff, 0 0 10px #fff;
 }
 
 .cmodal-main button.close {
@@ -25,6 +26,5 @@
   background: none;
   border: none;
   position: absolute;
-  top: 0em;
-  right: 0.2em;
+  bottom: -2em;
 }

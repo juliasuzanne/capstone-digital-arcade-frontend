@@ -99,5 +99,8 @@ a:active { text-decoration: none; }
 }
 
 .plain:hover{
-  background-color: grey;
+  text-decoration: underline;  
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
+  
 }

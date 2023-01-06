@@ -28,6 +28,11 @@ padding: 0px;
   top: 0;
 } */
 
+.showartifact{
+  position: relative;
+  z-index: 26;
+}
+
 div {
   padding: 5px;
 }
@@ -94,6 +99,29 @@ button{
   z-index: 3;
 }
 
+/* Not just my artifacts index styling */
+
+#handsonbox{
+  position: fixed;
+  top: 0;
+  left: 0;  
+  width: 100vw;
+  z-index: 11;
+
+}
+
+.greenglass{
+  background-color: rgb(199,202,154);
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  left: 0;
+ }
+
+ 
+
 .scene {
   display: flex;
   position: absolute;
@@ -111,7 +139,33 @@ button{
 }
 
 .showingartifact {
-  width: 300px;
+  width: 180px;
+}
+
+.displayBox{
+  background-image: url("./assets/images/label.png");
+  background-size: cover;
+  z-index: 4;
+  height: 130px;
+  width: 270px;
+  padding-top: 0px;
+  margin-top: 0px;
+  font-size: small;
+}
+
+#onlabel{
+  padding-left: 57px;
+  padding-top: 40px;
+  transform: rotate(-5deg);
+  color: rgb(69,69,21, 0.8);
+  font-family: "Lora"
+}
+#onlabel2{
+  padding-left: 68px;
+  padding-top: -30px;
+  transform: rotate(-5deg);
+  color: rgba(69, 69, 21, 0.8);
+  font-family: "Lora";
 }
 
 html {
@@ -190,6 +244,14 @@ html {
 
 .counter{
   position: absolute;
+  z-index: 4;
+  height: 675px;
+  left: 50px;
+  top: 20px;
+}
+
+.counterJulia{
+  position: absolute;
   z-index: 3;
   height: 675px;
   left: 50px;
@@ -244,6 +306,15 @@ html {
   color: transparent;
   position: absolute;
   z-index: 15;
+  top: 400px;
+  height: 40px;
+  width:280px;
+  left: 360px;
+}
+
+#artifactsinbox{
+  position: absolute;
+  z-index: 3;
   top: 400px;
   height: 40px;
   width:280px;
