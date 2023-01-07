@@ -9,8 +9,10 @@ body {
 }
 
 .pstyle1{
+  transform: rotate(-1deg);
   font-size:smaller;
-  width: 300px;
+  width: 400px;
+  padding: 2px;
 }
 
 .canvas {

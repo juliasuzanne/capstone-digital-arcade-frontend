@@ -31,9 +31,9 @@
   background-image: url("/src/assets/images/computermodal.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 400px;
+  transform: rotate(1deg);
+  width: 530px;
   color: black;
-  translate: rotate(-15deg);
   height: 90vh;
   left: 350px;
   top: 160px;

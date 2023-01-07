@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+iframe{
+  width: 400px;
+  height: 225px;
+  transform: rotate(-1deg);
+}
 #tasks{
 z-index: 15;
 position: absolute;
@@ -38,6 +43,13 @@ height: 80px;
   z-index: 15;
   position: absolute;
   top: 400px;
-  left: 170px;
+  left: 200px;
   height: 60px;
+}
+
+#movieplayer{
+  z-index: 15;
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 60px;
 }

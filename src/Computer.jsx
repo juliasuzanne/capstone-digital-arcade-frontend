@@ -46,7 +46,7 @@ export function Computer() {
         </div>
       </ComputerModal>
       <VideoModal show={show2} onClose={handleClose2}>
-        <div id="snakeDiv">
+        <div id="movieplayer">
           <Romeo />
         </div>
       </VideoModal>
