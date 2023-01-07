@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
+  let [portrait, setPortrait] = useState("/src/assets/images/julia.png");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,6 +21,16 @@ export function Signup() {
         setErrors(errors.response.data.errors);
       });
   };
+
+  const handleSetPortrait1 = () => {
+    setPortrait("/src/assets/images/egg.png");
+    console.log({ portrait });
+  };
+  const handleSetPortrait2 = () => {
+    setPortrait("/src/assets/images/moon.png");
+    console.log({ portrait });
+  };
+
   return (
     <div id="signup">
       <h1>Signup</h1>
@@ -27,7 +38,18 @@ export function Signup() {
       <form onSubmit={handleSubmit}>
         <div>
           Name:
-          <input name="name" className="form-control" type="text" />
+          <input name="name" className="form-control" type="string" />
+        </div>
+        <div>
+          <button onClick={handleSetPortrait1} type="button">
+            <img className="circular-images-signup" src="/src/assets/images/egg.png" />
+          </button>
+          <button type="button" onClick={handleSetPortrait2}>
+            <img className="circular-images-signup" src="/src/assets/images/moon.png" />
+          </button>
+        </div>
+        <div hidden>
+          <input name="image_url" className="form-control" type="string" defaultValue="/src/assets/images/moon.png" />
         </div>
         <div>
           E-mail:
@@ -41,7 +63,9 @@ export function Signup() {
           Password Confirmation:
           <input name="password_confirmation" className="form-control" type="password" />
         </div>
-        <button className="btn btn-secondary mt-3 submit">Signup</button>
+        <button type="submit" className="btn btn-secondary mt-3 submit">
+          Signup
+        </button>
       </form>
     </div>
   );

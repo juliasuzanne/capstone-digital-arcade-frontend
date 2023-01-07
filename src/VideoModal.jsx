@@ -1,10 +1,10 @@
-import "./ComputerModal.css";
+import "./VideoModal.css";
 
-export function ComputerModal(props) {
+export function VideoModal(props) {
   if (props.show) {
     return (
       <div className="comp-modal-background">
-        <section className="comp-modal-main-snake">
+        <section className="comp-modal-main-video">
           {props.children}
           <button className="close" type="button" onClick={props.onClose}>
             &#x2715;

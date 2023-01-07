@@ -1,9 +1,11 @@
 .computerbackground{
   background-image: url("./src/assets/images/computer-background.png");
-  height: 95vh;
-  width: 80vw;
+  height: 750px;
+  width: 1000px;
   background-size: cover;
   z-index: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 #tasks{
@@ -11,23 +13,25 @@ z-index: 15;
 position: absolute;
 top: 150px;
 left: 200px;
-height: 10vh;
+height: 80px;
 
 }
 
 #snake{
-  z-index: 15;
+z-index: 15;
 position: absolute;
 top: 260px;
 left: 170px;
-height: 10vh;
+height: 80px;
 }
 
 
 #snakeDiv{
-  padding-left: 30px;
-  padding-top: 40px;
-  color:white;
+  padding-left: 10%;
+  padding-top: 20%;
+  color:black;
+  position: absolute;
+  height: 95vh;
 }
 
 #romancemovie{
@@ -35,5 +39,5 @@ height: 10vh;
   position: absolute;
   top: 400px;
   left: 170px;
-  height: 8vh;
+  height: 60px;
 }

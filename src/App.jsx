@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Romeo } from "./Romeo";
 import { Login } from "./Login";
 import { Header } from "./Header";
 import { Home } from "./Home";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/hotel" element={<ButtonRoom />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<ButtonRoom />} />
+          <Route path="/romeo" element={<Romeo />} />
           <Route path="/artifactcatalog" element={<ArtifactsNew />} />
           <Route path="/artifacts" element={<ArtifactsAll />} />
           <Route path="/artifacts/all" element={<NotJustMyArtifacts />} />

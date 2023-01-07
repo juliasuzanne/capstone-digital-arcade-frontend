@@ -84,6 +84,26 @@ a:active { text-decoration: none; }
   object-fit: cover;
   padding: auto;
 }
+
+.circular-images-signup {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  z-index: 99;
+  object-fit: cover;
+  padding: auto;
+}
+
+
+.circular-images-signup:hover {
+  background-color: rgba(0, 0, 0, 0.407);
+}
+
+.circular-images-signup:focus {
+  background-color: rgba(0, 0, 0);
+
+}
+
 #login {
   margin: auto;
   width: 50%;

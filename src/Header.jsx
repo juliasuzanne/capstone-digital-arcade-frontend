@@ -19,34 +19,38 @@ export function Header() {
   useEffect(handleCurrentUser, []);
 
   return (
-    <div>
+    <div className="user-item">
       <header>
-        <p className="header-item">Welcome, {currentUser.name} </p>
-        <div className="header-item">
-          {" "}
-          <ShowPoints user={currentUser} />
-        </div>
-        <div className="user-item">
-          <img src={currentUser.image_url} className="circular-images" />
-          {localStorage.jwt === undefined ? (
-            <>
-              <li className="header-item">
-                <Link className="nav-link" to="/signup">
-                  Signup
-                </Link>
-              </li>
-              <li className="header-item">
+        <p>Welcome, {currentUser.name} </p>
+
+        {localStorage.jwt === undefined ? (
+          <>
+            <li>
+              <Link className="nav-link" to="/signup">
+                Signup
+              </Link>
+            </li>
+            <div>
+              <li>
                 <Link className="nav-link" to="/login">
                   Login
                 </Link>
               </li>
-            </>
-          ) : (
-            <li className="nav-link text-decoration-none">
-              <LogoutLink />
-            </li>
-          )}
-        </div>
+            </div>
+          </>
+        ) : (
+          <div>
+            <div>
+              <li>
+                <img src={currentUser.image_url} className="circular-images" />
+              </li>
+              <li>
+                <LogoutLink />
+              </li>
+              <ShowPoints user={currentUser} />
+            </div>
+          </div>
+        )}
       </header>
     </div>
   );

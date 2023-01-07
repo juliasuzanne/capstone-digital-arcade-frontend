@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useInterval } from "./useInterval";
 import { CANVAS_SIZE, SNAKE_START, APPLE_START, SCALE, SPEED, DIRECTIONS } from "./constants";
 import axios from "axios";
+import { UNSAFE_DataRouterStateContext } from "react-router-dom";
 
 // FOUNDATION CODE FROM THIS VIDEO: https://www.youtube.com/watch?v=OrpJdVP-hO4
 
@@ -58,7 +59,7 @@ export function Snake() {
         newApple = createApple();
       }
       setApple(newApple);
-      setPoints(points + 1);
+      setPoints(points + 5);
       return true;
     }
     return false;
@@ -90,6 +91,8 @@ export function Snake() {
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     context.fillStyle = "black";
+    context.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    context.fillStyle = "white";
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     context.fillStyle = "lightgrey";
     context.fillRect(apple[0], apple[1], 1, 1);
@@ -110,18 +113,18 @@ export function Snake() {
   return (
     <div role="button" tabIndex="0" onKeyDown={(e) => moveSnake(e)}>
       <canvas
-        style={{ border: "1px solid black" }}
+        style={{ border: "1px solid green" }}
         ref={canvasRef}
         width={`${CANVAS_SIZE[0]}px`}
         height={`${CANVAS_SIZE[1]}px`}
       />
       {gameOver && <div>GAME OVER!</div>}
-      <p>Points are: {points}</p>
-      <button className="buttonGrey" onClick={handleGetPoints}>
-        {" "}
-        submit score{" "}
-      </button>
-      <button onClick={startGame}>Start Game</button>
+
+      <div id="snakeText">
+        <button onClick={handleGetPoints}>Submit Score</button>
+        <button onClick={startGame}>Start Game</button>
+        <p>P O I N T S : {points} </p>
+      </div>
     </div>
   );
 }

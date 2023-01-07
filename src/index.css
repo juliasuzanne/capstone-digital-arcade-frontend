@@ -1,9 +1,16 @@
 html {
   scroll-behavior: smooth;
+  resize: none;
 }
 
 body {
   font-family: sans-serif;
+  resize: none;
+}
+
+.pstyle1{
+  font-size:smaller;
+  width: 300px;
 }
 
 .canvas {
@@ -386,6 +393,23 @@ html {
   background-size:cover;
   background-image: url("./src/assets/images/eyesWall.png")
 
+}
+
+
+#foeglass{
+  z-index: 19;
+  top: 30%;
+  left: 29%;
+  background-color:white;
+  height: 15vh;
+  width: 12vw;
+  position: absolute;
+  }
+  
+
+#snakeText {
+  padding-top: 0;
+  font-size: small;
 }
 
 /* #pupilspainting {

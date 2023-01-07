@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import face from "./assets/images/face.png";
 import pupils from "./assets//images/pupils.png";
-import threadButton from "./assets/images/thread.png";
-import { Link, UNSAFE_DataRouterStateContext } from "react-router-dom";
-import background2 from "./assets/images/background2.png";
-import egg from "./assets/images/egg.png";
-import { autoType } from "d3";
 
 // import { autoType, forceCenter } from "d3";
 
@@ -29,8 +24,8 @@ export function Face() {
   let root = document.documentElement;
 
   root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX - 500) * 0.025) + "px");
-    root.style.setProperty("--top", String((event.clientY - 200) * 0.03) + "px");
+    root.style.setProperty("--left", String((event.clientX + 500) * 0.025) + "px");
+    root.style.setProperty("--top", String((event.clientY - 50) * 0.03) + "px");
   });
 
   function handleArtifactClick() {
@@ -50,7 +45,10 @@ export function Face() {
   }
   return (
     <div>
-      <div id="face"></div>
+      <div id="face">
+        {" "}
+        <div id="foeglass"></div>
+      </div>
       {/* The mouse is at position{" "} */}
       <b hidden>
         ({mousePos.x}, {mousePos.y})
@@ -73,6 +71,7 @@ export function Face() {
             position: "absolute",
             width: "60vw",
             top: "40px",
+            left: "40px",
             zIndex: 21,
           }}
         />
