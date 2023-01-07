@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { useInterval } from "./useInterval";
 import { CANVAS_SIZE, SNAKE_START, APPLE_START, SCALE, SPEED, DIRECTIONS } from "./constants";
 import axios from "axios";
-import { UNSAFE_DataRouterStateContext } from "react-router-dom";
 
 // FOUNDATION CODE FROM THIS VIDEO: https://www.youtube.com/watch?v=OrpJdVP-hO4
 

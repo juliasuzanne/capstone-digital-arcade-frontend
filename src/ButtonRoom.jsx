@@ -11,24 +11,11 @@ import { Home } from "./Home";
 export function ButtonRoom() {
   const [items, setItems] = useState([]);
 
-  const [mousePos, setMousePos] = useState({});
   const [showLight, setShowLight] = useState(false);
   const [openCurtain, setOpenCurtain] = useState(true);
   let [array, setArray] = useState([]);
   const [image, setImage] = useState("./src/assets/images/closecurtainorange.png");
   const [stairs, setStairs] = useState("./src/assets/images/stairs.png");
-
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setMousePos({ x: event.clientX, y: event.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
 
   const handleShowLight = () => {
     if (showLight === false) {

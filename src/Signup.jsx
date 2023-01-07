@@ -1,14 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
+// import * as ReactDOM from "react-dom";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
-  let [portrait, setPortrait] = useState("/src/assets/images/julia.png");
+  let [portrait, setPortrait] = useState("/src/assets/images/moon.png");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors([]);
     const params = new FormData(event.target);
+    params.append("image_url", `${portrait}`);
     axios
       .post("http://localhost:3000/users", params)
       .then((response) => {
@@ -31,6 +33,12 @@ export function Signup() {
     console.log({ portrait });
   };
 
+  const handleTest = () => {
+    console.log({ portrait });
+  };
+
+  // const root = ReactDOM.createRoot(document.getElementById("root"));
+
   return (
     <div id="signup">
       <h1>Signup</h1>
@@ -41,19 +49,21 @@ export function Signup() {
           <input name="name" className="form-control" type="string" />
         </div>
         <div>
+          <p>Choose a portrait: </p>
           <button onClick={handleSetPortrait1} type="button">
             <img className="circular-images-signup" src="/src/assets/images/egg.png" />
           </button>
           <button type="button" onClick={handleSetPortrait2}>
             <img className="circular-images-signup" src="/src/assets/images/moon.png" />
           </button>
-        </div>
-        <div hidden>
-          <input name="image_url" className="form-control" type="string" defaultValue="/src/assets/images/moon.png" />
-        </div>
-        <div>
-          E-mail:
-          <input name="email" className="form-control" type="email" />
+          <div>
+            <p>Selected Portrait:</p>
+            <img className="circular-images-large" src={portrait} />
+          </div>
+          <div>
+            E-mail:
+            <input name="email" className="form-control" type="email" />
+          </div>
         </div>
         <div>
           Password:
