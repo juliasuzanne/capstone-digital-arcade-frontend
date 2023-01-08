@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { MoonVision } from "./MoonVision";
+import { AnimatedSphere } from "./AnimatedSphere";
 
 export function Moon() {
   return (
@@ -18,6 +19,12 @@ export function Moon() {
           <Suspense fallback={null}>
             <MoonVision />
           </Suspense>
+        </Canvas>
+        <Canvas className="canvas3D" style={{ width: "100px", height: "100px", position: "absolute" }}>
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.2}></ambientLight>
+          <pointLight position={[10, 10, 10]} />
+          <AnimatedSphere />
         </Canvas>
       </div>
     </div>

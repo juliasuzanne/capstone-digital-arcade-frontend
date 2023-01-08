@@ -7,6 +7,8 @@ Source: https://sketchfab.com/3d-models/moon-4db2273f6dd943b8ad7fa5e3b1b2431a
 Title: Moon
 */
 
+import { MeshDistortMaterial } from "@react-three/drei";
+
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 

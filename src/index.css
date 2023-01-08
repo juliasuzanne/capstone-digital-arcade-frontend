@@ -63,7 +63,9 @@ padding: 0px;
 
 .showartifact{
   position: relative;
+  top: 5px;
   z-index: 26;
+  font-style: italic;
 }
 
 div {

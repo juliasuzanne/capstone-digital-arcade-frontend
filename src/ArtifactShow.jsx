@@ -21,9 +21,8 @@ export function ArtifactShow(props) {
 
   return (
     <div>
-      <h2> {props.artifact.name} </h2>
-      <p> ID: {props.artifact.id} </p>
-      <p> {props.artifact.price} </p>
+      <h2> This is a {props.artifact.name} </h2>
+      <p> Price: {props.artifact.price} </p>
       <p> {props.artifact.description}</p>
       <ReduceScore user={currentUser} artifact={props.artifact} onBuy={handleBuy} />
     </div>

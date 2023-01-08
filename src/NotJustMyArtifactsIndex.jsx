@@ -17,13 +17,16 @@ export function NotJustMyArtifactsIndex(props) {
         .map((artifact) => (
           <div key={artifact.id} id="artifact">
             <img className="showingartifact" src={artifact.image_url} alt="" />
+
             <div className="displayBox">
-              <p id="onlabel"> This is a {artifact.name}.</p>
-              <p id="onlabel2"> It costs {artifact.price_in_points} points. </p>
+              <button onClick={() => props.onShowArtifact(artifact)}>
+                <p id="onlabel"> This is a {artifact.name}.</p>
+                <p id="onlabel2"> It costs {artifact.price_in_points} points. </p>
+              </button>
             </div>
-            <button className="showartifact" onClick={() => props.onShowArtifact(artifact)}>
-              Take a closer look
-            </button>
+            {/* <button className="showartifact" onClick={() => props.onShowArtifact(artifact)}>
+              look
+            </button> */}
           </div>
         ))}
     </div>
