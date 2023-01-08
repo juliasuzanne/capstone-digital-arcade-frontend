@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   patch "/artifacts/:id" => "artifacts#update"
 
   post "/items" => "items#create"
-  get "/items" => "items#index"
+  get "/items" => "items#categories"
   get "/items/:id" => "items#show"
   delete "/items/:id" => "items#destroy"
   patch "/items/:id" => "items#update"

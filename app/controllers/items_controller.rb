@@ -5,7 +5,10 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item = Item.new(image_url: params[:image_url])
+    item = Item.new(
+      image_url: params[:image_url],
+      description: params[:description],
+    )
     if item.save
       render json: { message: "Item created successfully." }, status: :created
     else
@@ -26,6 +29,11 @@ class ItemsController < ApplicationController
   def show
     item = Item.find(params[:id])
     render json: item.as_json
+  end
+
+  def categories
+    paintings = Item.all.where(category: params[:cat])
+    render json: paintings.as_json
   end
 
   def destroy
