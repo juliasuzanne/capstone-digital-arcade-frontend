@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { Light } from "./Images/Light";
 import axios from "axios";
-
+import { Modal3 } from "./Modal3";
 // import face from "./assets/images/facepainting.png";
 // import pupils from "./assets//images/pupilspainting.png";
 // import { autoType } from "d3";
 import { ConversationModal } from "./ConversationModal";
 import { Home } from "./Home";
+import { ThreeD } from "./ThreeD";
 
 export function ButtonRoom() {
   const [items, setItems] = useState([]);
 
   const [showLight, setShowLight] = useState(false);
   const [openCurtain, setOpenCurtain] = useState(true);
+  const [showNote, setShowNote] = useState(false);
   let [array, setArray] = useState([]);
   const [image, setImage] = useState("./src/assets/images/closecurtainorange.png");
   const [stairs, setStairs] = useState("./src/assets/images/stairs.png");
@@ -23,6 +25,14 @@ export function ButtonRoom() {
     } else {
       setShowLight(false);
     }
+  };
+
+  const handleShowNote = () => {
+    setShowNote(true);
+  };
+
+  const handleHideNote = () => {
+    setShowNote(false);
   };
 
   const handleOpenCurtain = () => {
@@ -55,7 +65,7 @@ export function ButtonRoom() {
     window.location.href = "/artifacts/all";
   };
   const catalog = () => {
-    window.location.href = "/threed";
+    window.location.href = "/artifactroom";
   };
 
   const movingEyes = () => {
@@ -122,7 +132,13 @@ export function ButtonRoom() {
       <ConversationModal show={isConversationVisible} onClose={handleCloseConversation}>
         <Home onClose={handleCloseConversation} />
       </ConversationModal>
-      <button className="note"></button>
+
+      <button className="note" onClick={handleShowNote}></button>
+
+      <Modal3 show={showNote} onClose={handleHideNote}>
+        <ThreeD />
+      </Modal3>
+
       <div id="artifactsinbox">
         {" "}
         {items.slice(0, 10).map((item) => (

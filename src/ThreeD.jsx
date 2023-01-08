@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import { Cardboard } from "./Cardboard";
 import { Safetypin } from "./Safetypin";
 import { Woodenbox } from "./Woodenbox";
+import { Note } from "./Note";
 import { Doorkey } from "./Doorkey";
 import { Keyring } from "./Keyring";
 import { Button } from "bootstrap";
@@ -24,22 +25,14 @@ export function ThreeD() {
       <button className="boxy2" onClick={handleClick}>
         Paintings
       </button> */}
-      <Canvas
-        className="canvas3D"
-        style={{ width: "1250px", height: "500px", position: "absolute", zIndex: 1, top: 200, left: 20 }}
-      >
-        <ambientLight />
-        <OrbitControls
-          maxAzimuthAngle={0}
-          enableZoom={false}
-          screenSpacePanning={false}
-          maxPolarAngle={Math.PI}
-          enableRotate={true}
-          _domElement={document}
-        />
-        <pointLight position={[10, 10, 10]} />
+      <Canvas className="canvas3D" style={{ width: "500px", height: "500px", position: "absolute" }}>
+        <pointLight position={[10, -10, 1]} />
+        <pointLight position={[1, 10, 1]} intensity={0.1} />
+
+        <OrbitControls enableZoom={false} screenSpacePanning={false} enableRotate={true} _domElement={document} />
+        {/* <pointLight position={[10, 10, 10]} /> */}
         <Suspense fallback={null}>
-          <Safetypin />
+          <Note />
         </Suspense>
       </Canvas>
       {/* <Canvas
@@ -50,20 +43,20 @@ export function ThreeD() {
         <OrbitControls enableZoom={false} />
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={null}>
-          <Doorkey />
+          <Cardboard />
         </Suspense>
       </Canvas>
       <Canvas
         className="canvas3D2"
-        style={{ width: "550px", height: "500px", position: "absolute", zIndex: 2, top: 200, left: 400 }}
+        style={{ width: "550px", height: "500px", position: "absolute", zIndex: 2, top: 200, left: 800 }}
       >
         <ambientLight />
         <OrbitControls enableZoom={false} />
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={null}>
-          <Keyring />
+          <Cardboard />
         </Suspense>
-      </Canvas> */}
+      </Canvas>
       {/* <Canvas className="canvas3D" style={{ width: "600px", height: "600px" }}>
         <ambientLight />
         <OrbitControls enableZoom={false} />
@@ -78,7 +71,7 @@ export function ThreeD() {
         <OrbitControls enableZoom={false} />
         <pointLight position={[10, 10, 10]} />
         <AnimatedSphere />
-      </Canvas> */}
+      </Canvas> */}{" "}
     </div>
   );
 }

@@ -14,7 +14,7 @@ export function Cardboard(props) {
   const { nodes, materials } = useGLTF("/cardboard.gltf");
   return (
     <group {...props} dispose={null}>
-      <group rotation={[1.56, 0, 0]} scale={0.02}>
+      <group rotation={[1.56, 0, 0]} scale={0.03}>
         <mesh
           geometry={nodes.box_00_box_00_material_0.geometry}
           material={materials.box_00_material}

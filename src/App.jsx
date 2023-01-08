@@ -6,6 +6,7 @@ import { Romeo } from "./Romeo";
 import { Login } from "./Login";
 import { Header } from "./Header";
 import { Home } from "./Home";
+import { Media } from "./ItemCategories/Media";
 import "./App.css";
 import { Signup } from "./Signup";
 import { Game } from "./Game";
@@ -20,13 +21,14 @@ import { Draw } from "./Draw";
 import { Moon } from "./Moon";
 import { Snake } from "./Snake";
 import { Computer } from "./Computer";
-import { ArtifactRoom } from "./ArtifactRoom";
+import { ArtifactRoom } from "./ItemCategories/ArtifactRoom";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/media" element={<Media />} />
           <Route path="/login" element={<Login />} />
           <Route path="/threed" element={<ThreeD />} />
           <Route path="/artifactroom" element={<ArtifactRoom />} />

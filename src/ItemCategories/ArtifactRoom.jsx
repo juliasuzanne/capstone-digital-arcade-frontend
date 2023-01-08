@@ -1,18 +1,27 @@
 import axios from "axios";
-import { Modal } from "./Modal";
+import { Modal } from "../Modal";
+import { Media } from "./Media";
+import { Painting } from "./Painting";
+import { Sewing } from "./Sewing";
 import { useState, useEffect } from "react";
 
 export function ArtifactRoom() {
   const [errors, setErrors] = useState([]);
   const [items, setItems] = useState([]);
   const [show, setShow] = useState(false);
+  const [mediaShow, setMediaShow] = useState(false);
+  const [paintingShow, setPaintingShow] = useState(false);
+  const [sewingShow, setSewingShow] = useState(false);
+
+  const [category, setCategory] = useState("");
   const [currentItem, setCurrentItem] = useState([]);
+
   // need to add axios request to new backend model of items waiting to become artifacts
   // need to create crud for these items
   // need to create request here to get all
   // connect on item click (use image) to prompt create artifact
   const handleGetItems = () => {
-    axios.get("http://localhost:3000/items.json").then((response) => {
+    axios.get(`http://localhost:3000/items.json?cat=painting`).then((response) => {
       console.log(response);
       setItems(response.data);
     });
@@ -28,7 +37,7 @@ export function ArtifactRoom() {
   const handleCreateArtifact = (params) => {
     axios
       .post("http://localhost:3000/artifacts", params)
-      .then((window.location.href = "/artifacts/all"))
+      // .then((window.location.href = "/artifacts/all"))
       .catch((error) => {
         console.log(error.response.data.errors);
         setErrors(error.response.data.errors);
@@ -43,10 +52,37 @@ export function ArtifactRoom() {
     setShow(false);
   };
 
-  useEffect(handleGetItems, []);
+  const handleToggleMedia = () => {
+    if (mediaShow === false) {
+      setMediaShow(true);
+    } else {
+      setMediaShow(false);
+    }
+  };
+
+  const handleTogglePainting = () => {
+    if (paintingShow === false) {
+      setPaintingShow(true);
+    } else {
+      setPaintingShow(false);
+    }
+  };
+  const handleToggleSewing = () => {
+    if (sewingShow === false) {
+      setSewingShow(true);
+    } else {
+      setSewingShow(false);
+    }
+  };
 
   return (
     <div>
+      <button onClick={handleToggleMedia}> toggle media </button>
+      <button onClick={handleTogglePainting}> toggle painting </button>
+      <button onClick={handleToggleSewing}> toggle sewing </button>
+      <Media show={mediaShow} />
+      <Painting show={paintingShow} />
+      <Sewing show={sewingShow} />
       {items.map((item) => (
         <button
           onClick={() => {
@@ -73,7 +109,7 @@ export function ArtifactRoom() {
           </div>
           <img src={currentItem} className="myimage" width="300px" />
           <div>
-            <button type="submit">Done? &#9744;</button>
+            <button type="submit">submit</button>
           </div>
         </form>
       </Modal>
