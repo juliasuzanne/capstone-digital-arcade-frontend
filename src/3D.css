@@ -1,5 +1,36 @@
-#canvas3D{
-  height: 300px;
-  width: 100px;
-  all: none;
+.canvas3D{
+  z-index:1;
+  position: absolute;
+  top: 300;
+  left: 0;
+
 }
+.canvas3D2{
+  z-index: 2;
+  position: absolute;
+  top: 300;
+  left: 0;
+}
+
+.boxy{
+  z-index: 5;
+  /* background-color: rgba(0, 0, 0, 0.478); */
+  position: absolute;
+  top: 400px;
+  left: 330px;
+  width: 100px;
+  height: 40px;
+  color:black;
+}
+
+.boxy2{
+  z-index: 5;
+  /* background-color: rgba(0, 0, 0, 0.478); */
+  position: absolute;
+  top: 200px;
+  left: 730px;
+  width: 100px;
+  height: 40px;
+  color:black;
+}
+
