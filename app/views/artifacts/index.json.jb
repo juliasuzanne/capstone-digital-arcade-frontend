@@ -5,7 +5,8 @@
   username: artifact.user.name,
   price: artifact.price_in_points,
   image: artifact.image_url,
-  name: artifact.name
+  name: artifact.name,
+  description: artifact.description
 
 }
 
