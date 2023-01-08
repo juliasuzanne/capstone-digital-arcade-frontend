@@ -18,6 +18,13 @@ export function Header() {
 
   useEffect(handleCurrentUser, []);
 
+  const handleSeeArtifacts = () => {
+    window.location.href = "/artifacts";
+  };
+  const handleGoHome = () => {
+    window.location.href = "/hotel";
+  };
+
   return (
     <div className="user-item">
       <header>
@@ -48,6 +55,11 @@ export function Header() {
                 <LogoutLink />
               </li>
               <ShowPoints user={currentUser} />
+            </div>
+            <button onClick={handleGoHome}>Home</button>
+            <div>
+              <button onClick={handleSeeArtifacts} className="bag"></button>
+              <img width="100px" src="./src/assets/images/bag.png" />
             </div>
           </div>
         )}

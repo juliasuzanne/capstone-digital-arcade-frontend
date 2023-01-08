@@ -3,6 +3,21 @@ html {
   resize: none;
 }
 
+.descript{
+  text-align: left;
+  width: 200px;
+  overflow-wrap: normal;
+}
+
+h5 {
+  text-align: center;
+}
+
+.containerHeader {
+  justify-content: center;
+  text-align: center;
+}
+
 .artifactRoom{
   z-index: 0;
   width: 400px;

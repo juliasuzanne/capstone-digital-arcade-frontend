@@ -11,3 +11,12 @@ li {
  list-style: none;
  text-align: center;
 }
+
+.bag{
+  background-color: transparent;
+  width: 70px;
+  height: 80px;
+  position: absolute;
+  top: 260px;
+  left: 35px;
+}
