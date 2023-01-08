@@ -87,6 +87,7 @@ export function ButtonRoom() {
 
   return (
     <div className="buttonRoom">
+      <img src="./src/assets/images/room_unpacking.png" className="artifactRoom" />
       <button onClick={exitRoom}>
         <img id="exit" src="./src/assets/images/exit.png" />
       </button>

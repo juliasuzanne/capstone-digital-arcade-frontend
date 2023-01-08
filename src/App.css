@@ -4,19 +4,26 @@
 }
 
 .sky{
-  position: fixed;
-  background-color: black;
+  position: absolute;
+  background-image: url("/src/assets/images/nighttime_scene.png");
+  background-size: cover;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 140vh;
   z-index: 0;
 }
+.moonperson {
+  width: 200px;
+  top: 20px;
+  left: 50px;
+  position: absolute;
+}
+
 #moon{
-  background-color: black;
   padding: 1px;
   height: 100vh;
-  width: 100vw;
+  width: 40vw;
   z-index: 1;
 }
 
@@ -147,4 +154,43 @@ a:active { text-decoration: none; }
 .plain:hover{
   text-shadow: 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 0 0 10px black, 0 0 11px black, 0 0 12px black, 0 0 13px black, 0 0 14px black, 0 0 15px black, 0 0 16px black, 0 0 17px black, 0 0 18px black, 0 0 19px black;
   
+}
+
+
+#mediaImage{
+  top: 400px;
+  left: 200px;
+  position: absolute;
+  height: 300px;
+}
+
+
+#clothesImage{
+  top: 370px;
+  left: 500px;
+  position: absolute;
+  height: 300px;
+}
+
+
+#paintingImage{
+  top: 420px;
+  left: 680px;
+  position: absolute;
+  height: 300px;
+  z-index: 1;
+}
+
+.roomy{
+  position: absolute;
+  top:0;
+  left:0;
+  background-repeat: no-repeat;
+  background-image: url('/src/assets/images/room_unpacking.png');
+  background-size: cover;
+  z-index: 5;
+  width: 1100px;
+  height: 800px;
+
+
 }

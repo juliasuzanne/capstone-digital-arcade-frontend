@@ -9,7 +9,6 @@ export function Media(props) {
     const [show, setShow] = useState(false);
 
     const [description, setDescription] = useState("");
-    const [category, setCategory] = useState("");
     const [currentItem, setCurrentItem] = useState([]);
 
     // need to add axios request to new backend model of items waiting to become artifacts
@@ -68,22 +67,24 @@ export function Media(props) {
           <form onSubmit={handleNewArtifact}>
             <div>
               Name:
-              <input name="name" className="myform" type="string" />
+              <input name="name" id="myform" type="string" />
             </div>
             <div>
               Price:
-              <input className="myform" name="price_in_points" type="integer" />
+              <input id="myform" name="price_in_points" type="integer" />
             </div>
             <div>
-              Description:
-              <input className="myform" name="description" type="string" defaultValue={description} />
+              <p>Description:</p>
+              <textarea className="myform" name="description" width="500px" type="string" defaultValue={description} />
             </div>
             <div>
               <input hidden name="image_url" type="string" defaultValue={currentItem}></input>
             </div>
             <img src={currentItem} className="myimage" width="300px" />
             <div>
-              <button type="submit">submit</button>
+              <button className="submitbutton" type="submit">
+                submit
+              </button>
             </div>
           </form>
         </Modal>

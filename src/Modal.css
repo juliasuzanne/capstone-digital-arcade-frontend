@@ -1,19 +1,36 @@
-.modal-background {
+#modal-background {
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   width:100%;
   height: 100%;
-  background: rgba(87, 87, 87, 0.066);
   z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.343);
 }
+
 .myform{
-border-style: hidden;
-background-color: transparent;
-outline: none;
-color: grey;
-padding: 5px;
+  border-style: hidden;
+  outline: none;
+  background-color:rgba(185, 185, 185, 0.343);
+  color: darkgrey;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#myform{
+  border-style: hidden;
+  outline: none;
+  margin: 10px;
+  background-color:rgba(185, 185, 185, 0.343);
+  color: darkgrey;
+  padding: 5px;
+  border-radius: 5px;
+  }
+
+.submitbutton{
+background-color: pink;
+border-radius: 10px;
 }
 
 .myimage {
@@ -22,12 +39,12 @@ padding: 5px;
   filter: grayscale(100%);
 }
 
-.modal-main {
-  background-image: url("https://images.unsplash.com/photo-1603484477859-abe6a73f9366?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
-  color: grey;
-   background-size: cover;
+#modal-main {
+  color: darkgrey;
+  background-color: rgba(14, 14, 14, 0.806);
   position: fixed;
-  width: 80%;
+  border-radius: 50px;
+  width: 400px;
   height: auto;
   top: 50%;
   left: 50%;

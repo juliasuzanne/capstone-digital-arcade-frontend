@@ -3,6 +3,15 @@ html {
   resize: none;
 }
 
+.artifactRoom{
+  z-index: 0;
+  width: 400px;
+  top: 200px;
+  left: 400px;
+  position: absolute;
+
+}
+
 body {
   font-family: sans-serif;
   resize: none;

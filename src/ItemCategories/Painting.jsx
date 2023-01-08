@@ -74,15 +74,17 @@ export function Painting(props) {
               <input className="myform" name="price_in_points" type="integer" />
             </div>
             <div>
-              Description:
-              <input className="myform" name="description" type="string" defaultValue={description} />
+              <p>Description:</p>
+              <textarea className="myform" name="description" type="string" defaultValue={description} />
             </div>
             <div>
               <input hidden name="image_url" type="string" defaultValue={currentItem}></input>
             </div>
             <img src={currentItem} className="myimage" width="300px" />
             <div>
-              <button type="submit">submit</button>
+              <button className="submitbutton" type="submit">
+                submit
+              </button>
             </div>
           </form>
         </Modal>
