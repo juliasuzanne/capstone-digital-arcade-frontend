@@ -8,7 +8,7 @@ export function Moon() {
   return (
     <div id="moon">
       <div className="sky">
-        {/* <img className="moonperson" src="./src/assets/images/moon.png" /> */}
+        <img className="moonperson" src="./src/assets/images/moon.png" />
         <Canvas className="canvas3D" style={{ width: "500px", height: "500px", position: "absolute" }}>
           {/* <pointLight position={[10, -10, 1]} /> */}
           <ambientLight></ambientLight>

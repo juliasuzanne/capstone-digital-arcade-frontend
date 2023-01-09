@@ -490,8 +490,8 @@ html {
 #face {
   position: absolute;
   top: 45px;
-  height: 93vh;
-  width: 90vw;
+  height: 670px;
+  width: 1100px;
   left:0;
   z-index:19;
   background-size:cover;
