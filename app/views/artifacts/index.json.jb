@@ -6,7 +6,7 @@
   price: artifact.price_in_points,
   image: artifact.image_url,
   name: artifact.name,
-  description: artifact.description
+  description: artifact.description,
 
 }
 

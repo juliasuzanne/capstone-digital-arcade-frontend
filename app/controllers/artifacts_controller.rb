@@ -15,6 +15,7 @@ class ArtifactsController < ApplicationController
       price_in_points: params[:price_in_points],
       image_url: params[:image_url],
       name: params[:name],
+      description: params[:description],
     )
     if artifact.save
       render json: { message: "Artifact created successfully" }, status: :created

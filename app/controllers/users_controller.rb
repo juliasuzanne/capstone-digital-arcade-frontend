@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: current_user.id)
     user.points = params[:points] || user.points
     user.name = params[:name] || user.name
+    user.fixed = params[:fixed] || user.fixed
     user.email = params[:email] || user.email
     if user.save
       render json: user
