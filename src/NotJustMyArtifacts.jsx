@@ -7,6 +7,8 @@ import { ArtifactShow } from "./ArtifactShow";
 export function NotJustMyArtifacts() {
   let [artifacts, setArtifacts] = useState([]);
   let [isArtifactsShowVisible, setIsArtifactsShowVisible] = useState(false);
+  let [currentUser, setCurrentUser] = useState([]);
+
   let [currentArtifact, setCurrentArtifact] = useState({});
 
   const handleIndexArtifacts = () => {
@@ -25,8 +27,15 @@ export function NotJustMyArtifacts() {
     setIsArtifactsShowVisible(false);
   };
 
+  const handleCurrentUser = () => {
+    axios.get("http://localhost:3000/users.json").then((response) => {
+      console.log(response);
+      setCurrentUser(response.data);
+    });
+  };
+
   const handleBuyArtifact = (id) => {
-    axios.patch(`http://localhost:3000/artifacts/${id}.json`).then((response) => {
+    axios.patch(`http://localhost:3000/artifacts/${id}.json`, { user_id: currentUser.id }).then((response) => {
       console.log(response.data);
       setArtifacts(
         artifacts.map((artifact) => {
@@ -43,6 +52,8 @@ export function NotJustMyArtifacts() {
   };
 
   useEffect(handleIndexArtifacts, []);
+
+  useEffect(handleCurrentUser, []);
 
   return (
     <div className="greenglass">

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { color } from "d3";
 import { useState, useEffect } from "react";
 
 export function ReduceScore(props) {
@@ -8,32 +9,36 @@ export function ReduceScore(props) {
 
   const currentPoints = props.user.points;
 
-  const handlePurchaseArtifact = () => {
+  const handlePurchaseArtifact = (event) => {
+    event.preventDefault();
+
+    setErrors([]);
     if (parseInt(props.artifact.price_in_points) < parseInt(props.user.points)) {
       let newPoints = props.user.points - props.artifact.price_in_points;
       axios
         .patch("http://localhost:3000/users", { points: newPoints })
         .then((window.location.href = "/"))
-        .catch((error) => {
-          console.log(error.response.data.errors);
-          setErrors(error.response.data.errors);
+        .catch((errors) => {
+          console.log(errors.response.data.errors);
+          setErrors(errors.response.data.errors);
         });
       props.onBuy();
 
       setPoints(0);
     } else {
       console.log("Not enough points to purchase");
+      setErrors("Not enough points to purchase");
     }
   };
 
   return (
     <div>
-      <p>{currentPoints}</p>
-
+      <p id="red">{errors}</p>
+      <p> Your Current Points: {currentPoints}</p>
       {localStorage.jwt === undefined ? (
         <p>Login to purchase</p>
       ) : (
-        <button className="buttonGrey" onClick={handlePurchaseArtifact}>
+        <button className="submitbutton" onClick={handlePurchaseArtifact}>
           {" "}
           Buy
         </button>

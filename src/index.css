@@ -3,6 +3,9 @@ html {
   resize: none;
 }
 
+#red {
+  color: red;
+}
 .descript{
   text-align: left;
   width: 200px;
