@@ -52,12 +52,13 @@ border-radius: 10px;
   padding: 1em;
 }
 
-.modal-main button.close {
+#modal-main button.close {
   font-size: 2em;
   background: none;
   border: none;
   position: absolute;
-  top: 0em;
+  top: 0.25em;
+  right: 0.25em;
   color: white;
   right: 0.2em;
 }

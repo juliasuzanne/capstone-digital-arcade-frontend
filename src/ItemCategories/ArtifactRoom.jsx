@@ -3,6 +3,8 @@ import { Modal } from "../Modal";
 import { Media } from "./Media";
 import { Painting } from "./Painting";
 import { Sewing } from "./Sewing";
+import { Baking } from "./Baking";
+import { Misc } from "./Misc";
 import { useState, useEffect } from "react";
 
 export function ArtifactRoom() {
@@ -15,6 +17,8 @@ export function ArtifactRoom() {
   const [clothesImage, setClothesImage] = useState("/src/assets/images/fullclothes.png");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
+  const [bakingShow, setBakingShow] = useState(false);
+  const [miscShow, setMiscShow] = useState(false);
 
   const [category, setCategory] = useState("");
   const [currentItem, setCurrentItem] = useState([]);
@@ -74,6 +78,27 @@ export function ArtifactRoom() {
       setPaintingImage("/src/assets/images/paintingsclosed.png");
     }
   };
+
+  const handleToggleBaking = () => {
+    if (bakingShow === false) {
+      setBakingShow(true);
+      // setBakingImage("/src/assets/images/paintingsopen.png");
+    } else {
+      setBakingShow(false);
+      // setBakingImage("/src/assets/images/paintingsclosed.png");
+    }
+  };
+
+  const handleToggleMisc = () => {
+    if (miscShow === false) {
+      setMiscShow(true);
+      // setBakingImage("/src/assets/images/paintingsopen.png");
+    } else {
+      setMiscShow(false);
+      // setBakingImage("/src/assets/images/paintingsclosed.png");
+    }
+  };
+
   const handleToggleSewing = () => {
     if (sewingShow === false) {
       setSewingShow(true);
@@ -94,6 +119,16 @@ export function ArtifactRoom() {
         {" "}
         <img id="paintingImage" src={paintingImage} width="300px" />{" "}
       </button>
+      <button onClick={handleToggleBaking}>
+        {" "}
+        {/* <img id="paintingImage" src={paintingImage} width="300px" />{" "} */}
+        baking
+      </button>
+      <button onClick={handleToggleMisc}>
+        {" "}
+        {/* <img id="paintingImage" src={paintingImage} width="300px" />{" "} */}
+        misc
+      </button>
 
       <button onClick={handleToggleSewing}>
         {" "}
@@ -105,6 +140,8 @@ export function ArtifactRoom() {
       <Media show={mediaShow} />
       <Painting show={paintingShow} />
       <Sewing show={sewingShow} />
+      <Baking show={bakingShow} />
+      <Misc show={miscShow} />
       {items.map((item) => (
         <button
           onClick={() => {
