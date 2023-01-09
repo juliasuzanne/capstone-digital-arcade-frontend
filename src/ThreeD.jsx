@@ -67,12 +67,12 @@ export function ThreeD() {
 
       </div>
       */}{" "}
-      <Canvas className="canvas3D" style={{ width: "600px", height: "600px" }}>
+      {/* <Canvas className="canvas3D" style={{ width: "600px", height: "600px" }}>
         <ambientLight />
         <OrbitControls enableZoom={false} />
         <pointLight position={[10, 10, 10]} />
         <AnimatedSphere />
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 }

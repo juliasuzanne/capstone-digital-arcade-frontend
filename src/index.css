@@ -6,7 +6,8 @@ html {
 .descript{
   text-align: left;
   width: 200px;
-  overflow-wrap: normal;
+  z-index: 10;
+  font-size: small;
 }
 
 h5 {
@@ -46,6 +47,17 @@ height: auto;
 background-color: white;
 margin: 0px;
 padding: 0px;
+}
+
+#talkingtome{
+  position: absolute;
+  width: 250px;
+  color: white;
+  top: 400px;
+  left: 400px;
+  font-style: bold;
+  z-index: 20;
+  text-shadow: 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 0 0 10px black, 0 0 11px black;
 }
 
 .draw{
@@ -321,6 +333,67 @@ html {
   top: 275px;
 }
 
+.top-box{
+  z-index: 5;
+  position: absolute;
+  top: 320px;
+  left:400px;
+  width: 30px;
+  opacity: 90%;
+}
+
+.electricalbox{
+  z-index: 20;
+  position: absolute;
+  top: 600px;
+  left:350px;
+  width: 100px;
+}
+
+#wires {
+  z-index: 40;
+}
+
+
+
+.redwire{
+
+  width: 10px;
+  height: 10px;
+  z-index: 30;
+  position: absolute;
+  top: 635px;
+  left:380px;
+}
+.redwire2{
+
+  width: 10px;
+  height: 10px;
+  z-index: 400;
+  position: absolute;
+  top: 655px;
+  left:406px;
+}
+
+.bluewire{
+
+  width: 10px;
+  height: 10px;
+  z-index: 400;
+  position: absolute;
+  top: 650px;
+  left:380px;
+}
+
+.bluewire2{
+  width: 10px;
+  height: 10px;
+  z-index: 400;
+  position: absolute;
+  top: 620px;
+  left:406px;
+}
+
 .eyesPaintingActual{
   position: absolute;
   z-index: 4;
@@ -419,7 +492,7 @@ html {
   left:0;
   z-index:19;
   background-size:cover;
-  background-image: url("./src/assets/images/eyesWall.png")
+  background-image: url("./src/assets/images/facewall.png")
 
 }
 
