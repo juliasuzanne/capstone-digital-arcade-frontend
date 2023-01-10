@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Light } from "./Images/Light";
 import axios from "axios";
 import { Modal3 } from "./Modal3";
+import { Sound } from "./Sound";
+
 // import face from "./assets/images/facepainting.png";
 // import pupils from "./assets//images/pupilspainting.png";
 // import { autoType } from "d3";
@@ -16,7 +18,9 @@ export function ButtonRoom() {
   const [talkText, setTalkText] = useState("");
 
   const [showLight, setShowLight] = useState(false);
+
   const [openCurtain, setOpenCurtain] = useState(true);
+  const [grate, setGrate] = useState("");
 
   const [fixed, setFixed] = useState(false);
   const [showNote, setShowNote] = useState(false);
@@ -45,7 +49,7 @@ export function ButtonRoom() {
 
   useEffect(handleCurrentUser, []);
 
-  const handleShowLight = () => {
+  function handleShowLight() {
     if (showLight === false && fixed === true) {
       setShowLight(true);
     } else if (showLight === true && fixed === true) {
@@ -55,7 +59,7 @@ export function ButtonRoom() {
       setIsTalking(false);
       setTalkText("It's been broken for awhile. I think it has something to do with those exposed wires.");
     }
-  };
+  }
 
   const handleShowNote = () => {
     setShowNote(true);
@@ -136,6 +140,7 @@ export function ButtonRoom() {
       <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
         <p>{talkText}</p>
       </button>
+      <Sound />
       <img src="./src/assets/images/room_unpacking.png" className="artifactRoom" />
       <button onClick={exitRoom}>
         <img id="exit" src="./src/assets/images/exit.png" />
@@ -164,12 +169,20 @@ export function ButtonRoom() {
         onMouseLeave={() => setStairs("./src/assets/images/stairs.png")}
         onClick={exitRoom}
       ></button>
+      <button
+        id="grate"
+        onMouseEnter={() => setGrate("./src/assets/images/eyeballgrate.png")}
+        onMouseLeave={() => setGrate("")}
+        onClick={exitRoom}
+      ></button>
+
       {/* <Curtain show={openCurtain} /> */}
       <img className="counterJulia" src="./src/assets/images/counterJulia.gif" />
       <img className="counter" src="./src/assets/images/counter.png" />
       <img className="roombackground" src="./src/assets/images/home_background.png" />
       <img className="opencurtain" src={image} />
       <img className="stairsImage" src={stairs} />
+      <img className="grateImage" src={grate} />
       <Light show={showLight} />
       <button className="talk" onClick={handleShowConversation}>
         {" "}

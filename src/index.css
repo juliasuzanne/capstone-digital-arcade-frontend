@@ -31,6 +31,8 @@ h5 {
 
 }
 
+
+
 body {
   font-family: sans-serif;
   resize: none;
@@ -166,7 +168,7 @@ button{
   z-index: 1;
   top: 0;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   left: 0;
  }
 
@@ -275,6 +277,8 @@ html {
 
 }
 
+
+
 #stairs{
   z-index: 15;
   height: 310px;
@@ -282,6 +286,33 @@ html {
   left: 70px;
   top: 200px;
   position:absolute;
+}
+
+#grate{
+  z-index: 15;
+  height: 35px;
+  width: 50px;
+  left: 830px;
+  top: 115px;
+  position:absolute;
+}
+
+.grateImage{
+  z-index: 14;
+   height: 675px;
+  left: 50px;
+  top: 20px;
+  position:absolute;
+}
+
+#stairs2{
+  z-index: 14;
+  height: 100px;
+  border-radius: 30%;
+  width: 100px;
+ left: 850px;
+ top: 480px;
+ position:absolute;
 }
 
 .note{
@@ -309,6 +340,24 @@ html {
   left: 542px;
   top: 190px;
   position:absolute;
+}
+
+.thousands {
+  position: absolute;
+  z-index: 3;
+  height: 445px;
+  left: 390px;
+  top: 235px;
+}
+
+.thousands-shadow {
+  position: absolute;
+  z-index: 2;
+  height: 475px;
+  left: 400px;
+  top: 245px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7)) blur(35px);
+
 }
 
 .roombackground {

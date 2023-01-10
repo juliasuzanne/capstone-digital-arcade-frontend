@@ -14,6 +14,8 @@ export function ArtifactRoom() {
   const [mediaShow, setMediaShow] = useState(false);
   const [mediaImage, setMediaImage] = useState("/src/assets/images/closedboxmedia.png");
   const [paintingImage, setPaintingImage] = useState("/src/assets/images/paintingsclosed.png");
+  const [bakingImage, setBakingImage] = useState("/src/assets/images/pastryclosed.png");
+  const [miscImage, setMiscImage] = useState("/src/assets/images/mysteryclosed.png");
   const [clothesImage, setClothesImage] = useState("/src/assets/images/fullclothes.png");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
@@ -23,10 +25,6 @@ export function ArtifactRoom() {
   const [category, setCategory] = useState("");
   const [currentItem, setCurrentItem] = useState([]);
 
-  // need to add axios request to new backend model of items waiting to become artifacts
-  // need to create crud for these items
-  // need to create request here to get all
-  // connect on item click (use image) to prompt create artifact
   const handleGetItems = () => {
     axios.get(`http://localhost:3000/items.json?cat=painting`).then((response) => {
       console.log(response);
@@ -82,20 +80,20 @@ export function ArtifactRoom() {
   const handleToggleBaking = () => {
     if (bakingShow === false) {
       setBakingShow(true);
-      // setBakingImage("/src/assets/images/paintingsopen.png");
+      setBakingImage("/src/assets/images/pastryopen.png");
     } else {
       setBakingShow(false);
-      // setBakingImage("/src/assets/images/paintingsclosed.png");
+      setBakingImage("/src/assets/images/pastryclosed.png");
     }
   };
 
   const handleToggleMisc = () => {
     if (miscShow === false) {
       setMiscShow(true);
-      // setBakingImage("/src/assets/images/paintingsopen.png");
+      setMiscImage("/src/assets/images/mysteryopen.png");
     } else {
       setMiscShow(false);
-      // setBakingImage("/src/assets/images/paintingsclosed.png");
+      setMiscImage("/src/assets/images/mysteryclosed.png");
     }
   };
 
@@ -121,13 +119,11 @@ export function ArtifactRoom() {
       </button>
       <button onClick={handleToggleBaking}>
         {" "}
-        {/* <img id="paintingImage" src={paintingImage} width="300px" />{" "} */}
-        baking
+        <img id="bakingImage" src={bakingImage} />{" "}
       </button>
       <button onClick={handleToggleMisc}>
         {" "}
-        {/* <img id="paintingImage" src={paintingImage} width="300px" />{" "} */}
-        misc
+        <img id="miscImage" src={miscImage} width="300px" />{" "}
       </button>
 
       <button onClick={handleToggleSewing}>

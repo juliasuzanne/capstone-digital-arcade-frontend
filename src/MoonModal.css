@@ -1,0 +1,34 @@
+.moon-modal-background {
+  display: block;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width:100%;
+  height: 100%;
+  z-index: 1000;
+  background-color:transparent;
+}
+
+
+.moon-modal-main {
+  position: absolute;
+  background: transparent;
+  width: 500px;
+  height: auto;
+  color: rgb(188, 175, 175);
+  top: -190px;
+  left: 100px;
+  font-style: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0 0 4px rgba(18, 1, 19, 0.599), 0 0 5px rgba(18, 1, 19, 0.599), 0 0 6px rgba(18, 1, 19, 0.599), 0 0 7px rgba(18, 1, 19, 0.599), 0 0 8px rgba(18, 1, 19, 0.599), 0 0 9px rgba(18, 1, 19, 0.599), 0 0 10px rgba(18, 1, 19, 0.599), 0 0 11px rgba(18, 1, 19, 0.599);
+}
+
+.moon-modal-main button.close {
+  font-size: small;
+  font-style: italic;
+  background: none;
+  border: none;
+  color: brown;
+  position: absolute;
+  bottom: -2em;
+}

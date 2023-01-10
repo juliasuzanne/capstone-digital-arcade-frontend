@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-player": "^2.11.0",
     "react-router-dom": "^6.6.1",
-    "three": "^0.148.0"
+    "three": "^0.148.0",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

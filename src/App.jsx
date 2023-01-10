@@ -22,6 +22,7 @@ import { Moon } from "./Moon";
 import { Snake } from "./Snake";
 import { Computer } from "./Computer";
 import { ArtifactRoom } from "./ItemCategories/ArtifactRoom";
+import { Basement } from "./Basement";
 function App() {
   return (
     <div>
@@ -29,6 +30,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/media" element={<Media />} />
+          <Route path="/basement" element={<Basement />} />
           <Route path="/login" element={<Login />} />
           <Route path="/threed" element={<ThreeD />} />
           <Route path="/artifactroom" element={<ArtifactRoom />} />

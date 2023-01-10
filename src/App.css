@@ -15,9 +15,20 @@
 }
 .moonperson {
   width: 200px;
+  height: 200px;
   top: 20px;
   left: 50px;
   position: absolute;
+  z-index: 4;
+}
+
+.moontalk {
+  width: 200px;
+  height: 200px;
+  top: 20px;
+  left: 50px;
+  position: absolute;
+  z-index: 6;
 }
 
 #moon{
@@ -158,18 +169,34 @@ a:active { text-decoration: none; }
 
 
 #mediaImage{
-  top: 400px;
-  left: 200px;
+  top: 390px;
+  left: 220px;
   position: absolute;
   height: 300px;
 }
 
+#miscImage{
+  top: 400px;
+  left: 10px;
+  position: absolute;
+  height: 300px;
+}
+
+#bakingImage{
+  top: 550px;
+  left: 320px;
+  width: 220px;
+  position: absolute;
+  height: 200px;
+  z-index: 5;
+}
 
 #clothesImage{
   top: 370px;
   left: 500px;
   position: absolute;
   height: 300px;
+  transform: rotate(4deg);
 }
 
 

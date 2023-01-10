@@ -9,6 +9,8 @@ export function Computer() {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
 
+  const [show3, setShow3] = useState(false);
+
   const handleShow = () => {
     setShow(true);
     document.body.style.overflow = "hidden";
@@ -27,12 +29,42 @@ export function Computer() {
     document.body.style.overflow = "unset";
   };
 
+  const handleShow3 = () => {
+    setShow3(true);
+    document.body.style.overflow = "hidden";
+  };
+  const handleClose3 = () => {
+    setShow3(false);
+    document.body.style.overflow = "unset";
+  };
+
   return (
     <div scroll="no">
       <div className="computerbackground"></div>
       <br></br>
       <br></br>
       <br></br>
+
+      <ComputerModal show={show} onClose={handleClose}>
+        <div id="snakeDiv">
+          <Snake />
+        </div>
+      </ComputerModal>
+
+      <VideoModal show={show2} onClose={handleClose2}>
+        <div id="movieplayer">
+          <Romeo />
+        </div>
+      </VideoModal>
+
+      <VideoModal show={show3} onClose={handleClose3}>
+        <div id="movieplayer">
+          <li>Fix the lights - 500pts</li>
+          <li>Play snake - 5pts /apple</li>
+          <li>Catalog an item - 1pt</li>
+        </div>
+      </VideoModal>
+
       <button
         onClick={() => {
           handleShow();
@@ -40,29 +72,20 @@ export function Computer() {
       >
         <img id="snake" src="./src/assets/images/snakegame.png" />
       </button>
-      <ComputerModal show={show} onClose={handleClose}>
-        <div id="snakeDiv">
-          <Snake />
-        </div>
-      </ComputerModal>
-      <VideoModal show={show2} onClose={handleClose2}>
-        <div id="movieplayer">
-          <Romeo />
-        </div>
-      </VideoModal>
-      <button
-        onClick={() => {
-          handleShow();
-        }}
-      >
-        <img id="tasks" src="./src/assets/images/tasklist.png" />
-      </button>
+
       <button
         onClick={() => {
           handleShow2();
         }}
       >
         <img id="romancemovie" src="./src/assets/images/romancemovie.png" />
+      </button>
+      <button
+        onClick={() => {
+          handleShow3();
+        }}
+      >
+        <img id="tasks" src="./src/assets/images/tasklist.png" />
       </button>
     </div>
   );

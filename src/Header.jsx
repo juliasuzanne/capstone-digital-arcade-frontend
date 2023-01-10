@@ -46,7 +46,7 @@ export function Header() {
             </div>
           </>
         ) : (
-          <div>
+          <>
             <div>
               <li>
                 <img src={currentUser.image_url} className="circular-images" />
@@ -61,7 +61,7 @@ export function Header() {
               <button onClick={handleSeeArtifacts} className="bag"></button>
               <img width="100px" src="/src/assets/images/bag.png" />
             </div>
-          </div>
+          </>
         )}
       </header>
     </div>
