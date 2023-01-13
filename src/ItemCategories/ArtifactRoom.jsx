@@ -12,11 +12,11 @@ export function ArtifactRoom() {
   const [items, setItems] = useState([]);
   const [show, setShow] = useState(false);
   const [mediaShow, setMediaShow] = useState(false);
-  const [mediaImage, setMediaImage] = useState("/src/assets/images/closedboxmedia.png");
-  const [paintingImage, setPaintingImage] = useState("/src/assets/images/paintingsclosed.png");
-  const [bakingImage, setBakingImage] = useState("/src/assets/images/pastryclosed.png");
-  const [miscImage, setMiscImage] = useState("/src/assets/images/mysteryclosed.png");
-  const [clothesImage, setClothesImage] = useState("/src/assets/images/fullclothes.png");
+  const [mediaImage, setMediaImage] = useState("./assets/images/closedboxmedia.png");
+  const [paintingImage, setPaintingImage] = useState("./assets/images/paintingsclosed.png");
+  const [bakingImage, setBakingImage] = useState("./assets/images/pastryclosed.png");
+  const [miscImage, setMiscImage] = useState("./assets/images/mysteryclosed.png");
+  const [clothesImage, setClothesImage] = useState("./assets/images/fullclothes.png");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
   const [bakingShow, setBakingShow] = useState(false);
@@ -60,50 +60,50 @@ export function ArtifactRoom() {
   const handleToggleMedia = () => {
     if (mediaShow === false) {
       setMediaShow(true);
-      setMediaImage("/src/assets/images/openedboxmedia.png");
+      setMediaImage("./assets/images/openedboxmedia.png");
     } else {
       setMediaShow(false);
-      setMediaImage("/src/assets/images/closedboxmedia.png");
+      setMediaImage("./assets/images/closedboxmedia.png");
     }
   };
 
   const handleTogglePainting = () => {
     if (paintingShow === false) {
       setPaintingShow(true);
-      setPaintingImage("/src/assets/images/paintingsopen.png");
+      setPaintingImage("./assets/images/paintingsopen.png");
     } else {
       setPaintingShow(false);
-      setPaintingImage("/src/assets/images/paintingsclosed.png");
+      setPaintingImage("./assets/images/paintingsclosed.png");
     }
   };
 
   const handleToggleBaking = () => {
     if (bakingShow === false) {
       setBakingShow(true);
-      setBakingImage("/src/assets/images/pastryopen.png");
+      setBakingImage("./assets/images/pastryopen.png");
     } else {
       setBakingShow(false);
-      setBakingImage("/src/assets/images/pastryclosed.png");
+      setBakingImage("./assets/images/pastryclosed.png");
     }
   };
 
   const handleToggleMisc = () => {
     if (miscShow === false) {
       setMiscShow(true);
-      setMiscImage("/src/assets/images/mysteryopen.png");
+      setMiscImage("./assets/images/mysteryopen.png");
     } else {
       setMiscShow(false);
-      setMiscImage("/src/assets/images/mysteryclosed.png");
+      setMiscImage("./assets/images/mysteryclosed.png");
     }
   };
 
   const handleToggleSewing = () => {
     if (sewingShow === false) {
       setSewingShow(true);
-      setClothesImage("/src/assets/images/emptyclothes.png");
+      setClothesImage("./assets/images/emptyclothes.png");
     } else {
       setSewingShow(false);
-      setClothesImage("/src/assets/images/fullclothes.png");
+      setClothesImage("./assets/images/fullclothes.png");
     }
   };
 

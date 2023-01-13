@@ -27,7 +27,7 @@ export function ButtonRoom() {
   const [isBoxFixed, setIsBoxFixed] = useState(false);
   let [array, setArray] = useState([]);
   const [image, setImage] = useState("./assets/images/closecurtainorange.png");
-  const [stairs, setStairs] = useState("./src/assets/images/stairs.png");
+  const [stairs, setStairs] = useState("./assets/images/stairs.png");
   let [currentUser, setCurrentUser] = useState([]);
 
   const handleCurrentUser = () => {
@@ -39,10 +39,10 @@ export function ButtonRoom() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed("./src/assets/images/closedbox.png");
+      setIsBoxFixed("./assets/images/closedbox.png");
       setFixed(true);
     } else {
-      setIsBoxFixed("./src/assets/images/openwire.png");
+      setIsBoxFixed("./assets/images/openwire.png");
       setFixed(false);
     }
   };
@@ -131,55 +131,55 @@ export function ButtonRoom() {
   return (
     <div className="buttonRoom">
       {localStorage.jwt === undefined ? (
-        <img className="top-box" src="./src/assets/images/openwire.png" />
+        <img className="top-box" src="./assets/images/openwire.png" />
       ) : (
         <img className="top-box" src={isBoxFixed} />
       )}
       {/* 
-      <img className="top-box" width="300px" src="./src/assets/images/openwire.png" /> */}
+      <img className="top-box" width="300px" src="./assets/images/openwire.png" /> */}
       <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
         <p>{talkText}</p>
       </button>
       <Sound />
-      <img src="./src/assets/images/room_unpacking.png" className="artifactRoom" />
+      <img src="./assets/images/room_unpacking.png" className="artifactRoom" />
       <button onClick={exitRoom}>
-        <img id="exit" src="./src/assets/images/exit.png" />
+        <img id="exit" src="./assets/images/exit.png" />
       </button>
-      <img src="./src/assets/images/eyespainting.png" className="eyesPaintingActual" />
+      <img src="./assets/images/eyespainting.png" className="eyesPaintingActual" />
       <button className="eyesPainting" onClick={movingEyes}></button>
       <button onClick={computer}>
-        <img id="computer" src="./src/assets/images/computer.png" />
+        <img id="computer" src="./assets/images/computer.png" />
       </button>
       <button onClick={handleShowLight}>
-        <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
+        <img id="lightswitch" src="./assets/images/lightswitch.png" />
       </button>
       <button id="artifactbox" onClick={seeArtifacts}></button>
       <button onClick={exitRoom}>
-        <img id="exit" src="./src/assets/images/exit.png" />
+        <img id="exit" src="./assets/images/exit.png" />
       </button>
       <button
         id="opencurtain"
-        onMouseEnter={() => setImage("./src/assets/images/opencurtainorange.png")}
-        onMouseLeave={() => setImage("./src/assets/images/closecurtainorange.png")}
+        onMouseEnter={() => setImage("./assets/images/opencurtainorange.png")}
+        onMouseLeave={() => setImage("./assets/images/closecurtainorange.png")}
         onClick={catalog}
       ></button>
       <button
         id="stairs"
-        onMouseEnter={() => setStairs("./src/assets/images/stairslight.png")}
-        onMouseLeave={() => setStairs("./src/assets/images/stairs.png")}
+        onMouseEnter={() => setStairs("./assets/images/stairslight.png")}
+        onMouseLeave={() => setStairs("./assets/images/stairs.png")}
         onClick={exitRoom}
       ></button>
       <button
         id="grate"
-        onMouseEnter={() => setGrate("./src/assets/images/eyeballgrate.png")}
+        onMouseEnter={() => setGrate("./assets/images/eyeballgrate.png")}
         onMouseLeave={() => setGrate("")}
         onClick={exitRoom}
       ></button>
 
       {/* <Curtain show={openCurtain} /> */}
-      <img className="counterJulia" src="./src/assets/images/counterJulia.gif" />
-      <img className="counter" src="./src/assets/images/counter.png" />
-      <img className="roombackground" src="./src/assets/images/home_background.png" />
+      <img className="counterJulia" src="./assets/images/counterJulia.gif" />
+      <img className="counter" src="./assets/images/counter.png" />
+      <img className="roombackground" src="./assets/images/home_background.png" />
       <img className="opencurtain" src={image} />
       <img className="stairsImage" src={stairs} />
       <img className="grateImage" src={grate} />
