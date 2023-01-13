@@ -1,5 +1,4 @@
 import axios from "axios";
-import { color } from "d3";
 import { useState, useEffect } from "react";
 
 export function ReduceScore(props) {
