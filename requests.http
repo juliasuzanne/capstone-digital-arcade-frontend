@@ -1,0 +1,89 @@
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI2NjY5NTl9.gjDfow50-5wdKgMTBZs8s4ng7Rreay38MnD9V2jL3LI
+
+### SEE USER PROFILE
+GET http://localhost:3000/users.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+#### SHOW ARTIFACT (DEAD)
+GET http://localhost:3000/artifacts/2.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### SEE ALL IMAGES FOR GAME
+GET http://localhost:3000/images.json
+Content-Type: application/json
+
+
+### CREATE IMAGE FOR GAME
+POST http://localhost:3000/images.json
+Content-Type: application/json
+
+{
+  "image_url" : "https://media.istockphoto.com/id/1340824257/photo/fog-white-clouds-or-haze-for-designs.jpg?s=612x612&w=0&k=20&c=ivtSRdJRlm5C3eIMipJ9JZncbb3nA8pLMMW3Vlfw56A=",
+  "points" : 5,
+  "name" : "cloud"
+}
+
+
+#### update points
+PATCH http://localhost:3000/users.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "points": 90
+}
+
+
+### login
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### CREATE ARTIFACT
+POST http://localhost:3000/artifacts.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "price_in_points": 20,
+  "image_url": "https://items.jellyneo.net/layout/imgs/itemdb/mascot_sad_250.png",
+  "name": "Sad Mascot"
+}
+
+
+### BUY AN ARTIFACT
+PATCH http://localhost:3000/artifacts/4.json
+Authorization: Bearer {{jwt}}
+
+
+### CREATE ITEM
+POST http://localhost:3000/items.json 
+Content-Type: application/json
+
+{
+"image_url": "/src/assets/images/leaf.png"
+}
+
+### SEE ALL ITEMS
+GET http://localhost:3000/items.json 
+Content-Type: application/json
+
+### SHOW ITEM
+GET http://localhost:3000/items/9.json
+
+### UPDATE ITEM
+PATCH http://localhost:3000/items/9.json
+Content-Type: application/json
+
+{
+  "image_url": "/src/assets/images/ladyvengeancepants.png"
+}
+
+
+### DESTROY ITEM
