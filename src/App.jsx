@@ -8,7 +8,6 @@ import "./App.css";
 import { Signup } from "./Signup";
 import { Game } from "./Game";
 import { ArtifactsNew } from "./ArtifactsNew";
-import axios from "axios";
 import { ArtifactsAll } from "./ArtifactsAll";
 import { NotJustMyArtifacts } from "./NotJustMyArtifacts";
 import { Index } from "./Index";

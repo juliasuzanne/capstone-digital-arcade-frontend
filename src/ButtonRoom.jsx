@@ -12,23 +12,18 @@ import { Home } from "./Home";
 import { ThreeD } from "./ThreeD";
 
 export function ButtonRoom() {
-  const [items, setItems] = useState([]);
-
   const [isTalking, setIsTalking] = useState(false);
   const [talkText, setTalkText] = useState("");
-
   const [showLight, setShowLight] = useState(false);
-
   const [openCurtain, setOpenCurtain] = useState(true);
   const [grate, setGrate] = useState("");
-
   const [fixed, setFixed] = useState(false);
   const [showNote, setShowNote] = useState(false);
-  const [isBoxFixed, setIsBoxFixed] = useState(false);
-  let [array, setArray] = useState([]);
+  const [isBoxFixed, setIsBoxFixed] = useState("");
   const [image, setImage] = useState("./src/assets/images/closecurtainorange.png");
   const [stairs, setStairs] = useState("./src/assets/images/stairs.png");
   let [currentUser, setCurrentUser] = useState([]);
+  const [items, setItems] = useState([]);
 
   const handleCurrentUser = () => {
     axios.get("https://patient-wood-4884.fly.dev/users.json").then((response) => {
@@ -129,78 +124,84 @@ export function ButtonRoom() {
   useEffect(checkBoxFixed);
 
   return (
-    <div className="buttonRoom">
-      {localStorage.jwt === undefined ? (
-        <img className="top-box" src="./src/assets/images/openwire.png" />
-      ) : (
-        <img className="top-box" src={isBoxFixed} />
-      )}
-      {/* 
+    <>
+      <div className="buttonRoom">
+        {localStorage.jwt === undefined ? (
+          <img className="top-box" src="./src/assets/images/openwire.png" />
+        ) : (
+          <img className="top-box" src={isBoxFixed} />
+        )}
+        {/* 
       <img className="top-box" width="300px" src="./src/assets/images/openwire.png" /> */}
-      <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
-        <p>{talkText}</p>
-      </button>
-      <Sound />
-      <img src="./src/assets/images/room_unpacking.png" className="artifactRoom" />
-      <button onClick={exitRoom}>
-        <img id="exit" src="./src/assets/images/exit.png" />
-      </button>
-      <img src="./src/assets/images/eyespainting.png" className="eyesPaintingActual" />
-      <button className="eyesPainting" onClick={movingEyes}></button>
-      <button onClick={computer}>
-        <img id="computer" src="./src/assets/images/computer.png" />
-      </button>
-      <button onClick={handleShowLight}>
-        <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
-      </button>
-      <button id="artifactbox" onClick={seeArtifacts}></button>
-      <button onClick={exitRoom}>
-        <img id="exit" src="./src/assets/images/exit.png" />
-      </button>
-      <button
-        id="opencurtain"
-        onMouseEnter={() => setImage("./src/assets/images/opencurtainorange.png")}
-        onMouseLeave={() => setImage("./src/assets/images/closecurtainorange.png")}
-        onClick={catalog}
-      ></button>
-      <button
-        id="stairs"
-        onMouseEnter={() => setStairs("./src/assets/images/stairslight.png")}
-        onMouseLeave={() => setStairs("./src/assets/images/stairs.png")}
-        onClick={exitRoom}
-      ></button>
-      <button
-        id="grate"
-        onMouseEnter={() => setGrate("./src/assets/images/eyeballgrate.png")}
-        onMouseLeave={() => setGrate("")}
-        onClick={exitRoom}
-      ></button>
+        <div>
+          <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
+            <p>{talkText}</p>
+          </button>
+        </div>
+        <Sound />
+        <div>
+          <img src="./src/assets/images/room_unpacking.png" className="artifactRoom" />
+        </div>
+        <button onClick={exitRoom}>
+          <img id="exit" src="./src/assets/images/exit.png" />
+        </button>
+        <img src="./src/assets/images/eyespainting.png" className="eyesPaintingActual" />
+        <button className="eyesPainting" onClick={movingEyes}></button>
+        <button onClick={computer}>
+          <img id="computer" src="./src/assets/images/computer.png" />
+        </button>
+        <button onClick={handleShowLight}>
+          <img id="lightswitch" src="./src/assets/images/lightswitch.png" />
+        </button>
+        <button id="artifactbox" onClick={seeArtifacts}></button>
+        <button onClick={exitRoom}>
+          <img id="exit" src="./src/assets/images/exit.png" />
+        </button>
+        <button
+          id="opencurtain"
+          onMouseEnter={() => setImage("./src/assets/images/opencurtainorange.png")}
+          onMouseLeave={() => setImage("./src/assets/images/closecurtainorange.png")}
+          onClick={catalog}
+        ></button>
+        <button
+          id="stairs"
+          onMouseEnter={() => setStairs("./src/assets/images/stairslight.png")}
+          onMouseLeave={() => setStairs("./src/assets/images/stairs.png")}
+          onClick={exitRoom}
+        ></button>
+        <button
+          id="grate"
+          onMouseEnter={() => setGrate("./src/assets/images/eyeballgrate.png")}
+          onMouseLeave={() => setGrate("")}
+          onClick={exitRoom}
+        ></button>
 
-      {/* <Curtain show={openCurtain} /> */}
-      <img className="counterJulia" src="./src/assets/images/counterJulia.gif" />
-      <img className="counter" src="./src/assets/images/counter.png" />
-      <img className="roombackground" src="./src/assets/images/home_background.png" />
-      <img className="opencurtain" src={image} />
-      <img className="stairsImage" src={stairs} />
-      <img className="grateImage" src={grate} />
-      <Light show={showLight} />
-      <button className="talk" onClick={handleShowConversation}>
-        {" "}
-        talk{" "}
-      </button>
-      <ConversationModal show={isConversationVisible} onClose={handleCloseConversation}>
-        <Home onClose={handleCloseConversation} />
-      </ConversationModal>
-      <button className="note" onClick={handleShowNote}></button>
-      <Modal3 show={showNote} onClose={handleHideNote}>
-        <ThreeD />
-      </Modal3>
-      <div id="artifactsinbox">
-        {" "}
-        {items.slice(0, 10).map((item) => (
-          <img src={item.image_url} width="30px" />
-        ))}{" "}
+        {/* <Curtain show={openCurtain} /> */}
+        <img className="counterJulia" src="./src/assets/images/counterJulia.gif" />
+        <img className="counter" src="./src/assets/images/counter.png" />
+        <img className="roombackground" src="./src/assets/images/home_background.png" />
+        <img className="opencurtain" src={image} />
+        <img className="stairsImage" src={stairs} />
+        <img className="grateImage" src={grate} />
+        <Light show={showLight} />
+        <button className="talk" onClick={handleShowConversation}>
+          {" "}
+          talk{" "}
+        </button>
+        <ConversationModal show={isConversationVisible} onClose={handleCloseConversation}>
+          <Home onClose={handleCloseConversation} />
+        </ConversationModal>
+        <button className="note" onClick={handleShowNote}></button>
+        <Modal3 show={showNote} onClose={handleHideNote}>
+          <ThreeD />
+        </Modal3>
+        <div id="artifactsinbox">
+          {" "}
+          {items.slice(0, 10).map((item) => (
+            <img src={item.image_url} width="30px" />
+          ))}{" "}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
