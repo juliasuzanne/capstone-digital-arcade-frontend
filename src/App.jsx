@@ -19,6 +19,7 @@ import { Snake } from "./Snake";
 import { Computer } from "./Computer";
 import { ArtifactRoom } from "./ItemCategories/ArtifactRoom";
 import { Basement } from "./Basement";
+
 function App() {
   return (
     <div>
