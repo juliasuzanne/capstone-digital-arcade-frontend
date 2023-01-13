@@ -37,7 +37,7 @@ function App() {
           <Route path="/draw" element={<Draw />} />
           <Route path="/hotel" element={<ButtonRoom />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<ButtonRoom />} />
+          <Route path="/" element={<ArtifactRoom />} />
           <Route path="/romeo" element={<Romeo />} />
           <Route path="/artifactcatalog" element={<ArtifactsNew />} />
           <Route path="/artifacts" element={<ArtifactsAll />} />

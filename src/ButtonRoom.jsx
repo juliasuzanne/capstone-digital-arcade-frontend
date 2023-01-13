@@ -124,7 +124,7 @@ export function ButtonRoom() {
   useEffect(checkBoxFixed);
 
   return (
-    <>
+    <div id="buttonRoom">
       <div className="buttonRoom">
         {localStorage.jwt === undefined ? (
           <img className="top-box" src="./src/assets/images/openwire.png" />
@@ -202,6 +202,6 @@ export function ButtonRoom() {
           ))}{" "}
         </div>
       </div>
-    </>
+    </div>
   );
 }
