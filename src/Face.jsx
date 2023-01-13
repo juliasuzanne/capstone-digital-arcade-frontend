@@ -15,7 +15,7 @@ export function Face() {
   let [currentUser, setCurrentUser] = useState([]);
 
   const handleCurrentUser = () => {
-    axios.get("http://localhost:3000/users.json").then((response) => {
+    axios.get("https://patient-wood-4884.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });
@@ -38,7 +38,7 @@ export function Face() {
     let newPoints = 500 + currentUser.points;
     console.log(newPoints);
     axios
-      .patch("http://localhost:3000/users", { fixed: true, points: newPoints })
+      .patch("https://patient-wood-4884.fly.dev/users", { fixed: true, points: newPoints })
       .then((window.location.href = "/"))
       .catch((error) => {
         console.log(error.response.data.errors);

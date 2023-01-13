@@ -13,7 +13,7 @@ export function ArtifactsNew() {
 
   const handleCreateArtifact = (params) => {
     axios
-      .post("http://localhost:3000/artifacts", params)
+      .post("https://patient-wood-4884.fly.dev/artifacts", params)
       // .then((window.location.href = "/artifacts/all"))
       .catch((error) => {
         console.log(error.response.data.errors);

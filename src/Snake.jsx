@@ -19,7 +19,7 @@ export function Snake() {
   const [errors, setErrors] = useState([]);
 
   const handleCurrentUser = () => {
-    axios.get("http://localhost:3000/users.json").then((response) => {
+    axios.get("https://patient-wood-4884.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });
@@ -100,7 +100,7 @@ export function Snake() {
   const handleGetPoints = () => {
     let newPoints = points + currentUser.points;
     axios
-      .patch("http://localhost:3000/users", { points: newPoints })
+      .patch("https://patient-wood-4884.fly.dev/users", { points: newPoints })
       .then((window.location.href = "/computer"))
       .catch((error) => {
         console.log(error.response.data.errors);

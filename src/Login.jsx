@@ -14,7 +14,7 @@ export function Login() {
     const params = new FormData(event.target);
     setErrors([]);
     axios
-      .post("http://localhost:3000/sessions", params)
+      .post("https://patient-wood-4884.fly.dev/sessions", params)
       .then((response) => {
         console.log(response.data);
         axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;

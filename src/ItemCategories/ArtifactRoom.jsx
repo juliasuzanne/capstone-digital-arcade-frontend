@@ -26,7 +26,7 @@ export function ArtifactRoom() {
   const [currentItem, setCurrentItem] = useState([]);
 
   const handleGetItems = () => {
-    axios.get(`http://localhost:3000/items.json?cat=painting`).then((response) => {
+    axios.get(`https://patient-wood-4884.fly.dev/items.json?cat=painting`).then((response) => {
       console.log(response);
       setItems(response.data);
     });
@@ -41,7 +41,7 @@ export function ArtifactRoom() {
 
   const handleCreateArtifact = (params) => {
     axios
-      .post("http://localhost:3000/artifacts", params)
+      .post("https://patient-wood-4884.fly.dev/artifacts", params)
       // .then((window.location.href = "/artifacts/all"))
       .catch((error) => {
         console.log(error.response.data.errors);

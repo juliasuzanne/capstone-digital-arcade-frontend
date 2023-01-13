@@ -16,7 +16,7 @@ export function Baking(props) {
     // need to create request here to get all
     // connect on item click (use image) to prompt create artifact
     const handleGetItems = () => {
-      axios.get(`http://localhost:3000/items.json?cat=baking`).then((response) => {
+      axios.get(`https://patient-wood-4884.fly.dev/items.json?cat=baking`).then((response) => {
         console.log(response);
         setItems(response.data);
       });
@@ -31,7 +31,7 @@ export function Baking(props) {
 
     const handleCreateArtifact = (params) => {
       axios
-        .post("http://localhost:3000/artifacts", params)
+        .post("https://patient-wood-4884.fly.dev/artifacts", params)
         // .then((window.location.href = "/artifacts/all"))
         .catch((error) => {
           console.log(error.response.data.errors);

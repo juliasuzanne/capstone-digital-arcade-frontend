@@ -12,7 +12,7 @@ export function NotJustMyArtifacts() {
   let [currentArtifact, setCurrentArtifact] = useState({});
 
   const handleIndexArtifacts = () => {
-    axios.get("http://localhost:3000/artifacts/all.json").then((response) => {
+    axios.get("https://patient-wood-4884.fly.dev/artifacts/all.json").then((response) => {
       console.log(response);
       setArtifacts(response.data);
     });
@@ -28,27 +28,29 @@ export function NotJustMyArtifacts() {
   };
 
   const handleCurrentUser = () => {
-    axios.get("http://localhost:3000/users.json").then((response) => {
+    axios.get("https://patient-wood-4884.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });
   };
 
   const handleBuyArtifact = (id) => {
-    axios.patch(`http://localhost:3000/artifacts/${id}.json`, { user_id: currentUser.id }).then((response) => {
-      console.log(response.data);
-      setArtifacts(
-        artifacts.map((artifact) => {
-          if (artifact.id === response.data.id) {
-            return response.data;
-          } else {
-            return artifact;
-          }
-        })
-      );
+    axios
+      .patch(`https://patient-wood-4884.fly.dev/artifacts/${id}.json`, { user_id: currentUser.id })
+      .then((response) => {
+        console.log(response.data);
+        setArtifacts(
+          artifacts.map((artifact) => {
+            if (artifact.id === response.data.id) {
+              return response.data;
+            } else {
+              return artifact;
+            }
+          })
+        );
 
-      handleClose();
-    });
+        handleClose();
+      });
   };
 
   useEffect(handleIndexArtifacts, []);

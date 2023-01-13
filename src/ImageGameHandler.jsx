@@ -8,7 +8,7 @@ export function ImageGameHandler() {
   const [errors, setErrors] = useState([]);
 
   const handleCurrentUser = () => {
-    axios.get("http://localhost:3000/users.json").then((response) => {
+    axios.get("https://patient-wood-4884.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });

@@ -6,7 +6,7 @@ export function ArtifactsAll() {
   let [artifacts, setArtifacts] = useState([]);
 
   const handleIndexArtifacts = () => {
-    axios.get("http://localhost:3000/artifacts.json").then((response) => {
+    axios.get("https://patient-wood-4884.fly.dev/artifacts.json").then((response) => {
       console.log(response);
       setArtifacts(response.data);
     });

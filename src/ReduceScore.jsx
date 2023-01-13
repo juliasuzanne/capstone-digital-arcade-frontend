@@ -16,7 +16,7 @@ export function ReduceScore(props) {
     if (parseInt(props.artifact.price_in_points) < parseInt(props.user.points)) {
       let newPoints = props.user.points - props.artifact.price_in_points;
       axios
-        .patch("http://localhost:3000/users", { points: newPoints })
+        .patch("https://patient-wood-4884.fly.dev/users", { points: newPoints })
         .then((window.location.href = "/"))
         .catch((errors) => {
           console.log(errors.response.data.errors);
