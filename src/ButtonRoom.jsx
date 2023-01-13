@@ -26,7 +26,7 @@ export function ButtonRoom() {
   const [showNote, setShowNote] = useState(false);
   const [isBoxFixed, setIsBoxFixed] = useState(false);
   let [array, setArray] = useState([]);
-  const [image, setImage] = useState("./src/assets/images/closecurtainorange.png");
+  const [image, setImage] = useState("./assets/images/closecurtainorange.png");
   const [stairs, setStairs] = useState("./src/assets/images/stairs.png");
   let [currentUser, setCurrentUser] = useState([]);
 
