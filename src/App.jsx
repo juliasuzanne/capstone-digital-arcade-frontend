@@ -1,11 +1,8 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThreeD } from "./ThreeD";
 import { Romeo } from "./Romeo";
 import { Login } from "./Login";
 import { Header } from "./Header";
-import { Home } from "./Home";
 import { Media } from "./ItemCategories/Media";
 import "./App.css";
 import { Signup } from "./Signup";
