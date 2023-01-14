@@ -4,8 +4,8 @@ import axios from "axios";
 import { Modal3 } from "./Modal3";
 import { Sound } from "./Sound";
 
-// import face from "./src/assets/images/facepainting.png";
-// import pupils from "./src/assets//images/pupilspainting.png";
+// import face from "./assets/images/facepainting.png";
+// import pupils from "./assets//images/pupilspainting.png";
 // import { autoType } from "d3";
 import { ConversationModal } from "./ConversationModal";
 import { Home } from "./Home";
