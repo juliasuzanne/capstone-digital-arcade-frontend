@@ -67,7 +67,7 @@ POST http://localhost:3000/items.json
 Content-Type: application/json
 
 {
-"image_url": "/src/assets/images/leaf.png"
+"image_url": "/images/leaf.png"
 }
 
 ### SEE ALL ITEMS
@@ -82,7 +82,7 @@ PATCH http://localhost:3000/items/9.json
 Content-Type: application/json
 
 {
-  "image_url": "/src/assets/images/ladyvengeancepants.png"
+  "image_url": "/images/ladyvengeancepants.png"
 }
 
 

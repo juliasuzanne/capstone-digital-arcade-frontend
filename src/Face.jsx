@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import face from "/src/assets/images/face.png";
-import pupils from "./assets/images/pupils.png";
+import face from "/images/face.png";
+import pupils from "/images/pupils.png";
 import axios from "axios";
 
 // import { autoType, forceCenter } from "d3";
@@ -10,8 +10,8 @@ export function Face() {
   const [errors, setErrors] = useState([]);
   const [isBoxFixed, setIsBoxFixed] = useState("");
   const [points, setPoints] = useState(0);
-  const [blueWire, setBlueWire] = useState("/src/assets/images/blueopen.png");
-  const [redWire, setRedWire] = useState("/src/assets/images/redopen.png");
+  const [blueWire, setBlueWire] = useState("/images/blueopen.png");
+  const [redWire, setRedWire] = useState("/images/redopen.png");
   let [currentUser, setCurrentUser] = useState([]);
 
   const handleCurrentUser = () => {
@@ -48,38 +48,38 @@ export function Face() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+      setIsBoxFixed("/images/closedbox.png");
       setBlueWire("");
       setRedWire("");
     } else {
-      setIsBoxFixed("/src/assets/images/blankbox.png");
-      // setBlueWire("/src/assets/images/blueopen.png");
-      // setRedWire("/src/assets/images/redopen.png");
+      setIsBoxFixed("/images/blankbox.png");
+      // setBlueWire("/images/blueopen.png");
+      // setRedWire("/images/redopen.png");
     }
   };
 
   const handleFixRed = () => {
-    if (blueWire === "/src/assets/images/blueclosed.png") {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+    if (blueWire === "/images/blueclosed.png") {
+      setIsBoxFixed("/images/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);
       handleFixBox();
     } else {
-      setRedWire("/src/assets/images/redclosed.png");
+      setRedWire("/images/redclosed.png");
     }
   };
 
   const handleFixBlue = () => {
-    if (redWire === "/src/assets/images/redclosed.png") {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+    if (redWire === "/images/redclosed.png") {
+      setIsBoxFixed("/images/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);
       handleFixBox();
     } else {
       console.log("fixed blue");
-      setBlueWire("/src/assets/images/blueclosed.png");
+      setBlueWire("/images/blueclosed.png");
     }
   };
 
@@ -127,7 +127,7 @@ export function Face() {
           }}
         /> */}
         {localStorage.jwt === undefined ? (
-          <img className="electricalbox" src="/src/assets/images/openwire.png" />
+          <img className="electricalbox" src="/images/openwire.png" />
         ) : (
           <>
             <img className="electricalbox" src={isBoxFixed} />

@@ -1,6 +1,6 @@
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
-import texture from "/src/assets/images/plaster.jpg";
+import texture from "/images/plaster.jpg";
 
 export function Box() {
   const colorMap = useLoader(TextureLoader, texture);

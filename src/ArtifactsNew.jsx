@@ -38,15 +38,9 @@ export function ArtifactsNew() {
           <input className="form-control" name="price_in_points" type="integer" />
         </div>
         <div>
-          <input
-            hidden
-            className="form-control"
-            name="image_url"
-            type="string"
-            defaultValue="/src/assets/images/egg.png"
-          ></input>
+          <input hidden className="form-control" name="image_url" type="string" defaultValue="/images/egg.png"></input>
         </div>
-        <img src="/src/assets/images/egg.png" width="300px" />
+        <img src="/images/egg.png" width="300px" />
         <button type="submit">Submit</button>
       </form>
     </div>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { Modal3 } from "./Modal3";
 import { Sound } from "./Sound";
 
-// import face from "/src/assets/images/facepainting.png";
+// import face from "/images/facepainting.png";
 // import pupils from "./assets//images/pupilspainting.png";
 // import { autoType } from "d3";
 import { ConversationModal } from "./ConversationModal";
@@ -21,8 +21,8 @@ export function ButtonRoom() {
   const [showNote, setShowNote] = useState(false);
   const [isBoxFixed, setIsBoxFixed] = useState(false);
   let [array, setArray] = useState([]);
-  const [image, setImage] = useState("/src/assets/images/closecurtainorange.png");
-  const [stairs, setStairs] = useState("/src/assets/images/stairs.png");
+  const [image, setImage] = useState("/images/closecurtainorange.png");
+  const [stairs, setStairs] = useState("/images/stairs.png");
   let [currentUser, setCurrentUser] = useState([]);
   const [items, setItems] = useState([]);
 
@@ -35,10 +35,10 @@ export function ButtonRoom() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+      setIsBoxFixed("/images/closedbox.png");
       setFixed(true);
     } else {
-      setIsBoxFixed("/src/assets/images/openwire.png");
+      setIsBoxFixed("/images/openwire.png");
       setFixed(false);
     }
   };
@@ -127,55 +127,55 @@ export function ButtonRoom() {
   return (
     <div className="buttonRoom">
       {localStorage.jwt === undefined ? (
-        <img className="top-box" src="/src/assets/images/openwire.png" />
+        <img className="top-box" src="/images/openwire.png" />
       ) : (
         <img className="top-box" src={isBoxFixed} />
       )}
       {/* 
-      <img className="top-box" width="300px" src="/src/assets/images/openwire.png" /> */}
+      <img className="top-box" width="300px" src="/images/openwire.png" /> */}
       <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
         <p>{talkText}</p>
       </button>
       <Sound />
-      <img src="/src/assets/images/room_unpacking.png" className="artifactRoom" />
+      <img src="/images/room_unpacking.png" className="artifactRoom" />
       <button onClick={exitRoom}>
-        <img id="exit" src="/src/assets/images/exit.png" />
+        <img id="exit" src="/images/exit.png" />
       </button>
-      <img src="/src/assets/images/eyespainting.png" className="eyesPaintingActual" />
+      <img src="/images/eyespainting.png" className="eyesPaintingActual" />
       <button className="eyesPainting" onClick={movingEyes}></button>
       <button onClick={computer}>
-        <img id="computer" src="/src/assets/images/computer.png" />
+        <img id="computer" src="/images/computer.png" />
       </button>
       <button onClick={handleShowLight}>
-        <img id="lightswitch" src="/src/assets/images/lightswitch.png" />
+        <img id="lightswitch" src="/images/lightswitch.png" />
       </button>
       <button id="artifactbox" onClick={seeArtifacts}></button>
       <button onClick={exitRoom}>
-        <img id="exit" src="/src/assets/images/exit.png" />
+        <img id="exit" src="/images/exit.png" />
       </button>
       <button
         id="opencurtain"
-        onMouseEnter={() => setImage("/src/assets/images/opencurtainorange.png")}
-        onMouseLeave={() => setImage("/src/assets/images/closecurtainorange.png")}
+        onMouseEnter={() => setImage("/images/opencurtainorange.png")}
+        onMouseLeave={() => setImage("/images/closecurtainorange.png")}
         onClick={catalog}
       ></button>
       <button
         id="stairs"
-        onMouseEnter={() => setStairs("/src/assets/images/stairslight.png")}
-        onMouseLeave={() => setStairs("/src/assets/images/stairs.png")}
+        onMouseEnter={() => setStairs("/images/stairslight.png")}
+        onMouseLeave={() => setStairs("/images/stairs.png")}
         onClick={exitRoom}
       ></button>
       <button
         id="grate"
-        onMouseEnter={() => setGrate("/src/assets/images/eyeballgrate.png")}
+        onMouseEnter={() => setGrate("/images/eyeballgrate.png")}
         onMouseLeave={() => setGrate("")}
         onClick={exitRoom}
       ></button>
 
       {/* <Curtain show={openCurtain} /> */}
-      <img className="counterJulia" src="/src/assets/images/counterJulia.gif" />
-      <img className="counter" src="/src/assets/images/counter.png" />
-      <img className="roombackground" src="/src/assets/images/home_background.png" />
+      <img className="counterJulia" src="/images/counterJulia.gif" />
+      <img className="counter" src="/images/counter.png" />
+      <img className="roombackground" src="/images/home_background.png" />
       <img className="opencurtain" src={image} />
       <img className="stairsImage" src={stairs} />
       <img className="grateImage" src={grate} />

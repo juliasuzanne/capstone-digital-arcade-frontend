@@ -70,7 +70,7 @@ export function Computer() {
           handleShow();
         }}
       >
-        <img id="snake" src="/src/assets/images/snakegame.png" />
+        <img id="snake" src="/images/snakegame.png" />
       </button>
 
       <button
@@ -78,14 +78,14 @@ export function Computer() {
           handleShow2();
         }}
       >
-        <img id="romancemovie" src="/src/assets/images/romancemovie.png" />
+        <img id="romancemovie" src="/images/romancemovie.png" />
       </button>
       <button
         onClick={() => {
           handleShow3();
         }}
       >
-        <img id="tasks" src="/src/assets/images/tasklist.png" />
+        <img id="tasks" src="/images/tasklist.png" />
       </button>
     </div>
   );
