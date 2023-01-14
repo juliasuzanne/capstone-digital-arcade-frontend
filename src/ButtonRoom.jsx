@@ -3,7 +3,8 @@ import { Light } from "./Images/Light";
 import axios from "axios";
 import { Modal3 } from "./Modal3";
 import { Sound } from "./Sound";
-
+import counterjulia from "/src/assets/images/counterJulia.gif";
+import homebackground from "./src/assets/images/home_background.png";
 // import face from "./src/assets/images/facepainting.png";
 // import pupils from "./src/assets//images/pupilspainting.png";
 // import { autoType } from "d3";
@@ -177,9 +178,9 @@ export function ButtonRoom() {
         ></button>
 
         {/* <Curtain show={openCurtain} /> */}
-        <img className="counterJulia" src="./src/assets/images/counterJulia.gif" />
+        <img className="counterJulia" src={counterjulia} />
         <img className="counter" src="./src/assets/images/counter.png" />
-        <img className="roombackground" src="./src/assets/images/home_background.png" />
+        <img className="roombackground" src={homebackground} />
         <img className="opencurtain" src={image} />
         <img className="stairsImage" src={stairs} />
         <img className="grateImage" src={grate} />
