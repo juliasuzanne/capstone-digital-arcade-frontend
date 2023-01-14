@@ -168,7 +168,10 @@ button {
   position: absolute;
   z-index: 1;
   top: 0;
-  background-size: cover;
+ height: 1000000px;
+ width: 10000000px;
+
+
   left: 0;
 }
 
