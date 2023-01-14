@@ -64,7 +64,12 @@ export function Baking(props) {
           </button>
         ))}
         <Modal show={show} onClose={handleNoCatalog}>
-          <form onSubmit={handleNewArtifact}>
+          <form
+            onSubmit={() => {
+              handleNewArtifact();
+              setShow(false);
+            }}
+          >
             <div>
               Name:
               <input name="name" id="myform" type="string" />

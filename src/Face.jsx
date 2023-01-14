@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import face from "/src/assets/images/face.png";
 import pupils from "./assets/images/pupils.png";
-import bluewire from "/src/assets/images/blueopen.png";
-import redwire from "/src/assets/images/redopen.png";
-import closedbox from "/src/assets/images/closedbox.png";
 import axios from "axios";
 
 // import { autoType, forceCenter } from "d3";
@@ -13,8 +10,8 @@ export function Face() {
   const [errors, setErrors] = useState([]);
   const [isBoxFixed, setIsBoxFixed] = useState("");
   const [points, setPoints] = useState(0);
-  const [blueWire, setBlueWire] = useState({ bluewire });
-  const [redWire, setRedWire] = useState({ redwire });
+  const [blueWire, setBlueWire] = useState("/src/assets/images/blueopen.png");
+  const [redWire, setRedWire] = useState("/src/assets/images/redopen.png");
   let [currentUser, setCurrentUser] = useState([]);
 
   const handleCurrentUser = () => {
@@ -51,7 +48,7 @@ export function Face() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed({ closedbox });
+      setIsBoxFixed("/src/assets/images/closedbox.png");
       setBlueWire("");
       setRedWire("");
     } else {
@@ -63,7 +60,7 @@ export function Face() {
 
   const handleFixRed = () => {
     if (blueWire === "/src/assets/images/blueclosed.png") {
-      setIsBoxFixed({ closedbox });
+      setIsBoxFixed("/src/assets/images/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);
@@ -75,7 +72,7 @@ export function Face() {
 
   const handleFixBlue = () => {
     if (redWire === "/src/assets/images/redclosed.png") {
-      setIsBoxFixed({ closedbox });
+      setIsBoxFixed("/src/assets/images/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);

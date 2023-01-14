@@ -47,6 +47,7 @@ export function ArtifactRoom() {
         console.log(error.response.data.errors);
         setErrors(error.response.data.errors);
       });
+    handleNoCatalog();
   };
 
   const handleCatalog = () => {
@@ -125,12 +126,10 @@ export function ArtifactRoom() {
         {" "}
         <img id="miscImage" src={miscImage} width="300px" />{" "}
       </button>
-
       <button onClick={handleToggleSewing}>
         {" "}
         <img id="clothesImage" src={clothesImage} width="300px" />{" "}
       </button>
-
       <button onClick={handleTogglePainting}> </button>
       <button onClick={handleToggleSewing}> </button>
       <Media show={mediaShow} />
@@ -150,7 +149,11 @@ export function ArtifactRoom() {
         </button>
       ))}
       <Modal show={show} onClose={handleNoCatalog}>
-        <form onSubmit={handleNewArtifact}>
+        <form
+          onSubmit={() => {
+            handleNewArtifact();
+          }}
+        >
           <div>
             Name:
             <input name="name" className="myform" type="string" />
@@ -164,8 +167,14 @@ export function ArtifactRoom() {
           </div>
           <img src={currentItem} className="myimage" width="300px" />
           <div>
-            <button type="submit" background-color="black">
-              submit
+            <button type="submit">submit</button>
+            <button
+              type="button"
+              onClick={() => {
+                setShow(false);
+              }}
+            >
+              done with this item
             </button>
           </div>
         </form>
