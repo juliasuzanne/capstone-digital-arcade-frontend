@@ -3,6 +3,7 @@ import face from "/src/assets/images/face.png";
 import pupils from "./assets/images/pupils.png";
 import bluewire from "/src/assets/images/blueopen.png";
 import redwire from "/src/assets/images/redopen.png";
+import closedbox from "/src/assets/images/closedbox.png";
 import axios from "axios";
 
 // import { autoType, forceCenter } from "d3";
@@ -50,7 +51,7 @@ export function Face() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+      setIsBoxFixed({ closedbox });
       setBlueWire("");
       setRedWire("");
     } else {
@@ -62,7 +63,7 @@ export function Face() {
 
   const handleFixRed = () => {
     if (blueWire === "/src/assets/images/blueclosed.png") {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+      setIsBoxFixed({ closedbox });
       setBlueWire("");
       setRedWire("");
       setPoints(50);
@@ -74,7 +75,7 @@ export function Face() {
 
   const handleFixBlue = () => {
     if (redWire === "/src/assets/images/redclosed.png") {
-      setIsBoxFixed("/src/assets/images/closedbox.png");
+      setIsBoxFixed({ closedbox });
       setBlueWire("");
       setRedWire("");
       setPoints(50);
