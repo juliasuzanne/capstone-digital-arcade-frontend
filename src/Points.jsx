@@ -18,7 +18,7 @@ export function Points() {
 
   const handleSetPoints = (params) => {
     axios
-      .patch("https://patient-wood-4884.fly.dev/users", params)
+      .patch("https://moon-egg.fly.dev/users", params)
       .then((window.location.href = "/"))
       .catch((error) => {
         console.log(error.response.data.errors);

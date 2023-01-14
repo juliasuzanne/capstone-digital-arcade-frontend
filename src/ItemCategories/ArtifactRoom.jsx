@@ -26,7 +26,7 @@ export function ArtifactRoom() {
   const [currentItem, setCurrentItem] = useState([]);
 
   const handleGetItems = () => {
-    axios.get(`https://patient-wood-4884.fly.dev/items.json?cat=painting`).then((response) => {
+    axios.get(`https://moon-egg.fly.dev/items.json?cat=painting`).then((response) => {
       console.log(response);
       setItems(response.data);
     });
@@ -41,7 +41,7 @@ export function ArtifactRoom() {
 
   const handleCreateArtifact = (params) => {
     axios
-      .post("https://patient-wood-4884.fly.dev/artifacts", params)
+      .post("https://moon-egg.fly.dev/artifacts", params)
       // .then((window.location.href = "/artifacts/all"))
       .catch((error) => {
         console.log(error.response.data.errors);
@@ -148,37 +148,6 @@ export function ArtifactRoom() {
           <img src={item.image_url} width="200px" />
         </button>
       ))}
-      <Modal show={show} onClose={handleNoCatalog}>
-        <form
-          onSubmit={() => {
-            handleNewArtifact();
-          }}
-        >
-          <div>
-            Name:
-            <input name="name" className="myform" type="string" />
-          </div>
-          <div>
-            Price:
-            <input className="myform" name="price_in_points" type="integer" />
-          </div>
-          <div>
-            <input hidden name="image_url" type="string" defaultValue={currentItem}></input>
-          </div>
-          <img src={currentItem} className="myimage" width="300px" />
-          <div>
-            <button type="submit">submit</button>
-            <button
-              type="button"
-              onClick={() => {
-                setShow(false);
-              }}
-            >
-              done with this item
-            </button>
-          </div>
-        </form>
-      </Modal>
     </div>
   );
 }
