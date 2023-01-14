@@ -1,4 +1,4 @@
-import creak from "./assets/images/creak.wav";
+import creak from "/src/assets/images/creak.wav";
 import useSound from "use-sound";
 
 export function Sound() {

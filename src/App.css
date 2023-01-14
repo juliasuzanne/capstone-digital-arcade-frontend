@@ -1,11 +1,11 @@
 #root {
   background-color: rgb(130, 130, 130);
-  background-size:cover;
+  background-size: cover;
 }
 
-.sky{
+.sky {
   position: absolute;
-  background-image: url("./assets/images/nighttime_scene.png");
+  background-image: url("/src/assets/images/nighttime_scene.png");
   background-size: cover;
   top: 0;
   left: 0;
@@ -31,14 +31,14 @@
   z-index: 6;
 }
 
-#moon{
+#moon {
   padding: 1px;
   height: 100vh;
   width: 40vw;
   z-index: 1;
 }
 
-.nighttime{
+.nighttime {
   background-color: black;
   padding: 1px;
   height: 100vh;
@@ -46,19 +46,18 @@
   z-index: 1;
 }
 
-.scene{
+.scene {
   background-color: black;
   padding: 1px;
   height: 100vh;
   width: 100vw;
   z-index: 1;
 }
-
 
 html {
   scroll-behavior: smooth;
   background-color: rgb(130, 130, 130);
-  background-size:cover;
+  background-size: cover;
 }
 
 body {
@@ -75,33 +74,40 @@ div {
 }
 
 .logout {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   text-decoration: none;
   font-size: 15px;
   padding: 10px;
   color: white;
-  text-align:center;
+  text-align: center;
 }
 
 a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   text-decoration: none;
   font-size: 18px;
   padding: 10px;
   color: white;
 }
 
-a:link { text-decoration: none; }
+a:link {
+  text-decoration: none;
+}
 
+a:visited {
+  text-decoration: none;
+}
 
-a:visited { text-decoration: none;}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
 
-
-a:hover { text-decoration: none; color: black;}
-
-
-a:active { text-decoration: none; }
-
+a:active {
+  text-decoration: none;
+}
 
 #signup {
   margin: auto;
@@ -138,14 +144,12 @@ a:active { text-decoration: none; }
   padding: auto;
 }
 
-
 .circular-images-signup:hover {
   background-color: rgba(0, 0, 0, 0.407);
 }
 
 .circular-images-signup:focus {
   background-color: rgba(0, 0, 0);
-
 }
 
 #login {
@@ -158,31 +162,31 @@ a:active { text-decoration: none; }
 }
 
 .plain {
- all: unset;
- padding: 3px;
+  all: unset;
+  padding: 3px;
 }
 
-.plain:hover{
-  text-shadow: 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 0 0 10px black, 0 0 11px black, 0 0 12px black, 0 0 13px black, 0 0 14px black, 0 0 15px black, 0 0 16px black, 0 0 17px black, 0 0 18px black, 0 0 19px black;
-  
+.plain:hover {
+  text-shadow: 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 0 0 10px black,
+    0 0 11px black, 0 0 12px black, 0 0 13px black, 0 0 14px black, 0 0 15px black, 0 0 16px black, 0 0 17px black,
+    0 0 18px black, 0 0 19px black;
 }
 
-
-#mediaImage{
+#mediaImage {
   top: 390px;
   left: 220px;
   position: absolute;
   height: 300px;
 }
 
-#miscImage{
+#miscImage {
   top: 400px;
   left: 10px;
   position: absolute;
   height: 300px;
 }
 
-#bakingImage{
+#bakingImage {
   top: 550px;
   left: 320px;
   width: 220px;
@@ -191,7 +195,7 @@ a:active { text-decoration: none; }
   z-index: 5;
 }
 
-#clothesImage{
+#clothesImage {
   top: 370px;
   left: 500px;
   position: absolute;
@@ -199,8 +203,7 @@ a:active { text-decoration: none; }
   transform: rotate(4deg);
 }
 
-
-#paintingImage{
+#paintingImage {
   top: 420px;
   left: 680px;
   position: absolute;
@@ -208,16 +211,14 @@ a:active { text-decoration: none; }
   z-index: 1;
 }
 
-.roomy{
+.roomy {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   background-repeat: no-repeat;
-  background-image: url('./assets/images/room_unpacking.png');
+  background-image: url("./assets/images/room_unpacking.png");
   background-size: cover;
   z-index: 5;
   width: 1100px;
   height: 800px;
-
-
 }

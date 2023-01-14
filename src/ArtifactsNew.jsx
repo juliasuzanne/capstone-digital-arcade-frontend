@@ -43,10 +43,10 @@ export function ArtifactsNew() {
             className="form-control"
             name="image_url"
             type="string"
-            defaultValue="./assets/images/egg.png"
+            defaultValue="/src/assets/images/egg.png"
           ></input>
         </div>
-        <img src="./assets/images/egg.png" width="300px" />
+        <img src="/src/assets/images/egg.png" width="300px" />
         <button type="submit">Submit</button>
       </form>
     </div>

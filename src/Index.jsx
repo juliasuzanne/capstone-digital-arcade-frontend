@@ -8,7 +8,7 @@ export function Index() {
   const [errors, setErrors] = useState([]);
 
   let [isMapVisible, setIsMapVisible] = useState(false);
-  let image = "./assets/images/map.png";
+  let image = "/src/assets/images/map.png";
 
   const handleShowMap = () => {
     setIsMapVisible(true);
@@ -31,16 +31,16 @@ export function Index() {
     <div>
       {/* <ShowMap
         show={isMapVisible}
-        image={<img src="./assets/images/map.png" width="500" />}
+        image={<img src="/src/assets/images/map.png" width="500" />}
         onClose={handleClose}
       ></ShowMap>
       <div>
         <button onClick={handleShowMap}>
-          <img className="hand" src="./assets/images/hand_map.png" width="200px" />
+          <img className="hand" src="/src/assets/images/hand_map.png" width="200px" />
         </button>
       </div> */}
       {/* <div>
-        <img className="scene" src="./assets/images/scene.jpg"/>
+        <img className="scene" src="/src/assets/images/scene.jpg"/>
       </div> */}
       <Face />
     </div>

@@ -3,7 +3,7 @@ export function Curtain(props) {
   if (props.show) {
     return (
       <div>
-        <img className="curtains" src="./assets/images/curtainclosed.png" />
+        <img className="curtains" src="/src/assets/images/curtainclosed.png" />
       </div>
     );
   }
