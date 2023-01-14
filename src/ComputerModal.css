@@ -12,7 +12,7 @@
 
 .comp-modal-main-snake {
   position: absolute;
-  background-image: url("./src/assets/images/computer-longmodal.png");
+  background-image: url("./assets/images/computer-longmodal.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 37vw;
@@ -28,7 +28,7 @@
 
 .comp-modal-main-video {
   position: absolute;
-  background-image: url("./src/assets/images/computermodal.png");
+  background-image: url("./assets/images/computermodal.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 400px;

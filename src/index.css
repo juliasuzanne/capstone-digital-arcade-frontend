@@ -195,7 +195,7 @@ button{
 }
 
 .displayBox{
-  background-image: url("./src/assets/images/label.png");
+  background-image: url("./assets/images/label.png");
   background-size: cover;
   z-index: 4;
   height: 130px;
@@ -316,7 +316,7 @@ html {
 }
 
 .note{
-  background-image: url("./src/assets/images/note2.png");
+  background-image: url("./assets/images/note2.png");
   z-index: 20;
   width: 50px;
   height: 50px;
@@ -544,7 +544,7 @@ html {
   left:0;
   z-index:19;
   background-size:cover;
-  background-image: url("./src/assets/images/facewall.png")
+  background-image: url("./assets/images/facewall.png")
 
 }
 
