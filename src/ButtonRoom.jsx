@@ -4,7 +4,7 @@ import axios from "axios";
 import { Modal3 } from "./Modal3";
 import { Sound } from "./Sound";
 import counterjulia from "/src/assets/images/counterJulia.gif";
-import homebackground from "./src/assets/images/home_background.png";
+import homebackground from "/src/assets/images/home_background.png";
 // import face from "./src/assets/images/facepainting.png";
 // import pupils from "./src/assets//images/pupilspainting.png";
 // import { autoType } from "d3";
