@@ -16,7 +16,7 @@ export function Signup() {
       .then((response) => {
         console.log(response);
         event.target.reset();
-        window.location.href = "/";
+        window.location.href = "/login";
       })
       .catch((errors) => {
         console.log(errors.response.data.errors);
