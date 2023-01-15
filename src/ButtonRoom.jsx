@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Light } from "./Images/Light";
 import axios from "axios";
 import { Modal3 } from "./Modal3";
+import { Login } from "./Login";
 import { Sound } from "./Sound";
 
 // import face from "/images/facepainting.png";
@@ -27,7 +28,7 @@ export function ButtonRoom() {
   const [items, setItems] = useState([]);
 
   const handleCurrentUser = () => {
-    axios.get("https://moon-egg.fly.dev/users.json").then((response) => {
+    axios.get("https://moon-egg.fly.dev//users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });
@@ -103,7 +104,7 @@ export function ButtonRoom() {
   };
 
   const handleGetItems = () => {
-    axios.get("https://moon-egg.fly.dev/artifacts/all.json").then((response) => {
+    axios.get("https://moon-egg.fly.dev//artifacts/all.json").then((response) => {
       console.log(response);
       setItems(response.data);
     });
@@ -127,7 +128,7 @@ export function ButtonRoom() {
   return (
     <div className="buttonRoom">
       {localStorage.jwt === undefined ? (
-        <img className="top-box" src="/images/openwire.png" />
+        (window.location.href = "/login")
       ) : (
         <img className="top-box" src={isBoxFixed} />
       )}
