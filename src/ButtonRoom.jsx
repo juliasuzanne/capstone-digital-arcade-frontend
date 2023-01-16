@@ -143,45 +143,76 @@ export function ButtonRoom() {
           </button>
           <Suspense>
             <img className="top-box" src={isBoxFixed} />
+          </Suspense>
+
+          <Suspense>
+            {" "}
             <img src="/images/eyespainting.png" className="eyesPaintingActual" />
+          </Suspense>
+          <Suspense>
             <button className="eyesPainting" onClick={movingEyes}></button>
+          </Suspense>
+          <Suspense>
             <button onClick={computer}>
               <img id="computer" src="/images/computer.png" />
             </button>
+          </Suspense>
+          <Suspense>
             <button onClick={handleShowLight}>
               <img id="lightswitch" src="/images/lightswitch.png" />
             </button>
+          </Suspense>
+          <Suspense>
             <button id="artifactbox" onClick={seeArtifacts}></button>
+          </Suspense>
+          <Suspense>
             <button onClick={exitRoom}>
               <img id="exit" src="/images/exit.png" />
             </button>
+          </Suspense>
+          <Suspense>
             <button
               id="opencurtain"
               onMouseEnter={() => setImage("/images/opencurtainorange.png")}
               onMouseLeave={() => setImage("/images/closecurtainorange.png")}
               onClick={catalog}
             ></button>
+          </Suspense>
+          <Suspense>
             <button
               id="stairs"
               onMouseEnter={() => setStairs("/images/stairslight.png")}
               onMouseLeave={() => setStairs("/images/stairs.png")}
               onClick={exitRoom}
             ></button>
+          </Suspense>
+          <Suspense>
             <button
               id="grate"
               onMouseEnter={() => setGrate("/images/eyeballgrate.png")}
               onMouseLeave={() => setGrate("")}
               onClick={exitRoom}
             ></button>
+          </Suspense>
+          <Suspense>
             <img className="counterJulia" src="/images/counterJulia.gif" />
-
+          </Suspense>
+          <Suspense>
             <img className="counter" src="/images/counter.png" />
-
+          </Suspense>
+          <Suspense>
             <img className="roombackground" src="/images/home_background.png" />
+          </Suspense>
+          <Suspense>
             <img className="opencurtain" src={image} />
+          </Suspense>
+          <Suspense>
             <img className="stairsImage" src={stairs} />
+          </Suspense>
+          <Suspense>
             <img className="grateImage" src={grate} />
           </Suspense>
+
           <Light show={showLight} />
           <button className="talk" onClick={handleShowConversation}>
             {" "}
@@ -194,12 +225,14 @@ export function ButtonRoom() {
           <Modal3 show={showNote} onClose={handleHideNote}>
             <ThreeD />
           </Modal3>
-          <div id="artifactsinbox">
-            {" "}
-            {items.slice(0, 10).map((item) => (
-              <img src={item.image_url} width="30px" />
-            ))}{" "}
-          </div>
+          <Suspense>
+            <div id="artifactsinbox">
+              {" "}
+              {items.slice(0, 10).map((item) => (
+                <img src={item.image_url} width="30px" />
+              ))}{" "}
+            </div>
+          </Suspense>
         </>
       )}
     </div>
