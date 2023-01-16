@@ -296,7 +296,7 @@ html {
   z-index: 15;
   height: 35px;
   width: 50px;
-  left: 830px;
+  left: 860px;
   top: 115px;
   position: absolute;
 }
@@ -304,7 +304,7 @@ html {
 .grateImage {
   z-index: 14;
   height: 675px;
-  left: 50px;
+  left: 54px;
   top: 20px;
   position: absolute;
 }
@@ -325,7 +325,7 @@ html {
   width: 50px;
   height: 50px;
   top: 490px;
-  left: 211px;
+  left: 216px;
   position: absolute;
 }
 
