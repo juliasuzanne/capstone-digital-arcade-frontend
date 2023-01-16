@@ -141,15 +141,15 @@ export function ButtonRoom() {
           <button onClick={exitRoom}>
             <img id="exit" src="/images/exit.png" />
           </button>
-          <Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
             <img className="top-box" src={isBoxFixed} />
           </Suspense>
 
-          <Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
             {" "}
             <img src="/images/eyespainting.png" className="eyesPaintingActual" />
           </Suspense>
-          <Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
             <button className="eyesPainting" onClick={movingEyes}></button>
           </Suspense>
           <Suspense>
