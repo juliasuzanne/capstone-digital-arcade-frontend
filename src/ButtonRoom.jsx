@@ -4,6 +4,8 @@ import axios from "axios";
 import { Modal3 } from "./Modal3";
 import { Login } from "./Login";
 import { Sound } from "./Sound";
+import React, { Suspense } from "react";
+import { useImage } from "react-image";
 
 // import face from "/images/facepainting.png";
 // import pupils from "./assets//images/pupilspainting.png";
@@ -131,7 +133,9 @@ export function ButtonRoom() {
         <Login />
       ) : (
         <>
-          <img className="top-box" src={isBoxFixed} />
+          <Suspense>
+            <img className="top-box" src={isBoxFixed} />
+          </Suspense>
           <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
             <p>{talkText}</p>
           </button>
@@ -140,10 +144,14 @@ export function ButtonRoom() {
           <button onClick={exitRoom}>
             <img id="exit" src="/images/exit.png" />
           </button>
-          <img src="/images/eyespainting.png" className="eyesPaintingActual" />
+          <Suspense>
+            <img src="/images/eyespainting.png" className="eyesPaintingActual" />
+          </Suspense>
           <button className="eyesPainting" onClick={movingEyes}></button>
           <button onClick={computer}>
-            <img id="computer" src="/images/computer.png" />
+            <Suspense>
+              <img id="computer" src="/images/computer.png" />
+            </Suspense>
           </button>
           <button onClick={handleShowLight}>
             <img id="lightswitch" src="/images/lightswitch.png" />
@@ -172,12 +180,18 @@ export function ButtonRoom() {
           ></button>
 
           {/* <Curtain show={openCurtain} /> */}
-          <img className="counterJulia" src="/images/counterJulia.gif" />
-          <img className="counter" src="/images/counter.png" />
-          <img className="roombackground" src="/images/home_background.png" />
-          <img className="opencurtain" src={image} />
-          <img className="stairsImage" src={stairs} />
-          <img className="grateImage" src={grate} />
+          <Suspense>
+            <img className="counterJulia" src="/images/counterJulia.gif" />
+          </Suspense>
+          <Suspense>
+            <img className="counter" src="/images/counter.png" />
+          </Suspense>
+          <Suspense>
+            <img className="roombackground" src="/images/home_background.png" />
+            <img className="opencurtain" src={image} />
+            <img className="stairsImage" src={stairs} />
+            <img className="grateImage" src={grate} />
+          </Suspense>
           <Light show={showLight} />
           <button className="talk" onClick={handleShowConversation}>
             {" "}
