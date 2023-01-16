@@ -6,7 +6,7 @@ import { Login } from "./Login";
 import { Sound } from "./Sound";
 import React, { Suspense } from "react";
 import { useImage } from "react-image";
-
+import homeBackground from "/images/home_background.png";
 // import face from "/images/facepainting.png";
 // import pupils from "./assets//images/pupilspainting.png";
 // import { autoType } from "d3";
@@ -201,7 +201,7 @@ export function ButtonRoom() {
             <img className="counter" src="/images/counter.png" />
           </Suspense>
           <Suspense>
-            <img className="roombackground" src="/images/home_background.png" />
+            <img className="roombackground" src={homeBackground} />
           </Suspense>
           <Suspense>
             <img className="opencurtain" src={image} />
