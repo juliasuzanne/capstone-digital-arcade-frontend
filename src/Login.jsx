@@ -47,6 +47,11 @@ export function Login() {
         </div>
         <button className="btn btn-secondary mt-3 submit">Login</button>
       </form>
+      <br></br>
+      <a href="/signup" className="signupButton">
+        {" "}
+        No account? Signup{" "}
+      </a>
     </div>
   );
 }

@@ -3,6 +3,14 @@ html {
   resize: none;
 }
 
+.signupButton{
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  font-size: smaller;
+}
+
 #red {
   color: red;
 }
