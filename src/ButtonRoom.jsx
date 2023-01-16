@@ -133,9 +133,6 @@ export function ButtonRoom() {
         <Login />
       ) : (
         <>
-          <Suspense>
-            <img className="top-box" src={isBoxFixed} />
-          </Suspense>
           <button onClick={toggleTalking} hidden={isTalking} id="talkingtome">
             <p>{talkText}</p>
           </button>
@@ -145,48 +142,41 @@ export function ButtonRoom() {
             <img id="exit" src="/images/exit.png" />
           </button>
           <Suspense>
+            <img className="top-box" src={isBoxFixed} />
             <img src="/images/eyespainting.png" className="eyesPaintingActual" />
-          </Suspense>
-          <button className="eyesPainting" onClick={movingEyes}></button>
-          <button onClick={computer}>
-            <Suspense>
+            <button className="eyesPainting" onClick={movingEyes}></button>
+            <button onClick={computer}>
               <img id="computer" src="/images/computer.png" />
-            </Suspense>
-          </button>
-          <button onClick={handleShowLight}>
-            <img id="lightswitch" src="/images/lightswitch.png" />
-          </button>
-          <button id="artifactbox" onClick={seeArtifacts}></button>
-          <button onClick={exitRoom}>
-            <img id="exit" src="/images/exit.png" />
-          </button>
-          <button
-            id="opencurtain"
-            onMouseEnter={() => setImage("/images/opencurtainorange.png")}
-            onMouseLeave={() => setImage("/images/closecurtainorange.png")}
-            onClick={catalog}
-          ></button>
-          <button
-            id="stairs"
-            onMouseEnter={() => setStairs("/images/stairslight.png")}
-            onMouseLeave={() => setStairs("/images/stairs.png")}
-            onClick={exitRoom}
-          ></button>
-          <button
-            id="grate"
-            onMouseEnter={() => setGrate("/images/eyeballgrate.png")}
-            onMouseLeave={() => setGrate("")}
-            onClick={exitRoom}
-          ></button>
-
-          {/* <Curtain show={openCurtain} /> */}
-          <Suspense>
+            </button>
+            <button onClick={handleShowLight}>
+              <img id="lightswitch" src="/images/lightswitch.png" />
+            </button>
+            <button id="artifactbox" onClick={seeArtifacts}></button>
+            <button onClick={exitRoom}>
+              <img id="exit" src="/images/exit.png" />
+            </button>
+            <button
+              id="opencurtain"
+              onMouseEnter={() => setImage("/images/opencurtainorange.png")}
+              onMouseLeave={() => setImage("/images/closecurtainorange.png")}
+              onClick={catalog}
+            ></button>
+            <button
+              id="stairs"
+              onMouseEnter={() => setStairs("/images/stairslight.png")}
+              onMouseLeave={() => setStairs("/images/stairs.png")}
+              onClick={exitRoom}
+            ></button>
+            <button
+              id="grate"
+              onMouseEnter={() => setGrate("/images/eyeballgrate.png")}
+              onMouseLeave={() => setGrate("")}
+              onClick={exitRoom}
+            ></button>
             <img className="counterJulia" src="/images/counterJulia.gif" />
-          </Suspense>
-          <Suspense>
+
             <img className="counter" src="/images/counter.png" />
-          </Suspense>
-          <Suspense>
+
             <img className="roombackground" src="/images/home_background.png" />
             <img className="opencurtain" src={image} />
             <img className="stairsImage" src={stairs} />
