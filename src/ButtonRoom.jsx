@@ -128,7 +128,7 @@ export function ButtonRoom() {
   return (
     <div className="buttonRoom">
       {localStorage.jwt === undefined ? (
-        (window.location.href = "/login")
+        <Login />
       ) : (
         <>
           <img className="top-box" src={isBoxFixed} />
