@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Modal } from "../Modal";
 import { useState, useEffect } from "react";
+import { Catalog } from "./Catalog";
 
 export function Misc(props) {
   if (props.show) {
@@ -50,45 +51,19 @@ export function Misc(props) {
     useEffect(handleGetItems, []);
 
     return (
-      <div>
-        {items.map((item) => (
-          <button
-            onClick={() => {
-              handleCatalog();
-              setCurrentItem(item.image_url);
-              setDescription(item.description);
-              console.log(currentItem);
-            }}
-          >
-            <img src={item.image_url} width="200px" />
-          </button>
-        ))}
-        <Modal show={show} onClose={handleNoCatalog}>
-          <form onSubmit={handleNewArtifact}>
-            <div>
-              Name:
-              <input name="name" id="myform" type="string" />
-            </div>
-            <div>
-              Price:
-              <input id="myform" name="price_in_points" type="integer" />
-            </div>
-            <div>
-              <p>Description:</p>
-              <textarea className="myform" name="description" width="500px" type="string" defaultValue={description} />
-            </div>
-            <div>
-              <input hidden name="image_url" type="string" defaultValue={currentItem}></input>
-            </div>
-            <img src={currentItem} className="myimage" width="300px" />
-            <div>
-              <button className="submitbutton" type="submit">
-                submit
-              </button>
-            </div>
-          </form>
-        </Modal>
-      </div>
+      <Catalog
+        handleCatalog={handleCatalog}
+        setCurrentItem={setCurrentItem}
+        setDescription={setDescription}
+        show={show}
+        handleNoCatalog={handleNoCatalog}
+        items={items}
+        currentItem={currentItem}
+        errors={errors}
+        handleNewArtifact={handleNewArtifact}
+        setShow={setShow}
+        description={description}
+      />
     );
   }
 }
