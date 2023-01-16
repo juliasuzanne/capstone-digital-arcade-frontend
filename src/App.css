@@ -14,10 +14,10 @@
   z-index: 0;
 }
 .moonperson {
-  width: 200px;
-  height: 200px;
-  top: 20px;
-  left: 50px;
+  width: 180px;
+  height: 180px;
+  top: 30px;
+  left: 60px;
   position: absolute;
   z-index: 4;
 }
@@ -187,11 +187,11 @@ a:active {
 }
 
 #bakingImage {
-  top: 550px;
-  left: 320px;
-  width: 220px;
+  top: 590px;
+  left: 390px;
+  width: 160px;
   position: absolute;
-  height: 200px;
+  height: 130px;
   z-index: 5;
 }
 

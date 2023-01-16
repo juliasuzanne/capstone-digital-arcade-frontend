@@ -294,9 +294,10 @@ html {
 
 #grate {
   z-index: 15;
+
   height: 35px;
   width: 50px;
-  left: 860px;
+  left: 830px;
   top: 115px;
   position: absolute;
 }
@@ -368,6 +369,14 @@ html {
   z-index: 2;
   height: 675px;
   left: -55px;
+  top: 20px;
+}
+
+.basementbackground {
+  position: absolute;
+  z-index: 2;
+  height: 675px;
+  left: 5px;
   top: 20px;
 }
 
