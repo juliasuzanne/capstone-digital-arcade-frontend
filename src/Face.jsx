@@ -136,8 +136,8 @@ export function Face() {
           style={{
             position: "absolute",
             width: "60vw",
-            top: "40px",
-            left: "40px",
+            top: "7%",
+            left: "3%",
             zIndex: 21,
           }}
         />

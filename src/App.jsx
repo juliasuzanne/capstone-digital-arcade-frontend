@@ -21,6 +21,7 @@ import { Computer } from "./Computer";
 import { ArtifactRoom } from "./ItemCategories/ArtifactRoom";
 import { Basement } from "./Basement";
 import { UpdateArtifacts } from "./UpdateArtifacts";
+import { UpdateUsers } from "./UpdateUsers";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/updateusers" element={<UpdateUsers />} />
           <Route path="/media" element={<Media />} />
           <Route path="/updateitems" element={<UpdateItemsArtifacts />} />
           <Route path="/updateartifacts" element={<UpdateArtifacts />} />
