@@ -12,11 +12,11 @@ export function ArtifactRoom() {
   const [items, setItems] = useState([]);
   const [show, setShow] = useState(false);
   const [mediaShow, setMediaShow] = useState(false);
-  const [mediaImage, setMediaImage] = useState("/images/closedboxmedia.png");
-  const [paintingImage, setPaintingImage] = useState("/images/paintingsclosed.png");
+  const [mediaImage, setMediaImage] = useState("https://i.ibb.co/XpxxNR7/closedboxmedia.png");
+  const [paintingImage, setPaintingImage] = useState("https://i.ibb.co/nRN1gRf/paintingsclosed.png");
   const [bakingImage, setBakingImage] = useState("/images/pastryclosed.png");
   const [miscImage, setMiscImage] = useState("/images/mysteryclosed.png");
-  const [clothesImage, setClothesImage] = useState("/images/fullclothes.png");
+  const [clothesImage, setClothesImage] = useState("https://i.ibb.co/Tb1Shjj/fullclothes.png");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
   const [bakingShow, setBakingShow] = useState(false);
@@ -61,20 +61,20 @@ export function ArtifactRoom() {
   const handleToggleMedia = () => {
     if (mediaShow === false) {
       setMediaShow(true);
-      setMediaImage("/images/openedboxmedia.png");
+      setMediaImage("https://i.ibb.co/sqCYg3t/openedboxmedia.png");
     } else {
       setMediaShow(false);
-      setMediaImage("/images/closedboxmedia.png");
+      setMediaImage("https://i.ibb.co/XpxxNR7/closedboxmedia.png");
     }
   };
 
   const handleTogglePainting = () => {
     if (paintingShow === false) {
       setPaintingShow(true);
-      setPaintingImage("/images/paintingsopen.png");
+      setPaintingImage("https://i.ibb.co/qpcVTR7/paintingsopen.png");
     } else {
       setPaintingShow(false);
-      setPaintingImage("/images/paintingsclosed.png");
+      setPaintingImage("https://i.ibb.co/nRN1gRf/paintingsclosed.png");
     }
   };
 
@@ -101,10 +101,10 @@ export function ArtifactRoom() {
   const handleToggleSewing = () => {
     if (sewingShow === false) {
       setSewingShow(true);
-      setClothesImage("/images/emptyclothes.png");
+      setClothesImage("https://i.ibb.co/4PFT5Kc/emptyclothes.png");
     } else {
       setSewingShow(false);
-      setClothesImage("/images/fullclothes.png");
+      setClothesImage("https://i.ibb.co/Tb1Shjj/fullclothes.png");
     }
   };
 

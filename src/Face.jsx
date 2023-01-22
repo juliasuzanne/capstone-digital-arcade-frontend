@@ -48,7 +48,7 @@ export function Face() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed("/images/closedbox.png");
+      setIsBoxFixed("https://i.ibb.co/YX1t4rS/closedbox.png");
       setBlueWire("");
       setRedWire("");
     } else {
@@ -60,7 +60,7 @@ export function Face() {
 
   const handleFixRed = () => {
     if (blueWire === "/images/blueclosed.png") {
-      setIsBoxFixed("/images/closedbox.png");
+      setIsBoxFixed("https://i.ibb.co/YX1t4rS/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);
@@ -72,7 +72,7 @@ export function Face() {
 
   const handleFixBlue = () => {
     if (redWire === "/images/redclosed.png") {
-      setIsBoxFixed("/images/closedbox.png");
+      setIsBoxFixed("https://i.ibb.co/YX1t4rS/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);
@@ -127,7 +127,7 @@ export function Face() {
           }}
         /> */}
         {localStorage.jwt === undefined ? (
-          <img className="electricalbox" src="/images/openwire.png" />
+          <img className="electricalbox" src="https://i.ibb.co/bskm30G/openwire.png" />
         ) : (
           <>
             <img className="electricalbox" src={isBoxFixed} />

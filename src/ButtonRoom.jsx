@@ -19,8 +19,8 @@ export function ButtonRoom() {
   const [fixed, setFixed] = useState(false);
   const [showNote, setShowNote] = useState(false);
   const [isBoxFixed, setIsBoxFixed] = useState(false);
-  const [image, setImage] = useState("/images/closecurtainorange.png");
-  const [stairs, setStairs] = useState("/images/stairs.png");
+  const [image, setImage] = useState("https://i.ibb.co/rG4SrF7/closecurtainorange.png");
+  const [stairs, setStairs] = useState("https://i.ibb.co/VNb5qD6/stairs.png");
   let [currentUser, setCurrentUser] = useState([]);
   const [items, setItems] = useState([]);
 
@@ -33,10 +33,10 @@ export function ButtonRoom() {
 
   const checkBoxFixed = () => {
     if (currentUser.fixed === true) {
-      setIsBoxFixed("/images/closedbox.png");
+      setIsBoxFixed("https://i.ibb.co/YX1t4rS/closedbox.png");
       setFixed(true);
     } else {
-      setIsBoxFixed("/images/openwire.png");
+      setIsBoxFixed("https://i.ibb.co/bskm30G/openwire.png");
       setFixed(false);
     }
   };
@@ -142,7 +142,7 @@ export function ButtonRoom() {
 
           <Suspense fallback={<div>Loading...</div>}>
             {" "}
-            <img src="/images/eyespainting.png" className="eyesPaintingActual" />
+            <img src="https://i.ibb.co/cFM4L3s/eyespainting.png" className="eyesPaintingActual" />
           </Suspense>
           <Suspense fallback={<div>Loading...</div>}>
             <button className="eyesPainting" onClick={movingEyes}></button>
@@ -154,7 +154,7 @@ export function ButtonRoom() {
           </Suspense>
           <Suspense>
             <button onClick={handleShowLight}>
-              <img id="lightswitch" src="/images/lightswitch.png" />
+              <img id="lightswitch" src="https://i.ibb.co/WGqSjQf/lightswitch.png" />
             </button>
           </Suspense>
           <Suspense>
@@ -168,16 +168,16 @@ export function ButtonRoom() {
           <Suspense>
             <button
               id="opencurtain"
-              onMouseEnter={() => setImage("/images/opencurtainorange.png")}
-              onMouseLeave={() => setImage("/images/closecurtainorange.png")}
+              onMouseEnter={() => setImage("https://i.ibb.co/d6xpy82/opencurtainorange.png")}
+              onMouseLeave={() => setImage("https://i.ibb.co/rG4SrF7/closecurtainorange.png")}
               onClick={catalog}
             ></button>
           </Suspense>
           <Suspense>
             <button
               id="stairs"
-              onMouseEnter={() => setStairs("/images/stairslight.png")}
-              onMouseLeave={() => setStairs("/images/stairs.png")}
+              onMouseEnter={() => setStairs("https://i.ibb.co/0tSQ3HF/stairslight.png")}
+              onMouseLeave={() => setStairs("https://i.ibb.co/VNb5qD6/stairs.png")}
               onClick={exitRoom}
             ></button>
           </Suspense>

@@ -1,8 +1,8 @@
 User.create!([
-  { points: 135, name: "moon", email: "moon@test.com", password_digest: "$2a$12$gKAKvY1x6uSMwrVOc6Bx5erLBf7EdXeirU6LV0xYKW24aHamkg552", image_url: "/images/moon.png", fixed: false },
+  { points: 135, name: "moon", email: "moon@test.com", password_digest: "$2a$12$gKAKvY1x6uSMwrVOc6Bx5erLBf7EdXeirU6LV0xYKW24aHamkg552", image_url: "https://i.ibb.co/pvGJDfR/moon.png", fixed: false },
   { points: 1905, name: "Julia", email: "julia@test.com", password_digest: "$2a$12$i6D4LkAAUAMD73Eki4R.ZOapX42rO6REO4Fr5awCc6dCzFljininG", image_url: "https://avatars.githubusercontent.com/u/96872404?v=4", fixed: true },
   { points: 440, name: "Demo", email: "demo@test.com", password_digest: "$2a$12$XRGMeulocLQoRFtwF2LLy.td7Tpr5N4LOuA.dNoo7UkYTR4o6Ou8S", image_url: "/images/egg.png", fixed: true },
-  { points: 505, name: "Lauren", email: "Lauren@test.com", password_digest: "$2a$12$KTr2Wa95a7Q.ErwETaVpYubygCzKmBObNeGuQWeIcDy.fp4TPoX0y", image_url: "/images/moon.png", fixed: true },
+  { points: 505, name: "Lauren", email: "Lauren@test.com", password_digest: "$2a$12$KTr2Wa95a7Q.ErwETaVpYubygCzKmBObNeGuQWeIcDy.fp4TPoX0y", image_url: "https://i.ibb.co/pvGJDfR/moon.png", fixed: true },
   { points: 1470, name: "egg", email: "egg@test.com", password_digest: "$2a$12$oRAXiHZza0GD.M8ZplUIXejAMu4FYDbtFjy7TQkFjg41VTxPJ7Thi", image_url: "/images/egg.png", fixed: true },
   { points: 1150, name: "nelson", email: "nelson@test.com", password_digest: "$2a$12$UJgtgALhdE3qxzlzw0zBZu7FFQ0ezarbFTNTb8aAOsB2fbEn3tCqK", image_url: "https://i.pinimg.com/originals/43/a2/2d/43a22ddbd9edf5afa1f5f083239418f4.png", fixed: true },
 ])
