@@ -132,7 +132,7 @@ export function ButtonRoom() {
             <p>{talkText}</p>
           </button>
           <Sound />
-          <img src="/images/room_unpacking.png" className="artifactRoom" />
+          <img src="https://i.ibb.co/9HCD6Nz/room-unpacking.png" className="artifactRoom" />
           <button onClick={exitRoom}>
             <img id="exit" src="/images/exit.png" />
           </button>
