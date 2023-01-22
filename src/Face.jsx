@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import face from "https://i.ibb.co/nzVZx9m/face.png";
 import pupils from "/images/pupils.png";
 import axios from "axios";
 
@@ -142,7 +141,7 @@ export function Face() {
         <button onClick={handleFixRed} className="redwire"></button>
 
         <img
-          src={face}
+          src="https://i.ibb.co/nzVZx9m/face.png"
           style={{
             position: "absolute",
             width: "60vw",
