@@ -5,6 +5,7 @@ import { Login } from "./Login";
 import { Header } from "./Header";
 import { Media } from "./ItemCategories/Media";
 import "./App.css";
+import { UpdateItemsArtifacts } from "./UpdateItemsArtifacts";
 import { Signup } from "./Signup";
 import { Game } from "./Game";
 import { ArtifactsNew } from "./ArtifactsNew";
@@ -27,6 +28,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/media" element={<Media />} />
+          <Route path="/updateitems" element={<UpdateItemsArtifacts />} />
           <Route path="/basement" element={<Basement />} />
           <Route path="/login" element={<Login />} />
           <Route path="/threed" element={<ThreeD />} />

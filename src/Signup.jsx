@@ -12,7 +12,7 @@ export function Signup() {
     const params = new FormData(event.target);
     params.append("image_url", `${portrait}`);
     axios
-      .post("https://moon-egg.fly.dev/users", params)
+      .post("https://moon--egg.fly.dev/users", params)
       .then((response) => {
         console.log(response);
         event.target.reset();

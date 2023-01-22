@@ -6,7 +6,7 @@ export function ArtifactsAll() {
   let [artifacts, setArtifacts] = useState([]);
 
   const handleIndexArtifacts = () => {
-    axios.get("https://moon-egg.fly.dev/artifacts.json").then((response) => {
+    axios.get("https://moon--egg.fly.dev/artifacts.json").then((response) => {
       console.log(response);
       setArtifacts(response.data);
     });

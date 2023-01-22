@@ -23,7 +23,7 @@ export function FindInImageGame(props) {
   const handleGetPoints = () => {
     let newPoints = points + props.user.points;
     axios
-      .patch("https://moon-egg.fly.dev/users", { points: newPoints })
+      .patch("https://moon--egg.fly.dev/users", { points: newPoints })
       .then((window.location.href = "/"))
       .catch((error) => {
         console.log(error.response.data.errors);

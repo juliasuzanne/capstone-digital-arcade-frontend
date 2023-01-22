@@ -14,7 +14,7 @@ export function Face() {
   let [currentUser, setCurrentUser] = useState([]);
 
   const handleCurrentUser = () => {
-    axios.get("https://moon-egg.fly.dev/users.json").then((response) => {
+    axios.get("https://moon--egg.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });
@@ -37,7 +37,7 @@ export function Face() {
     let newPoints = 500 + currentUser.points;
     console.log(newPoints);
     axios
-      .patch("https://moon-egg.fly.dev/users", { fixed: true, points: newPoints })
+      .patch("https://moon--egg.fly.dev/users", { fixed: true, points: newPoints })
       .then((window.location.href = "/"))
       .catch((error) => {
         console.log(error.response.data.errors);

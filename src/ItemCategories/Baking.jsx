@@ -17,7 +17,7 @@ export function Baking(props) {
     // need to create request here to get all
     // connect on item click (use image) to prompt create artifact
     const handleGetItems = () => {
-      axios.get(`https://moon-egg.fly.dev/items.json?cat=baking`).then((response) => {
+      axios.get(`https://moon--egg.fly.dev/items.json?cat=baking`).then((response) => {
         console.log(response);
         setItems(response.data);
       });
@@ -32,7 +32,7 @@ export function Baking(props) {
 
     const handleCreateArtifact = (params) => {
       axios
-        .post("https://moon-egg.fly.dev/artifacts", params)
+        .post("https://moon--egg.fly.dev/artifacts", params)
         // .then((window.location.href = "/artifacts/all"))
         .catch((error) => {
           console.log(error.response.data.errors);

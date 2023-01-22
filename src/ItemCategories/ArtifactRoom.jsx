@@ -26,7 +26,7 @@ export function ArtifactRoom() {
   const [currentItem, setCurrentItem] = useState([]);
 
   const handleGetItems = () => {
-    axios.get(`https://moon-egg.fly.dev/items.json?cat=painting`).then((response) => {
+    axios.get(`https://moon--egg.fly.dev/items.json?cat=painting`).then((response) => {
       console.log(response);
       setItems(response.data);
     });
@@ -41,7 +41,7 @@ export function ArtifactRoom() {
 
   const handleCreateArtifact = (params) => {
     axios
-      .post("https://moon-egg.fly.dev/artifacts", params)
+      .post("https://moon--egg.fly.dev/artifacts", params)
       // .then((window.location.href = "/artifacts/all"))
       .catch((error) => {
         console.log(error.response.data.errors);

@@ -8,7 +8,7 @@ export function ImageGameHandler() {
   const [errors, setErrors] = useState([]);
 
   const handleCurrentUser = () => {
-    axios.get("https://moon-egg.fly.dev/users.json").then((response) => {
+    axios.get("https://moon--egg.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
     });
