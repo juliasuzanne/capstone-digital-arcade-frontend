@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import face from "/images/face.png";
+import face from "https://i.ibb.co/nzVZx9m/face.png";
 import pupils from "/images/pupils.png";
 import axios from "axios";
 
@@ -10,8 +10,8 @@ export function Face() {
   const [errors, setErrors] = useState([]);
   const [isBoxFixed, setIsBoxFixed] = useState("");
   const [points, setPoints] = useState(0);
-  const [blueWire, setBlueWire] = useState("/images/blueopen.png");
-  const [redWire, setRedWire] = useState("/images/redopen.png");
+  const [blueWire, setBlueWire] = useState("https://i.ibb.co/bKn1fVL/blueopen.png");
+  const [redWire, setRedWire] = useState("https://i.ibb.co/LtVjfHx/redopen.png");
   let [currentUser, setCurrentUser] = useState([]);
 
   const handleCurrentUser = () => {
@@ -53,25 +53,25 @@ export function Face() {
       setRedWire("");
     } else {
       setIsBoxFixed("/images/blankbox.png");
-      // setBlueWire("/images/blueopen.png");
-      // setRedWire("/images/redopen.png");
+      // setBlueWire("https://i.ibb.co/bKn1fVL/blueopen.png");
+      // setRedWire("https://i.ibb.co/LtVjfHx/redopen.png");
     }
   };
 
   const handleFixRed = () => {
-    if (blueWire === "/images/blueclosed.png") {
+    if (blueWire === "https://i.ibb.co/CvpXmPf/blueclosed.png") {
       setIsBoxFixed("https://i.ibb.co/YX1t4rS/closedbox.png");
       setBlueWire("");
       setRedWire("");
       setPoints(50);
       handleFixBox();
     } else {
-      setRedWire("/images/redclosed.png");
+      setRedWire("https://i.ibb.co/R03ZZ07/redclosed.png");
     }
   };
 
   const handleFixBlue = () => {
-    if (redWire === "/images/redclosed.png") {
+    if (redWire === "https://i.ibb.co/R03ZZ07/redclosed.png") {
       setIsBoxFixed("https://i.ibb.co/YX1t4rS/closedbox.png");
       setBlueWire("");
       setRedWire("");
@@ -79,7 +79,7 @@ export function Face() {
       handleFixBox();
     } else {
       console.log("fixed blue");
-      setBlueWire("/images/blueclosed.png");
+      setBlueWire("https://i.ibb.co/CvpXmPf/blueclosed.png");
     }
   };
 

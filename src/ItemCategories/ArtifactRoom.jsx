@@ -14,8 +14,8 @@ export function ArtifactRoom() {
   const [mediaShow, setMediaShow] = useState(false);
   const [mediaImage, setMediaImage] = useState("https://i.ibb.co/XpxxNR7/closedboxmedia.png");
   const [paintingImage, setPaintingImage] = useState("https://i.ibb.co/nRN1gRf/paintingsclosed.png");
-  const [bakingImage, setBakingImage] = useState("/images/pastryclosed.png");
-  const [miscImage, setMiscImage] = useState("/images/mysteryclosed.png");
+  const [bakingImage, setBakingImage] = useState("https://i.ibb.co/jHNVJkN/pastryclosed.png");
+  const [miscImage, setMiscImage] = useState("https://i.ibb.co/0FGHGpZ/mysteryclosed.png");
   const [clothesImage, setClothesImage] = useState("https://i.ibb.co/Tb1Shjj/fullclothes.png");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
@@ -81,20 +81,20 @@ export function ArtifactRoom() {
   const handleToggleBaking = () => {
     if (bakingShow === false) {
       setBakingShow(true);
-      setBakingImage("/images/pastryopen.png");
+      setBakingImage("https://i.ibb.co/p4b9GTZ/pastryopen.png");
     } else {
       setBakingShow(false);
-      setBakingImage("/images/pastryclosed.png");
+      setBakingImage("https://i.ibb.co/jHNVJkN/pastryclosed.png");
     }
   };
 
   const handleToggleMisc = () => {
     if (miscShow === false) {
       setMiscShow(true);
-      setMiscImage("/images/mysteryopen.png");
+      setMiscImage("https://i.ibb.co/JchLGNM/mysteryopen.png");
     } else {
       setMiscShow(false);
-      setMiscImage("/images/mysteryclosed.png");
+      setMiscImage("https://i.ibb.co/0FGHGpZ/mysteryclosed.png");
     }
   };
 

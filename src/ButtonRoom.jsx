@@ -149,7 +149,7 @@ export function ButtonRoom() {
           </Suspense>
           <Suspense>
             <button onClick={computer}>
-              <img id="computer" src="/images/computer.png" />
+              <img id="computer" src="https://i.ibb.co/TmvwYPB/computer.png" />
             </button>
           </Suspense>
           <Suspense>
@@ -184,16 +184,16 @@ export function ButtonRoom() {
           <Suspense>
             <button
               id="grate"
-              onMouseEnter={() => setGrate("/images/eyeballgrate.png")}
+              onMouseEnter={() => setGrate("https://i.ibb.co/W6FRRdK/eyeballgrate.png")}
               onMouseLeave={() => setGrate("")}
               onClick={exitRoom}
             ></button>
           </Suspense>
           <Suspense>
-            <img className="counterJulia" src="/images/counterJulia.gif" />
+            <img className="counterJulia" src="https://i.ibb.co/17Q9hqs/counter-Julia.gif" />
           </Suspense>
           <Suspense>
-            <img className="counter" src="/images/counter.png" />
+            <img className="counter" src="https://i.ibb.co/7Kz8SHx/counter.png" />
           </Suspense>
           <Suspense>
             <img className="roombackground" src="https://i.ibb.co/2ySX1sN/home-background.png" />
