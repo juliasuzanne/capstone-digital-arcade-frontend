@@ -20,6 +20,7 @@ import { Snake } from "./Snake";
 import { Computer } from "./Computer";
 import { ArtifactRoom } from "./ItemCategories/ArtifactRoom";
 import { Basement } from "./Basement";
+import { UpdateArtifacts } from "./UpdateArtifacts";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/media" element={<Media />} />
           <Route path="/updateitems" element={<UpdateItemsArtifacts />} />
+          <Route path="/updateartifacts" element={<UpdateArtifacts />} />
           <Route path="/basement" element={<Basement />} />
           <Route path="/login" element={<Login />} />
           <Route path="/threed" element={<ThreeD />} />

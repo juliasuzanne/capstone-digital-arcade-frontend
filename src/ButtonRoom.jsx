@@ -134,7 +134,7 @@ export function ButtonRoom() {
           <Sound />
           <img src="https://i.ibb.co/9HCD6Nz/room-unpacking.png" className="artifactRoom" />
           <button onClick={exitRoom}>
-            <img id="exit" src="/images/exit.png" />
+            <img id="exit" src="https://i.ibb.co/g7vVGZc/exit.png" />
           </button>
           <Suspense fallback={<div>Loading...</div>}>
             <img className="top-box" src={isBoxFixed} />
@@ -162,7 +162,7 @@ export function ButtonRoom() {
           </Suspense>
           <Suspense>
             <button onClick={exitRoom}>
-              <img id="exit" src="/images/exit.png" />
+              <img id="exit" src="https://i.ibb.co/g7vVGZc/exit.png" />
             </button>
           </Suspense>
           <Suspense>
