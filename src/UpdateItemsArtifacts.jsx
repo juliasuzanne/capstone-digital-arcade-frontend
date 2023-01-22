@@ -1,5 +1,4 @@
 import axios from "axios";
-import { image } from "d3";
 import { useState, useEffect } from "react";
 
 export function UpdateItemsArtifacts() {
