@@ -5,13 +5,6 @@ export function NotJustMyArtifactsIndex(props) {
 
   return (
     <div id="artifacts-index">
-      {/* Search Filter:
-      <input
-        className="container"
-        type="text"
-        value={searchFilter}
-        onChange={(event) => setSearchFilter(event.target.value)}
-      /> */}
       {props.artifacts
         .filter((artifacts) => artifacts.name.toLowerCase().includes(searchFilter.toLowerCase()))
         .map((artifact) => (
@@ -24,9 +17,6 @@ export function NotJustMyArtifactsIndex(props) {
                 <p id="onlabel2"> It costs {artifact.price_in_points} points. </p>
               </button>
             </div>
-            {/* <button className="showartifact" onClick={() => props.onShowArtifact(artifact)}>
-              look
-            </button> */}
           </div>
         ))}
     </div>

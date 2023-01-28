@@ -5,10 +5,9 @@ export function ReduceScore(props) {
   console.log(props);
   const [errors, setErrors] = useState([]);
   const [points, setPoints] = useState(0);
-  const [id, setId] = useState(0);
 
   const currentPoints = props.user.points;
-  setId(props.user.id);
+  const id = props.user.id;
 
   const handlePurchaseArtifact = (event) => {
     event.preventDefault();
