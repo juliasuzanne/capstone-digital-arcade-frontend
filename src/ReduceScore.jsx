@@ -5,8 +5,10 @@ export function ReduceScore(props) {
   console.log(props);
   const [errors, setErrors] = useState([]);
   const [points, setPoints] = useState(0);
+  const [id, setId] = useState(0);
 
   const currentPoints = props.user.points;
+  setId(props.user.id);
 
   const handlePurchaseArtifact = (event) => {
     event.preventDefault();
@@ -15,7 +17,7 @@ export function ReduceScore(props) {
     if (parseInt(props.artifact.price_in_points) < parseInt(props.user.points)) {
       let newPoints = props.user.points - props.artifact.price_in_points;
       axios
-        .patch("https://moon--egg.fly.dev/users", { points: newPoints })
+        .patch(`https://moon--egg.fly.dev/users/${id}`, { points: newPoints })
         .then((window.location.href = "/"))
         .catch((errors) => {
           console.log(errors.response.data.errors);
