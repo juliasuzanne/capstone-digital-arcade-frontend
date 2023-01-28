@@ -83,8 +83,8 @@ export function Face() {
   let root = document.documentElement;
 
   root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX + windowSize.current[0] * 0.5) * 0.025) + "px");
-    root.style.setProperty("--top", String((event.clientY - windowSize.current[1] * 3.5) * 0.03) + "px");
+    root.style.setProperty("--left", String((event.clientX + 500) * 0.025) + "px");
+    root.style.setProperty("--top", String((event.clientY - 1900) * 0.03) + "px");
   });
 
   function handleArtifactClick() {

@@ -538,10 +538,10 @@ button {
   color: transparent;
   position: absolute;
   z-index: 15;
-  top: 170px;
-  height: 135px;
-  width: 205px;
-  left: 300px;
+  top: 320px;
+  height: 30px;
+  width: 30px;
+  left: 400px;
 }
 
 #artifactbox {

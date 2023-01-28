@@ -13,7 +13,7 @@ export function Note(props) {
       <mesh
         geometry={nodes.ppPaper.geometry}
         material={materials.blinn1SG}
-        rotation={[0.59, -0.99, -1.36]}
+        rotation={[0.59, -0.3, -1.36]}
         scale={0.2}
       />
     </group>
