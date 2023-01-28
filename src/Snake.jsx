@@ -100,7 +100,7 @@ export function Snake() {
   const handleGetPoints = () => {
     let newPoints = points + currentUser.points;
     axios
-      .patch(`https://moon--egg.fly.dev/users/${id}`, { points: newPoints })
+      .patch(`https://moon--egg.fly.dev/users/${currentUser.id}`, { points: newPoints })
       .then((window.location.href = "/computer"))
       .catch((error) => {
         console.log(error.response.data.errors);
