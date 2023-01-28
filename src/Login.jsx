@@ -36,6 +36,11 @@ export function Login() {
           <li key={error}>{error}</li>
         ))}
       </ul>
+      <p>
+        Hello! Thank you for visiting my website. It is slowly becoming a point-and-click adventure game. All the
+        artwork is original. It's still under development, and any suggestions or comments would be greatly appreciated!
+        You can email me at julia.s.grimes@gmail.com.
+      </p>
       <form onSubmit={handleSubmit}>
         <div>
           E-mail:
