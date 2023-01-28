@@ -83,8 +83,8 @@ export function Face() {
   let root = document.documentElement;
 
   root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX + windowSize.current[0] * 0.4) * 0.025) + "px");
-    root.style.setProperty("--top", String((event.clientY - windowSize.current[1] * 4.3) * 0.03) + "px");
+    root.style.setProperty("--left", String((event.clientX + windowSize.current[0] * 0.5) * 0.025) + "px");
+    root.style.setProperty("--top", String((event.clientY - windowSize.current[1] * 3.5) * 0.03) + "px");
   });
 
   function handleArtifactClick() {
@@ -140,23 +140,33 @@ export function Face() {
             src="https://i.ibb.co/nzVZx9m/face.png"
             style={{
               position: "absolute",
-              width: "60vw",
-              top: "-17%",
-              left: "5%",
+              width: "530px",
+              top: "-50px",
+              left: "20px",
               zIndex: 21,
             }}
           />
+
           <img
             id="pupils"
             src={pupils}
             style={{
-              position: "relative",
-              width: "60vw",
+              position: "absolute",
+              width: "530px",
               zIndex: 19,
             }}
           />
 
-          <div className="foeglass"></div>
+          <img
+            src="https://i.ibb.co/k5MJtfK/foeglass.png"
+            style={{
+              position: "absolute",
+              width: "530px",
+              top: "-50px",
+              left: "20px",
+              zIndex: 18,
+            }}
+          />
         </div>
 
         {/* {(document.getElementById("pupils").style.width = left)} */}

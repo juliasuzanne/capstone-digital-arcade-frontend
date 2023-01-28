@@ -400,25 +400,13 @@ button {
   opacity: 90%;
 }
 
-#pupildiv{
-  background-color: black;
-  height: 10vh;
-  width: 15vw;
-  z-index: 40;
-  top: 29%;
-  left: 50%;
-  position: absolute;
-  display: inline-block;
-
-
-}
 
 .face {
   position: absolute;
-  top: 2vh;
-  height: 110vh;
-  width: 110vw;
-  left: -3vw;
+  top: 10px;
+  height: 1100px;
+  width: 950px;
+  left: -20px;
   z-index: 19;
   overflow: hidden;
   background-size: contain;
@@ -426,42 +414,30 @@ button {
   background-image: url("https://i.ibb.co/C2dKw0h/facewall.png");
 }
 
-.foeglass {
-  z-index: 10;
-  top: 25%;
-  left: 55%;
-  background-color: white;
-  border-radius: 100px;
-  height: 12vw;
-  width: 12vw;
-  position: absolute;
-}
-
 #paintingcontents{
   background-color: transparent;
-  height: 57vh;
-  width: 45vw;
+  height: 300px;
+  width: 450px;
   z-index: 40;
-  top: 15%;
-  left: 1%;
+  top: 80px;
+  left: 10px;
   position: absolute;
 }
 
 .electricalbox {
   z-index: 20;
   position: absolute;
-  bottom: 15%;
-  left: 30%;
-  width: 7vw;
+  top: 450px;
+  left: 250px;
+  width: 70px;
 }
 
 .onelectricalbox {
   z-index: 40;
   position: absolute;
-  bottom: 15%;
-  left: 30%;
-  width: 7vw;
-  height: 7vw;
+  top: 450px;
+  left: 250px;
+  width: 70px;
 }
 
 #wires {
@@ -469,24 +445,27 @@ button {
 }
 
 .redwire {
-  width: .7vw;
+  width: 5px;
   z-index: 50;
   position: absolute;
-  left: 2.98vw;
-  top: 5.8vh;
-  height: 1vh;
+  left: 30px;
+  top: 30px;
+  height: 7px;
+  border-radius: 5px;
 }
 
 .redwire2 {
-  width: .7vw;
+  border-radius: 5px;
+  width: 10px;
   z-index: 50;
   position: absolute;
-  left: 3.7vw;
-  top: 7.9vh;
-  height: 1vh;
+  left: 40px;
+  top: 40px;
+  height: 10px;
 }
 
 .bluewire {
+  border-radius: 50px;
   width: .7vw;
   z-index: 50;
   position: absolute;
@@ -496,12 +475,13 @@ button {
 }
 
 .bluewire2 {
-  width: .7vw;
+  border-radius: 50px;
+  width: 8px;
   z-index: 50;
   position: absolute;
-  left: 2.5vw;
-  top: 7.2vh;
-  height: 1vh;
+  left: 23px;
+  top: 35px;
+  height: 9px;
 }
 
 .eyesPaintingActual {

@@ -17,7 +17,7 @@ export function UpdateItemsArtifacts() {
     const params = new FormData(event.target);
     setErrors([]);
     axios
-      .patch(`https://moon--egg.fly.dev//items/${id}`, params)
+      .patch(`https://moon--egg.fly.dev/items/${id}`, params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();

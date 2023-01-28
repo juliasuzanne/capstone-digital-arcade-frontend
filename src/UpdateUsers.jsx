@@ -70,6 +70,10 @@ export function UpdateUsers() {
           New Points
           <input name="points" className="form-control" type="integer" />
         </div>
+        <div>
+          Fixed lights?
+          <input name="fixed" className="form-control" type="boolean" />
+        </div>
 
         <button className="btn btn-secondary mt-3 submit">Change</button>
       </form>
