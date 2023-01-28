@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import pupils from "/images/pupils.png";
 import axios from "axios";
 
@@ -6,6 +6,7 @@ import axios from "axios";
 
 export function Face() {
   const [id, setId] = useState(0);
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   const [mousePos, setMousePos] = useState({});
   const [errors, setErrors] = useState([]);
@@ -82,8 +83,8 @@ export function Face() {
   let root = document.documentElement;
 
   root.addEventListener("mousemove", (event) => {
-    root.style.setProperty("--left", String((event.clientX + 100) * 0.025) + "px");
-    root.style.setProperty("--top", String((event.clientY + 100) * 0.03) + "px");
+    root.style.setProperty("--left", String((event.clientX + windowSize.current[0] * 0.4) * 0.025) + "px");
+    root.style.setProperty("--top", String((event.clientY - windowSize.current[1] * 4.3) * 0.03) + "px");
   });
 
   function handleArtifactClick() {
@@ -97,12 +98,11 @@ export function Face() {
     }
   }
 
+  document.body.style.overflow = "hidden";
+
   return (
     <div>
-      <div id="face">
-        {" "}
-        <div id="foeglass"></div>
-      </div>
+      <div className="face"> </div>
       {/* The mouse is at position{" "} */}
       <b hidden>
         ({mousePos.x}, {mousePos.y})
@@ -134,26 +134,30 @@ export function Face() {
           <button onClick={handleFixRed} className="redwire2"></button>
           <button onClick={handleFixRed} className="redwire"></button>
         </div>
-        <img
-          src="https://i.ibb.co/nzVZx9m/face.png"
-          style={{
-            position: "absolute",
-            width: "60vw",
-            top: "7%",
-            left: "3%",
-            zIndex: 21,
-          }}
-        />
 
-        <img
-          id="pupils"
-          src={pupils}
-          style={{
-            position: "relative",
-            width: "60vw",
-            zIndex: 20,
-          }}
-        />
+        <div id="paintingcontents">
+          <img
+            src="https://i.ibb.co/nzVZx9m/face.png"
+            style={{
+              position: "absolute",
+              width: "60vw",
+              top: "-17%",
+              left: "5%",
+              zIndex: 21,
+            }}
+          />
+          <img
+            id="pupils"
+            src={pupils}
+            style={{
+              position: "relative",
+              width: "60vw",
+              zIndex: 19,
+            }}
+          />
+
+          <div className="foeglass"></div>
+        </div>
 
         {/* {(document.getElementById("pupils").style.width = left)} */}
         {console.log()}
