@@ -412,39 +412,53 @@ html {
   width: 7vw;
 }
 
+.onelectricalbox {
+  z-index: 40;
+  position: absolute;
+  top: 85%;
+  left: 30%;
+  width: 7vw;
+  height: 7vw;
+}
+
 #wires {
   z-index: 40;
 }
 
 .redwire {
   width: .7vw;
-  z-index: 30;
+  z-index: 50;
   position: absolute;
-  top: 635px;
-  left: 380px;
+  left: 2.98vw;
+  top: 5.8vh;
+  height: 1vh;
 }
+
 .redwire2 {
   width: .7vw;
-  z-index: 400;
+  z-index: 50;
   position: absolute;
-  top: 655px;
-  left: 406px;
+  left: 3.7vw;
+  top: 7.9vh;
+  height: 1vh;
 }
 
 .bluewire {
   width: .7vw;
-  z-index: 400;
+  z-index: 50;
   position: absolute;
-  top: 650px;
-  left: 380px;
+  left: 3.7vw;
+  top: 1.9vh;
+  height: 2vh;
 }
 
 .bluewire2 {
   width: .7vw;
-  z-index: 400;
+  z-index: 50;
   position: absolute;
-  top: 620px;
-  left: 406px;
+  left: 2.5vw;
+  top: 7.2vh;
+  height: 1vh;
 }
 
 .eyesPaintingActual {

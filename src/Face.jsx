@@ -125,12 +125,12 @@ export function Face() {
             <img className="electricalbox" id="wires" src={redWire} />
           </>
         )}
-
-        <button onClick={handleFixBlue} className="bluewire2"></button>
-        <button onClick={handleFixBlue} className="bluewire"></button>
-        <button onClick={handleFixRed} className="redwire2"></button>
-        <button onClick={handleFixRed} className="redwire"></button>
-
+        <div className="onelectricalbox">
+          <button onClick={handleFixBlue} className="bluewire2"></button>
+          <button onClick={handleFixBlue} className="bluewire"></button>
+          <button onClick={handleFixRed} className="redwire2"></button>
+          <button onClick={handleFixRed} className="redwire"></button>
+        </div>
         <img
           src="https://i.ibb.co/nzVZx9m/face.png"
           style={{
