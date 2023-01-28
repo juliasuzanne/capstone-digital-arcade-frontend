@@ -5,6 +5,8 @@ import axios from "axios";
 // import { autoType, forceCenter } from "d3";
 
 export function Face() {
+  const [id, setId] = useState(0);
+
   const [mousePos, setMousePos] = useState({});
   const [errors, setErrors] = useState([]);
   const [isBoxFixed, setIsBoxFixed] = useState("");
@@ -16,6 +18,7 @@ export function Face() {
     axios.get("https://moon--egg.fly.dev/users.json").then((response) => {
       console.log(response);
       setCurrentUser(response.data);
+      setId(currentUser.id);
     });
   };
 
@@ -36,7 +39,7 @@ export function Face() {
     let newPoints = 500 + currentUser.points;
     console.log(newPoints);
     axios
-      .patch("https://moon--egg.fly.dev/users", { fixed: true, points: newPoints })
+      .patch(`https://moon--egg.fly.dev/users/${id}`, { fixed: true, points: newPoints })
       .then((window.location.href = "/hotel"))
       .catch((error) => {
         console.log(error.response.data.errors);
