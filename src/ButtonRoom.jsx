@@ -19,7 +19,7 @@ export function ButtonRoom() {
   const [fixed, setFixed] = useState(false);
   const [showNote, setShowNote] = useState(false);
   const [isBoxFixed, setIsBoxFixed] = useState(false);
-  const [image, setImage] = useState("https://i.ibb.co/rG4SrF7/closecurtainorange.png");
+  const [image, setImage] = useState("https://imgur.com/BLLlkOs");
   const [stairs, setStairs] = useState("https://i.ibb.co/VNb5qD6/stairs.png");
   let [currentUser, setCurrentUser] = useState([]);
   const [items, setItems] = useState([]);
@@ -132,7 +132,7 @@ export function ButtonRoom() {
             <p>{talkText}</p>
           </button>
           <Sound />
-          <img src="https://i.ibb.co/9HCD6Nz/room-unpacking.png" className="artifactRoom" />
+          <img src="https://imgur.com/5Iul9ZC" className="artifactRoom" />
           <button onClick={exitRoom}>
             <img id="exit" src="https://i.ibb.co/g7vVGZc/exit.png" />
           </button>
@@ -142,7 +142,7 @@ export function ButtonRoom() {
 
           <Suspense fallback={<div>Loading...</div>}>
             {" "}
-            <img src="https://i.ibb.co/cFM4L3s/eyespainting.png" className="eyesPaintingActual" />
+            <img src="https://imgur.com/d13xj8a" className="eyesPaintingActual" />
           </Suspense>
           <Suspense fallback={<div>Loading...</div>}>
             <button className="eyesPainting" onClick={movingEyes}></button>
@@ -168,8 +168,8 @@ export function ButtonRoom() {
           <Suspense>
             <button
               id="opencurtain"
-              onMouseEnter={() => setImage("https://i.ibb.co/d6xpy82/opencurtainorange.png")}
-              onMouseLeave={() => setImage("https://i.ibb.co/rG4SrF7/closecurtainorange.png")}
+              onMouseEnter={() => setImage("https://imgur.com/KdBCYpP")}
+              onMouseLeave={() => setImage("https://imgur.com/BLLlkOs")}
               onClick={catalog}
             ></button>
           </Suspense>
@@ -196,7 +196,7 @@ export function ButtonRoom() {
             <img className="counter" src="https://i.ibb.co/7Kz8SHx/counter.png" />
           </Suspense>
           <Suspense>
-            <img className="roombackground" src="https://i.ibb.co/2ySX1sN/home-background.png" />
+            <img className="roombackground" src="https://imgur.com/J6MIvHa" />
           </Suspense>
           <Suspense>
             <img className="opencurtain" src={image} />

@@ -12,11 +12,11 @@ export function ArtifactRoom() {
   const [items, setItems] = useState([]);
   const [show, setShow] = useState(false);
   const [mediaShow, setMediaShow] = useState(false);
-  const [mediaImage, setMediaImage] = useState("https://i.ibb.co/XpxxNR7/closedboxmedia.png");
-  const [paintingImage, setPaintingImage] = useState("https://i.ibb.co/nRN1gRf/paintingsclosed.png");
+  const [mediaImage, setMediaImage] = useState("https://imgur.com/6vRsuBt");
+  const [paintingImage, setPaintingImage] = useState("https://imgur.com/nsRKkKB");
   const [bakingImage, setBakingImage] = useState("https://i.ibb.co/jHNVJkN/pastryclosed.png");
   const [miscImage, setMiscImage] = useState("https://i.ibb.co/0FGHGpZ/mysteryclosed.png");
-  const [clothesImage, setClothesImage] = useState("https://i.ibb.co/Tb1Shjj/fullclothes.png");
+  const [clothesImage, setClothesImage] = useState("https://imgur.com/JK4ahbB");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
   const [bakingShow, setBakingShow] = useState(false);
@@ -61,27 +61,27 @@ export function ArtifactRoom() {
   const handleToggleMedia = () => {
     if (mediaShow === false) {
       setMediaShow(true);
-      setMediaImage("https://i.ibb.co/sqCYg3t/openedboxmedia.png");
+      setMediaImage("https://imgur.com/vtG0XgI");
     } else {
       setMediaShow(false);
-      setMediaImage("https://i.ibb.co/XpxxNR7/closedboxmedia.png");
+      setMediaImage("https://imgur.com/6vRsuBt");
     }
   };
 
   const handleTogglePainting = () => {
     if (paintingShow === false) {
       setPaintingShow(true);
-      setPaintingImage("https://i.ibb.co/qpcVTR7/paintingsopen.png");
+      setPaintingImage("https://imgur.com/Rv7Yo7j");
     } else {
       setPaintingShow(false);
-      setPaintingImage("https://i.ibb.co/nRN1gRf/paintingsclosed.png");
+      setPaintingImage("https://imgur.com/nsRKkKB");
     }
   };
 
   const handleToggleBaking = () => {
     if (bakingShow === false) {
       setBakingShow(true);
-      setBakingImage("https://i.ibb.co/p4b9GTZ/pastryopen.png");
+      setBakingImage("https://imgur.com/e4WvaYu");
     } else {
       setBakingShow(false);
       setBakingImage("https://i.ibb.co/jHNVJkN/pastryclosed.png");
@@ -101,7 +101,7 @@ export function ArtifactRoom() {
   const handleToggleSewing = () => {
     if (sewingShow === false) {
       setSewingShow(true);
-      setClothesImage("https://i.ibb.co/4PFT5Kc/emptyclothes.png");
+      setClothesImage("https://imgur.com/C970rSz");
     } else {
       setSewingShow(false);
       setClothesImage("https://i.ibb.co/Tb1Shjj/fullclothes.png");
