@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
-  let [portrait, setPortrait] = useState("https://imgur.com/6CSlchm");
+  let [portrait, setPortrait] = useState("images/moon.png");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +29,7 @@ export function Signup() {
     console.log({ portrait });
   };
   const handleSetPortrait2 = () => {
-    setPortrait("https://imgur.com/6CSlchm");
+    setPortrait("images/moon.png");
     console.log({ portrait });
   };
 
@@ -54,7 +54,7 @@ export function Signup() {
             <img className="circular-images-signup" src="/images/egg.png" />
           </button>
           <button type="button" onClick={handleSetPortrait2}>
-            <img className="circular-images-signup" src="https://imgur.com/6CSlchm" />
+            <img className="circular-images-signup" src="images/moon.png" />
           </button>
           <div>
             <p>Selected Portrait:</p>

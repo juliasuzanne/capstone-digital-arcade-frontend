@@ -12,11 +12,11 @@ export function ArtifactRoom() {
   const [items, setItems] = useState([]);
   const [show, setShow] = useState(false);
   const [mediaShow, setMediaShow] = useState(false);
-  const [mediaImage, setMediaImage] = useState("https://imgur.com/6vRsuBt");
-  const [paintingImage, setPaintingImage] = useState("https://imgur.com/nsRKkKB");
-  const [bakingImage, setBakingImage] = useState("https://i.ibb.co/jHNVJkN/pastryclosed.png");
-  const [miscImage, setMiscImage] = useState("https://i.ibb.co/0FGHGpZ/mysteryclosed.png");
-  const [clothesImage, setClothesImage] = useState("https://imgur.com/JK4ahbB");
+  const [mediaImage, setMediaImage] = useState("images/closedboxmedia.png");
+  const [paintingImage, setPaintingImage] = useState("images/paintingsclosed.png");
+  const [bakingImage, setBakingImage] = useState("images/pastryclosed.png");
+  const [miscImage, setMiscImage] = useState("images/mysteryclosed.png");
+  const [clothesImage, setClothesImage] = useState("images/fullclothes.png");
   const [paintingShow, setPaintingShow] = useState(false);
   const [sewingShow, setSewingShow] = useState(false);
   const [bakingShow, setBakingShow] = useState(false);
@@ -61,50 +61,50 @@ export function ArtifactRoom() {
   const handleToggleMedia = () => {
     if (mediaShow === false) {
       setMediaShow(true);
-      setMediaImage("https://imgur.com/vtG0XgI");
+      setMediaImage("images/openedboxmedia.png");
     } else {
       setMediaShow(false);
-      setMediaImage("https://imgur.com/6vRsuBt");
+      setMediaImage("images/closedboxmedia.png");
     }
   };
 
   const handleTogglePainting = () => {
     if (paintingShow === false) {
       setPaintingShow(true);
-      setPaintingImage("https://imgur.com/Rv7Yo7j");
+      setPaintingImage("images/paintingsopen.png");
     } else {
       setPaintingShow(false);
-      setPaintingImage("https://imgur.com/nsRKkKB");
+      setPaintingImage("images/paintingsclosed.png");
     }
   };
 
   const handleToggleBaking = () => {
     if (bakingShow === false) {
       setBakingShow(true);
-      setBakingImage("https://imgur.com/e4WvaYu");
+      setBakingImage("images/pastryopen.png");
     } else {
       setBakingShow(false);
-      setBakingImage("https://i.ibb.co/jHNVJkN/pastryclosed.png");
+      setBakingImage("images/pastryclosed.png");
     }
   };
 
   const handleToggleMisc = () => {
     if (miscShow === false) {
       setMiscShow(true);
-      setMiscImage("https://i.ibb.co/JchLGNM/mysteryopen.png");
+      setMiscImage("images/mysteryopen.png");
     } else {
       setMiscShow(false);
-      setMiscImage("https://i.ibb.co/0FGHGpZ/mysteryclosed.png");
+      setMiscImage("images/mysteryclosed.png");
     }
   };
 
   const handleToggleSewing = () => {
     if (sewingShow === false) {
       setSewingShow(true);
-      setClothesImage("https://imgur.com/C970rSz");
+      setClothesImage("images/emptyclothes.png");
     } else {
       setSewingShow(false);
-      setClothesImage("https://i.ibb.co/Tb1Shjj/fullclothes.png");
+      setClothesImage("images/fullclothes.png");
     }
   };
 

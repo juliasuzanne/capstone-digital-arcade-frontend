@@ -1,8 +1,8 @@
 User.create!([
-  { points: 135, name: "moon", email: "moon@test.com", password_digest: "$2a$12$gKAKvY1x6uSMwrVOc6Bx5erLBf7EdXeirU6LV0xYKW24aHamkg552", image_url: "https://imgur.com/6CSlchm", fixed: false },
+  { points: 135, name: "moon", email: "moon@test.com", password_digest: "$2a$12$gKAKvY1x6uSMwrVOc6Bx5erLBf7EdXeirU6LV0xYKW24aHamkg552", image_url: "https://i.imgur.com/6CSlchm", fixed: false },
   { points: 1905, name: "Julia", email: "julia@test.com", password_digest: "$2a$12$i6D4LkAAUAMD73Eki4R.ZOapX42rO6REO4Fr5awCc6dCzFljininG", image_url: "https://avatars.githubusercontent.com/u/96872404?v=4", fixed: true },
   { points: 440, name: "Demo", email: "demo@test.com", password_digest: "$2a$12$XRGMeulocLQoRFtwF2LLy.td7Tpr5N4LOuA.dNoo7UkYTR4o6Ou8S", image_url: "/images/egg.png", fixed: true },
-  { points: 505, name: "Lauren", email: "Lauren@test.com", password_digest: "$2a$12$KTr2Wa95a7Q.ErwETaVpYubygCzKmBObNeGuQWeIcDy.fp4TPoX0y", image_url: "https://imgur.com/6CSlchm", fixed: true },
+  { points: 505, name: "Lauren", email: "Lauren@test.com", password_digest: "$2a$12$KTr2Wa95a7Q.ErwETaVpYubygCzKmBObNeGuQWeIcDy.fp4TPoX0y", image_url: "https://i.imgur.com/6CSlchm", fixed: true },
   { points: 1470, name: "egg", email: "egg@test.com", password_digest: "$2a$12$oRAXiHZza0GD.M8ZplUIXejAMu4FYDbtFjy7TQkFjg41VTxPJ7Thi", image_url: "/images/egg.png", fixed: true },
   { points: 1150, name: "nelson", email: "nelson@test.com", password_digest: "$2a$12$UJgtgALhdE3qxzlzw0zBZu7FFQ0ezarbFTNTb8aAOsB2fbEn3tCqK", image_url: "https://i.pinimg.com/originals/43/a2/2d/43a22ddbd9edf5afa1f5f083239418f4.png", fixed: true },
 ])
@@ -27,13 +27,13 @@ Image.create!([
 ])
 Artifact.create!([
   { price_in_points: 10, image_url: "/images/CD.png", user_id: 25, name: "Delial CD", description: "<a href=\"https://delial.bandcamp.com/album/patience-patients\" />" },
-  { price_in_points: 100, image_url: "https://imgur.com/tn6q9mb", user_id: nil, name: "Spider painting", description: "An painting of a greenbottle blue spider. 20\" x 16\" oil on canvas" },
+  { price_in_points: 100, image_url: "https://i.imgur.com/tn6q9mb", user_id: nil, name: "Spider painting", description: "An painting of a greenbottle blue spider. 20\" x 16\" oil on canvas" },
   { price_in_points: 100, image_url: "/images/onionpancake.png", user_id: 25, name: "Onion pancake", description: "A pancake in the image of an onion." },
   { price_in_points: 78, image_url: "/images/book.png", user_id: 2, name: "Book Cover", description: "A mysterious book cover. What is inside?" },
   { price_in_points: 45, image_url: "/images/pumpkinbread.png", user_id: 26, name: "Pumpkin Bread", description: "It's shaped like a pumpkin." },
   { price_in_points: 100, image_url: "/images/harrier.png", user_id: 22, name: "Harrier", description: "Northern harrier oil painting. My sister likes birds." },
   { price_in_points: 1000, image_url: "/images/CD.png", user_id: 2, name: "CD", description: "https://delial.bandcamp.com/album/patience-patients" },
-  { price_in_points: 100, image_url: "https://imgur.com/tn6q9mb", user_id: 2, name: "Painting", description: "An painting of a greenbottle blue spider. 20\" x 16\"" },
+  { price_in_points: 100, image_url: "https://i.imgur.com/tn6q9mb", user_id: 2, name: "Painting", description: "An painting of a greenbottle blue spider. 20\" x 16\"" },
   { price_in_points: 100, image_url: "/images/CD.png", user_id: 2, name: "Delial CD", description: nil },
   { price_in_points: 100, image_url: "/images/vhs.png", user_id: 22, name: "VHS", description: nil },
   { price_in_points: 0, image_url: "/images/harrier.png", user_id: 22, name: "Harrier painting", description: "This is an oil painting of a northern harrier. My sister is a bird watcher." },

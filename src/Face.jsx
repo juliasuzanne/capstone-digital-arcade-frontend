@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import pupils from "https://imgur.com/2xknxXZ";
+import pupils from "/images/pupils.png";
 import axios from "axios";
 
 // import { autoType, forceCenter } from "d3";
@@ -120,7 +120,7 @@ export function Face() {
           }}
         /> */}
         {localStorage.jwt === undefined ? (
-          <img className="electricalbox" src="https://imgur.com/4YPi2ZB" />
+          <img className="electricalbox" src="images/openwire.png" />
         ) : (
           <>
             <img className="electricalbox" src={isBoxFixed} />
@@ -137,7 +137,7 @@ export function Face() {
 
         <div id="paintingcontents">
           <img
-            src="https://imgur.com/Zn2JKIL"
+            src="images/face.png"
             style={{
               position: "absolute",
               width: "530px",
@@ -158,7 +158,7 @@ export function Face() {
           />
 
           <img
-            src="https://imgur.com/WVZBCSJ"
+            src="images/foeglass.png"
             style={{
               position: "absolute",
               width: "530px",

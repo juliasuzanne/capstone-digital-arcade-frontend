@@ -26,7 +26,7 @@ export function Moon() {
           <MoonTalking onClose={handleCloseTalk} />
         </MoonModal>
 
-        <img className="moonperson" src="https://imgur.com/6CSlchm" />
+        <img className="moonperson" src="images/moon.png" />
 
         <Canvas
           className="canvas3D"
