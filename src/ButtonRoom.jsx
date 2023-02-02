@@ -196,6 +196,9 @@ export function ButtonRoom() {
             <img className="counter" src="images/counter.png" />
           </Suspense>
           <Suspense>
+            <img className="note" src="images/note.png" />
+          </Suspense>
+          <Suspense>
             <img className="roombackground" src="images/home_background.png" />
           </Suspense>
           <Suspense>
