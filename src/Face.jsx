@@ -120,7 +120,7 @@ export function Face() {
           }}
         /> */}
         {localStorage.jwt === undefined ? (
-          <img className="electricalbox" src="https://i.ibb.co/bskm30G/openwire.png" />
+          <img className="electricalbox" src="images/openwire.png" />
         ) : (
           <>
             <img className="electricalbox" src={isBoxFixed} />
@@ -137,7 +137,7 @@ export function Face() {
 
         <div id="paintingcontents">
           <img
-            src="https://i.ibb.co/nzVZx9m/face.png"
+            src="images/face.png"
             style={{
               position: "absolute",
               width: "530px",
@@ -158,7 +158,7 @@ export function Face() {
           />
 
           <img
-            src="https://i.ibb.co/k5MJtfK/foeglass.png"
+            src="images/foeglass.png"
             style={{
               position: "absolute",
               width: "530px",

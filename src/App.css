@@ -5,7 +5,7 @@
 
 .sky {
   position: absolute;
-  background-image: url("https://i.ibb.co/5cmgYw5/nighttime-scene.png");
+  background-image: url("images/nighttime_scene.png");
   background-size: cover;
   top: 0;
   left: 0;
@@ -216,7 +216,7 @@ a:active {
   top: 0;
   left: 0;
   background-repeat: no-repeat;
-  background-image: url("https://i.ibb.co/9HCD6Nz/room-unpacking.png");
+  background-image: url("images/room_unpacking.png");
   background-size: cover;
   z-index: 5;
   width: 1100px;
