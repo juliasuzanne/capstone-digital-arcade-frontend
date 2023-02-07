@@ -20,7 +20,7 @@ export function ButtonRoom() {
   const [showNote, setShowNote] = useState(false);
   const [isBoxFixed, setIsBoxFixed] = useState(false);
   const [image, setImage] = useState("images/closecurtainorange.png");
-  const [stairs, setStairs] = useState("images/stairs.png");
+  const [stairs, setStairs] = useState("https://ibb.co/hMrwmH0");
   let [currentUser, setCurrentUser] = useState([]);
   const [items, setItems] = useState([]);
 
@@ -177,7 +177,7 @@ export function ButtonRoom() {
             <button
               id="stairs"
               onMouseEnter={() => setStairs("images/stairslight.png")}
-              onMouseLeave={() => setStairs("images/stairs.png")}
+              onMouseLeave={() => setStairs("https://ibb.co/hMrwmH0")}
               onClick={exitRoom}
             ></button>
           </Suspense>
