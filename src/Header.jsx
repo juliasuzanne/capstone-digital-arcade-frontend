@@ -59,7 +59,7 @@ export function Header() {
             <button onClick={handleGoHome}>Home</button>
             <div>
               <button onClick={handleSeeArtifacts} className="bag"></button>
-              <img width="100px" src="images/bag.png" />
+              <img width="100px" src="https://i.ibb.co/kQWBtSK/bag.png.png" />
             </div>
           </>
         )}

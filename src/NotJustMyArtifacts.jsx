@@ -57,8 +57,7 @@ export function NotJustMyArtifacts() {
 
   return (
     <div className="greenglass">
-      <img id="handsonbox" src="https://ibb.co/1LLygkM" />
-      <h1> Artifacts Available</h1>
+      <img id="handsonbox" src="https://i.ibb.co/CzzCcf6/handsoncounter.png" />
 
       <NotJustMyArtifactsIndex artifacts={artifacts} onShowArtifact={handleShowArtifact} />
       <Modal show={isArtifactsShowVisible} onClose={handleClose}>

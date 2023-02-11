@@ -8,7 +8,7 @@ export function NotJustMyArtifactsIndex(props) {
       {props.artifacts
         .filter((artifacts) => artifacts.name.toLowerCase().includes(searchFilter.toLowerCase()))
         .map((artifact) => (
-          <div key={artifact.id} id="artifact">
+          <div key={artifact.id}>
             <img className="showingartifact" src={artifact.image_url} alt="" />
 
             <div className="displayBox">

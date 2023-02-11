@@ -192,10 +192,12 @@ button {
 }
 
 #artifacts-index {
-  position: absolute;
-  flex-wrap: wrap;
+  padding: 100px;
+  z-index: 3;
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
+  width: 100vw;
+
 }
 
 .showingartifact {
