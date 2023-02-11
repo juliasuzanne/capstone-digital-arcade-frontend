@@ -216,7 +216,7 @@ a:active {
   top: 0;
   left: 0;
   background-repeat: no-repeat;
-  background-image: url("images/room_unpacking.png");
+  background-image: url("/images/room_unpacking.png");
   background-size: cover;
   z-index: 5;
   width: 1100px;
