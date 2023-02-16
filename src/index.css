@@ -11,6 +11,14 @@ html {
   font-size: smaller;
 }
 
+.personalsite{
+ color: rgb(51, 35, 3);
+}
+
+.personalsite:hover{
+  color: darkgrey;
+}
+
 #red {
   color: red;
 }
@@ -251,6 +259,7 @@ button {
   border: 3px solid rgb(160, 160, 160);
   padding: 10px;
   color: rgb(10, 43, 10);
+  background-color: rgb(160, 160, 160);
   text-align: center;
 }
 

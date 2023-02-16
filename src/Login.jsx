@@ -39,7 +39,10 @@ export function Login() {
       <p>
         Hello! Thank you for visiting my website. It is slowly becoming a point-and-click adventure game. All the
         artwork is original. It's still under development, and any suggestions or comments would be greatly appreciated!
-        You can email me at julia.s.grimes@gmail.com.
+        You can email me at julia.s.grimes@gmail.com, or see my
+        <a href="https://juliasuzannegrimes.netlify.app/">
+          <h2 className="personalsite"> personal website here! </h2>
+        </a>
       </p>
       <form onSubmit={handleSubmit}>
         <div>

@@ -28,8 +28,6 @@ export function Header() {
   return (
     <div className="user-item">
       <header>
-        <p>Welcome, {currentUser.name} </p>
-
         {localStorage.jwt === undefined ? (
           <>
             <li>
@@ -48,6 +46,8 @@ export function Header() {
         ) : (
           <>
             <div>
+              <p>Welcome, {currentUser.name} </p>
+
               <li>
                 <img src={currentUser.image_url} className="circular-images" />
               </li>
